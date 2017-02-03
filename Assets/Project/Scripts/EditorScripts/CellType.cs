@@ -16,5 +16,8 @@ public class CellType {
     public bool imAppliedToCell = false;
     public bool feedBackOnMaterial = false;
     public bool feedBackOnEmission = false;
+
+    public bool isCancer = false;
+    public bool onWaitForCancer = false;
 	
 }

@@ -197,6 +197,29 @@ public class WorldGenerate : MonoBehaviour {
         newObject.transform.localScale = new Vector3(newObject.transform.localScale.x, height+100, newObject.transform.localScale.z);
         newObject.SetActive(true);
     }
+    public void GetAllCellNeighbours()
+    {
+       for (int i = 0; i < transform.childCount; i++)
+        {
+            CellTwo cellTwoCenter = transform.GetChild(i).GetComponent<CellTwo>();
+            Vector3 centerVector = new Vector3(cellTwoCenter.transform.position.x, 0, cellTwoCenter.transform.position.z);
+            
+            for (int j = 0; j < transform.childCount; j++)
+            {
+                CellTwo cellTwoAdjacent = transform.GetChild(j).GetComponent<CellTwo>();
+                Vector3 targetVector = new Vector3(cellTwoAdjacent.transform.position.x, 0, cellTwoAdjacent.transform.position.z);
+                float distanceFromCenterHexagon = Vector3.Distance(centerVector, targetVector);
+                
+                if (distanceFromCenterHexagon < 1.6f)
+                {
+                    cellTwoCenter.neighbours.Add(cellTwoAdjacent);
+                    
+                }
+            }
+        }
+        
+
+    }
 	
 	
 }

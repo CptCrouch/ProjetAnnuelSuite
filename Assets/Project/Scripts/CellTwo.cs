@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CellTwo : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class CellTwo : MonoBehaviour
     public bool _imReturningStartPos;
     [HideInInspector]
     public bool imAtStartPos = true;
+    [HideInInspector]
+    public bool iWasCancer = false;
 
 
     private Vector3 lastScale;
@@ -65,8 +68,10 @@ public class CellTwo : MonoBehaviour
 
     [HideInInspector]
     public bool isGrow = false;
+    
+    public List<CellTwo> neighbours = new List<CellTwo>();
 
-   
+
 
     public int currentAltitude;
 
@@ -101,7 +106,8 @@ public class CellTwo : MonoBehaviour
 
         float lastDifference = transform.position.y - startPosYbyWorldGenerate;
         transform.position = new Vector3(transform.position.x, transform.position.y + cellType.diffWithBasePosY-lastDifference, transform.position.z);
-   
+        //GetComponent<MeshRenderer>().material = cellType.mat;
+
     }
 
     public IEnumerator ChangeColor()
@@ -211,6 +217,11 @@ public class CellTwo : MonoBehaviour
     public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve,bool launchPassive, int chainParameter,bool launchByVirus)
     {
         Vector3 firstPos = transform.position;
+
+        if(destructionBehavior.cancerInTheScene == true)
+        {
+            destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this);
+        }
 
         if (launchByVirus == false)
         {

@@ -7,6 +7,9 @@ public enum DestroyState { Idle, OnDestroy, OnMove, AdjacentCell}
 public class DestructionBehavior : MonoBehaviour {
     WorldGenerate worldGenerate; 
     PunchHexagon punchHexagon;
+
+    [HideInInspector]
+    public CancerBehavior cancerBehavior;
      
     public float timeToWaitForDominoEffect;
     public float timeToDestroyCellMin =0.1f;
@@ -46,12 +49,8 @@ public class DestructionBehavior : MonoBehaviour {
     [HideInInspector]
     public int currentLvlOnChainSound =0 ;
 
-
-
-
-
-
-
+    [HideInInspector]
+    public bool cancerInTheScene;
 
 
 
@@ -60,10 +59,17 @@ public class DestructionBehavior : MonoBehaviour {
         
         worldGenerate = FindObjectOfType<WorldGenerate>();
         punchHexagon = FindObjectOfType<PunchHexagon>();
+        cancerBehavior = FindObjectOfType<CancerBehavior>();
+        if(cancerBehavior != null)
+        {
+            cancerInTheScene = true;
+        }
   
         for (int i = 0; i < worldGenerate.transform.childCount; i++)
         {
-            listOfCellOnStart.Add(worldGenerate.transform.GetChild(i).GetComponent<CellTwo>());
+            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            if (cell.cellType.isCancer == false)
+            listOfCellOnStart.Add(cell);
         }
         
         
@@ -374,7 +380,7 @@ public class DestructionBehavior : MonoBehaviour {
 
                 if (listCellTwoToDisable[j].isGrow == true)
                 {
-                    listCellTwoToDisable[j].ChangeScaleTimeFeedback(false);
+                    //listCellTwoToDisable[j].ChangeScaleTimeFeedback(false);
                     listCellTwoToDisable[j].isGrow = false;
                 }
                 

@@ -131,6 +131,7 @@ public class DrawGUILayout : Editor {
                 Undo.RecordObject(cellTwo, "Update Cell");
 
                 cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
+                cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
                 //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
                 //cellTwo.cellType.speedUp = generateInEditor.cellTypes[indexCellTypes].speedUp;
                 cellTwo.cellType.diffWithBasePosY = generateInEditor.cellTypes[indexCellTypes].diffWithBasePosY;
@@ -158,6 +159,7 @@ public class DrawGUILayout : Editor {
                 Undo.RecordObject(cellTwo, "Update Cell");
 
                 cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
+                cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
                 //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
                 //cellTwo.cellType.speedUp = generateInEditor.cellTypes[indexCellTypes].speedUp;
                 cellTwo.cellType.diffWithBasePosY = generateInEditor.cellTypes[indexCellTypes].diffWithBasePosY;

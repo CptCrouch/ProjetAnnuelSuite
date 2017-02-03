@@ -62,6 +62,7 @@ public class GenerateInEditor : MonoBehaviour {
         if (alreadyAWorld == false)
         {
             worldGenerate.GenerateHexagonWorld(diametreWorldHexagon, matColors);
+            worldGenerate.GetAllCellNeighbours();
             alreadyAWorld = true;
         }
         else

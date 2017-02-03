@@ -150,9 +150,9 @@ public class PunchHexagon : MonoBehaviour {
                 if (Physics.Raycast(ray, out hit, rangeEarthTool, layerMaskCell))
                 {
                    
-                    if(hit.collider.gameObject.GetComponent<CellTwo>()._imMoving == false)
+                    if(hit.collider.gameObject.GetComponent<CellTwo>()._imMoving == false && hit.collider.gameObject.GetComponent<CellTwo>().cellType.isCancer == false)
                         StartCoroutine(hit.collider.gameObject.GetComponent<CellTwo>().ChangeColor());
-
+                    #region AireForce
                     if (punchAireForceActivate)
                     {
                         if (punchArea >= 1)
@@ -180,10 +180,11 @@ public class PunchHexagon : MonoBehaviour {
                             }
                         }
                     }
-                   
                     #endregion
 
-                    
+                    #endregion
+
+
                     #region Elevation Terrain
                     if (isWithPinceau == true && holdMouseButtonLeft == true)
                     {
@@ -191,7 +192,7 @@ public class PunchHexagon : MonoBehaviour {
                         CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
 
 
-                        if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell)
+                        if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell && cellHit.cellType.isCancer == false)
                         {
                             float hitPosX = hit.collider.transform.position.x;
                             float hitPosY = hit.collider.transform.position.y;
@@ -269,7 +270,7 @@ public class PunchHexagon : MonoBehaviour {
                         CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
 
 
-                        if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell)
+                        if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell && cellHit.cellType.isCancer == false)
                         {
                             float hitPosX = hit.collider.transform.position.x;
                             float hitPosY = hit.collider.transform.position.y;
