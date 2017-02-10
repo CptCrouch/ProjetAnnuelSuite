@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CancerBehavior : MonoBehaviour {
-
+    public GenerateInEditor generateInEditor;
     [HideInInspector]
     public CellType cleanCellType;
     [HideInInspector]
@@ -16,61 +16,47 @@ public class CancerBehavior : MonoBehaviour {
     private WorldGenerate worldGenerate;
 
     public GameObject dissolveCancer;
+    public float timeToWaitForRespawn = 0.5f;
+    
 
 
     // Use this for initialization
     void Start () {
         destructionBehav = FindObjectOfType<DestructionBehavior>();
         worldGenerate = FindObjectOfType<WorldGenerate>();
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+
+        // VERSION CRADE A MODIFIER
+        for (int i = 0; i < generateInEditor.cellTypes.Count; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-            if (cell.cellType.isCancer == true)
+            
+            if (generateInEditor.cellTypes[i].isCancer == true && generateInEditor.cellTypes[i].onWaitForCancer == false)
             {
-                cancerCellType = cell.cellType;
-                break;
+                cancerCellType = generateInEditor.cellTypes[i];
+                Debug.Log("Cancer Found");
+                return;
+            }
+            if(generateInEditor.cellTypes[i].name == "CouleursAutomne")
+            {
+                cleanCellType = generateInEditor.cellTypes[i];
+                Debug.Log("Clean Found");
             }
         }
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
-        {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-            if (cell.cellType.isCancer == false)
-            {
-                cleanCellType = cell.cellType;
-                break;
-            }
-        }
+        
 
     }
 	
 	public IEnumerator DestroyCellWithCancer(CellTwo cell)
     {
         Vector3 firstPos = cell.transform.position;
-        cell.cellType = cellTypeOnWait;
-        cell.UpdateCellType();
-        cell.GetComponent<MeshRenderer>().material = cell.cellType.mat;
 
-        /*if (launchByVirus == false)
+        if (CheckGroupClean(cell) == true)
         {
-            soundManager.EmittDestroySound(chainParameter, currentAltitude);
+            CleanGroup(cell);
         }
         else
         {
-            soundManager.EmittDestroySound(0, currentAltitude);
-        }*/
-
-        /*currentAltitude = 0;
-        if (cellType.feedBackOnMaterial == true)
-        {
-            GetComponent<MeshRenderer>().material = startMat;
-            currentMat = startMat;
-        }*/
-
-        /*if (cellType.imAppliedToCell == false)
-            transform.position = new Vector3(transform.position.x, startPosYbyWorldGenerate, transform.position.z);
-        else
-            transform.position = new Vector3(transform.position.x, startPosYbyWorldGenerate + cellType.diffWithBasePosY, transform.position.z);*/
-
+            UpdateForcingMaterial(cell, cellTypeOnWait);
+        }
 
         GameObject feedBackDissolve = Instantiate(dissolveCancer, firstPos, Quaternion.identity) as GameObject;
         Renderer mat = feedBackDissolve.GetComponent<Renderer>();
@@ -92,6 +78,28 @@ public class CancerBehavior : MonoBehaviour {
         Destroy(feedBackDissolve);
     }
 
+    public bool CheckGroupClean(CellTwo cell)
+    {
+        for (int i = 0; i < cell.groupOfCancerImWith.Length; i++)
+        {
+            CellTwo cellTemp = cell.groupOfCancerImWith[i].GetComponent<CellTwo>();
+            if (cellTemp.cellType.onWaitForCancer == false && cellTemp.cellType.isCancer == true && cellTemp != cell)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void CleanGroup(CellTwo cell)
+    {
+        for (int i = 0; i < cell.groupOfCancerImWith.Length; i++)
+        {
+            CellTwo cellTemp = cell.groupOfCancerImWith[i].GetComponent<CellTwo>();
+            UpdateForcingMaterial(cellTemp, cleanCellType);
+        }
+    }
+
     public void DestroyAllCellCancerClose(CellTwo center)
     {
         for (int i = 0; i < center.neighbours.Count; i++)
@@ -102,5 +110,30 @@ public class CancerBehavior : MonoBehaviour {
             }
         }
     }
+    public void ResetCellCancer(CellTwo cell)
+    {
     
+        UpdateForcingMaterial(cell,cancerCellType);
+
+    } 
+    public void ResetAllCancer()
+    {
+        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        {
+            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            if (cell.cellType.onWaitForCancer == true)
+            {
+                ResetCellCancer(cell);
+            }
+        }
+    }
+    
+    public void UpdateForcingMaterial (CellTwo cell, CellType cellType)
+    {
+        cell.cellType = cellType;
+        cell.UpdateCellType();
+        cell.GetComponent<MeshRenderer>().material = cell.cellType.mat;
+        cell.currentMat = cell.cellType.mat;
+        cell.startMat = cell.cellType.mat;
+    }
 }

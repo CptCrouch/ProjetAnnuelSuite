@@ -14,9 +14,6 @@ public class CellTwo : MonoBehaviour
     [HideInInspector]
     public GameObject childTimeFeedback;
 
-    //[HideInInspector]
-    //public CellTwo cellWhoImAdjacentWith;
-
     [HideInInspector]
     public bool _imMoving;
     [HideInInspector]
@@ -24,12 +21,11 @@ public class CellTwo : MonoBehaviour
     [HideInInspector]
     public bool imAtStartPos = true;
     [HideInInspector]
-    public bool iWasCancer = false;
-
-
-    private Vector3 lastScale;
-    private float ecartAvecStartPosY = 0;
-
+    public bool onDestroy;
+    [HideInInspector]
+    public bool canLaunchVirus;
+    [HideInInspector]
+    public bool isGrow = false;
 
 
     [HideInInspector]
@@ -59,15 +55,11 @@ public class CellTwo : MonoBehaviour
     private float timer = 0;
     private Color color = Color.black;
 
-    [HideInInspector]
-    public bool onDestroy;
-    [HideInInspector]
-    public bool canLaunchVirus;
+    
     [HideInInspector]
     public Coroutine destroyCoroutine;
 
-    [HideInInspector]
-    public bool isGrow = false;
+    
     
     public List<CellTwo> neighbours = new List<CellTwo>();
 
@@ -75,11 +67,20 @@ public class CellTwo : MonoBehaviour
 
     public int currentAltitude;
 
-    private Material currentMat;
+    [HideInInspector]
+    public Material currentMat;
 
     private SoundManager soundManager;
 
     private FMOD.Studio.EventInstance eventInstance;
+
+    #region CancerVariables
+
+    
+    public GameObject[] groupOfCancerImWith;
+
+
+    #endregion
 
     void Start()
     {
@@ -214,7 +215,7 @@ public class CellTwo : MonoBehaviour
     }
 
 
-    public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve,bool launchPassive, int chainParameter,bool launchByVirus)
+    public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve,bool launchPassive, int chainParameter,bool launchByVirus,bool cleanCancer)
     {
         Vector3 firstPos = transform.position;
 
@@ -235,8 +236,9 @@ public class CellTwo : MonoBehaviour
         currentAltitude = 0;
         if (cellType.feedBackOnMaterial == true)
         {
-            GetComponent<MeshRenderer>().material = startMat;
             currentMat = startMat;
+            GetComponent<MeshRenderer>().material = currentMat;
+            
         }
         state = DestroyState.Idle;
         if (cellType.imAppliedToCell == false)
@@ -262,9 +264,12 @@ public class CellTwo : MonoBehaviour
         {
             destructionBehavior.DisableAllVirus();
             destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
-
-            
         }
+        if(cleanCancer == true)
+        {
+            destructionBehavior.cancerBehavior.ResetAllCancer();
+        }
+
         canLaunchVirus = false;
         feedBackDissolve.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(1f);

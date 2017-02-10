@@ -210,7 +210,7 @@ public class WorldGenerate : MonoBehaviour {
                 Vector3 targetVector = new Vector3(cellTwoAdjacent.transform.position.x, 0, cellTwoAdjacent.transform.position.z);
                 float distanceFromCenterHexagon = Vector3.Distance(centerVector, targetVector);
                 
-                if (distanceFromCenterHexagon < 1.6f)
+                if (distanceFromCenterHexagon < 1.6f && cellTwoAdjacent != cellTwoCenter)
                 {
                     cellTwoCenter.neighbours.Add(cellTwoAdjacent);
                     

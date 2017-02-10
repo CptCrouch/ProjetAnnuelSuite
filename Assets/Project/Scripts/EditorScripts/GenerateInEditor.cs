@@ -42,10 +42,14 @@ public class GenerateInEditor : MonoBehaviour {
     [Header("[ FeedBacks Material and Colors ]")]
     public MaterialFeedBackVariables matColors = new MaterialFeedBackVariables();
 
-    
+    public List<GameObject[]> cancerGroups = new List<GameObject[]>();
+
 
     [HideInInspector]
     public List<CellType> cellTypes = new List<CellType>();
+    
+    
+   
 
     private bool alreadyAWorld = false;
 

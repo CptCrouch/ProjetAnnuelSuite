@@ -74,6 +74,7 @@ public class PunchHexagon : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(FindObjectOfType<GenerateInEditor>().cancerGroups.Count);
         currentGeneralAltitude = GetGeneralAltitude();
         //Debug.Log(currentGeneralAltitude);
         /*if(currentGeneralAltitude > altitudeToForce1 && currentGeneralAltitude < altitudeToForce2)
