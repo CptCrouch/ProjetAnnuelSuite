@@ -117,19 +117,15 @@ public class DestructionBehavior : MonoBehaviour {
 
     public bool CheckIfThisWillLaunchChain(CellTwo cell)
     {
-        Vector3 hitVector = new Vector3(cell.transform.position.x, 0, cell.transform.position.z);
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cell.neighbours.Count; i++)
         {
-            CellTwo cellTwo = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-            Vector3 targetVector = new Vector3(cellTwo.transform.position.x, 0, cellTwo.transform.position.z);
-            float distanceFromCenterHexagon = Vector3.Distance(hitVector, targetVector);
-
-            if (distanceFromCenterHexagon < 1.6f && cellTwo.cellType.isCancer == false)
+            if(cell.neighbours[i].cellType.isCancer == false)
             {
                 return true;
             }
         }
         return false;
+
     }
 
 
@@ -188,7 +184,7 @@ public class DestructionBehavior : MonoBehaviour {
         }
         else if(altitude >= 3)
         {
-            StartCoroutine(WaitForAreaEffect(1, target, altitude));
+            StartCoroutine(WaitForAreaEffect( target, altitude));
         }
     }
 
@@ -213,8 +209,15 @@ public class DestructionBehavior : MonoBehaviour {
     {
         if (currentIndex > 0)
         {
-            Vector3 hitVector = new Vector3(center.transform.position.x, 0, center.transform.position.z);
             List<CellTwo> listCloseCell = new List<CellTwo>();
+            for (int i = 0; i < center.neighbours.Count; i++)
+            {
+                if(center.neighbours[i]._imMoving == false && center.neighbours[i].imAtStartPos == false)
+                {
+                    listCloseCell.Add(center.neighbours[i]);
+                }
+            }
+            /*Vector3 hitVector = new Vector3(center.transform.position.x, 0, center.transform.position.z);
             for (int i = 0; i < worldGenerate.transform.childCount; i++)
             {
 
@@ -225,13 +228,13 @@ public class DestructionBehavior : MonoBehaviour {
                 if (distanceFromCenterHexagon < 1.6f)
                 {
 
-                    if (cellTwo._imMoving == false && cellTwo.imAtStartPos == false /*&& cellTwo.currentAltitude < startAltitude*/)
+                    if (cellTwo._imMoving == false && cellTwo.imAtStartPos == false )
                     {
                         listCloseCell.Add(cellTwo);
                     }
                 }
                 //}
-            }
+            }*/
             if(listCloseCell.Count > 0)
             {
                 int random = Random.Range(0, listCloseCell.Count - 1);
@@ -280,10 +283,10 @@ public class DestructionBehavior : MonoBehaviour {
     }
 
 
-    IEnumerator WaitForAreaEffect(int area, CellTwo center,int startAltitude)
+    IEnumerator WaitForAreaEffect(CellTwo center,int startAltitude)
     {
         yield return new WaitForSeconds(timeToWaitForDominoEffect);
-        GetAreaOfCellAndLaunchReturn(area,center,startAltitude);
+        GetAreaOfCellAndLaunchReturn(center,startAltitude);
     }
     IEnumerator WaitForDominosEffect( CellTwo center, int currentIndex)
     {
@@ -295,192 +298,66 @@ public class DestructionBehavior : MonoBehaviour {
     }
 
 
-    void GetAreaOfCellAndLaunchReturn(int areaForce, CellTwo center,int startAltitude )
+    void GetAreaOfCellAndLaunchReturn( CellTwo center,int startAltitude )
     {
         Vector3 hitVector = new Vector3(center.transform.position.x, 0, center.transform.position.z);
         bool checkIfThisAffect = false;
-        for (int h = 1; h <= areaForce; h++)
+
+        for (int i = 0; i < center.neighbours.Count; i++)
         {
-
-            for (int i = 0; i < worldGenerate.transform.childCount; i++)
+            CellTwo cellTwo = center.neighbours[i];
+            if (cellTwo._imMoving == false && cellTwo.imAtStartPos == false)
             {
-                //if (CheckCellOnList(i) == true)
-                //{
-                CellTwo cellTwo = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                Vector3 targetVector = new Vector3(cellTwo.transform.position.x, 0, cellTwo.transform.position.z);
-                float distanceFromCenterHexagon = Vector3.Distance(hitVector, targetVector);
-                if (distanceFromCenterHexagon < 1.6f * h)
+                //cellToDissolve.Add(punchHexagon.worldGenerateObject.transform.GetChild(i).GetComponent<CellTwo>());
+                int alt = cellTwo.currentAltitude;
+
+                bool cleanCancer;
+
+                if (CheckIfThisWillLaunchChain(cellTwo) == true)
                 {
-                    
-                    if (cellTwo._imMoving == false && cellTwo.imAtStartPos == false /*&& cellTwo.currentAltitude < startAltitude*/)
-                    {
-                        //cellToDissolve.Add(punchHexagon.worldGenerateObject.transform.GetChild(i).GetComponent<CellTwo>());
-                        int alt = cellTwo.currentAltitude;
-
-                        bool cleanCancer;
-
-                        if (CheckIfThisWillLaunchChain(cellTwo) == true)
-                        {
-                             cleanCancer = false;
-                            if (alt == 1)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolveAlt1, true, currentLvlOnChainSound, false, cleanCancer));
-                            if (alt == 2)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolveAlt2, true, currentLvlOnChainSound, false, cleanCancer));
-                            if (alt >= 3)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolveAlt3, true, currentLvlOnChainSound, false, cleanCancer));
-                        }
-                        else
-                        {
-                            cleanCancer = true;
-                            Debug.Log("NOP");
-                            if (alt == 1)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolveAlt1, true, currentLvlOnChainSound, false, cleanCancer));
-                            if (alt == 2)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolveAlt2, true, currentLvlOnChainSound, false, cleanCancer));
-                            if (alt >= 3)
-                                StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolveAlt3, true, currentLvlOnChainSound, false, cleanCancer));
-                            ChooseRandomClosestCell(GetClosestCells(center));
-                        }
-
-
-                       
-
-                        listOfCellOnStart.Add(cellTwo);
-                        
-                        ChooseAndLaunchProperty(alt, cellTwo);
-                        checkIfThisAffect = true;
-                        
-
-                        //StartCoroutine(WaitForDominoEffect(1, cellTwo.transform,alt));
-                    }
+                    cleanCancer = false;
+                    if (alt == 1)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolveAlt1, true, currentLvlOnChainSound, false, cleanCancer));
+                    if (alt == 2)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolveAlt2, true, currentLvlOnChainSound, false, cleanCancer));
+                    if (alt >= 3)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolveAlt3, true, currentLvlOnChainSound, false, cleanCancer));
                 }
-                
-                //}
+                else
+                {
+                    cleanCancer = true;
+                    Debug.Log("NOP");
+                    if (alt == 1)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolveAlt1, true, currentLvlOnChainSound, false, cleanCancer));
+                    if (alt == 2)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolveAlt2, true, currentLvlOnChainSound, false, cleanCancer));
+                    if (alt >= 3)
+                        StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolveAlt3, true, currentLvlOnChainSound, false, cleanCancer));
+                    ChooseRandomClosestCell(GetClosestCells(center));
+                }
+
+
+
+
+                listOfCellOnStart.Add(cellTwo);
+
+                ChooseAndLaunchProperty(alt, cellTwo);
+                checkIfThisAffect = true;
+
+
+                //StartCoroutine(WaitForDominoEffect(1, cellTwo.transform,alt));
             }
-          
         }
+
+        
+          
+        
         if (checkIfThisAffect == false && cancerInTheScene == true)
         {
             cancerBehavior.ResetAllCancer();
         }
     }
 
-    public void GetAreaEnableFeedbacks(int areaForce, CellTwo cellCenter)
-    {
-        Vector3 hitVector = new Vector3(cellCenter.transform.position.x, 0, cellCenter.transform.position.z);
-        for (int h = 1; h <= areaForce; h++)
-        {
-           
-
-            for (int i = 0; i < worldGenerate.transform.childCount; i++)
-            {
-                
-                CellTwo cellTwo = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                if (cellTwo != cellCenter)
-                {
-                    Vector3 targetVector = new Vector3(cellTwo.transform.position.x, 0, cellTwo.transform.position.z);
-                    float distanceFromCenterHexagon = Vector3.Distance(hitVector, targetVector);
-                    if (distanceFromCenterHexagon < 1.6f * h)
-                    {
-                        cellTwo.state = DestroyState.AdjacentCell;
-                        
-                        cellTwo.childTimeFeedback.SetActive(true);
-                    }
-                }
-                
-            }
-        }
-    }
-    public List<CellTwo> GetAllCellOnDestroyInArea(int areaForce,CellTwo center)
-    {
-        List<CellTwo> getList = new List<CellTwo>();
-        Vector3 hitVector = new Vector3(center.transform.position.x, 0, center.transform.position.z);
-        for (int h = 1; h <= areaForce; h++)
-        {
-           
-
-            for (int i = 0; i < worldGenerate.transform.childCount; i++)
-            {
-
-                CellTwo cellTwo = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                Vector3 targetVector = new Vector3(cellTwo.transform.position.x, 0, cellTwo.transform.position.z);
-                float distanceFromCenterHexagon = Vector3.Distance(hitVector, targetVector);
-                if (distanceFromCenterHexagon < 1.6f * h)
-                {
-
-                    if (cellTwo.state == DestroyState.OnDestroy || cellTwo.state == DestroyState.OnMove)
-                    {
-                        getList.Add(cellTwo);
-                    }
-
-                }
-
-            }
-        }
-        return getList;
-    }
-
-    public void GetAreaDisableFeedbacks(int areaForce, List<CellTwo> listCellTwoToDisable, bool isDisablingByPlayer)
-    {
-        for (int j = 0; j < listCellTwoToDisable.Count; j++)
-        {
-
-
-            if (isDisablingByPlayer == true)
-            {
-                listCellTwoToDisable[j].state = DestroyState.AdjacentCell;
-
-                listCellTwoToDisable[j].childTimeFeedback.SetActive(true);
-
-                if (listCellTwoToDisable[j].isGrow == true)
-                {
-                    //listCellTwoToDisable[j].ChangeScaleTimeFeedback(false);
-                    listCellTwoToDisable[j].isGrow = false;
-                }
-                
-                // reset time feedback si besoin
-            }
-
-            for (int h = 1; h <= areaForce; h++)
-            {
-                Vector3 hitVector = new Vector3(listCellTwoToDisable[j].transform.position.x, 0, listCellTwoToDisable[j].transform.position.z);
-
-                for (int i = 0; i < worldGenerate.transform.childCount; i++)
-                {
-
-                    CellTwo cellTwo = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                    Vector3 targetVector = new Vector3(cellTwo.transform.position.x, 0, cellTwo.transform.position.z);
-                    float distanceFromCenterHexagon = Vector3.Distance(hitVector, targetVector);
-                    if (distanceFromCenterHexagon < 1.6f * h)
-                    {
-
-                        cellTwo.state = DestroyState.Idle;
-                        cellTwo.childTimeFeedback.SetActive(false);
-
-                    }
-
-                }
-            }
-        }
-    }
-
-
-    bool CheckCellOnList(int index)
-    {
-        for (int i = 0; i < cellToDissolve.Count; i++)
-        {
-            if(cellToDissolve[i] == punchHexagon.worldGenerateObject.transform.GetChild(index))
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
-   
-
-
-   
 
     public List<CellTwo> GetClosestCells(CellTwo currentCell)
     {
