@@ -265,9 +265,12 @@ public class CellTwo : MonoBehaviour
             destructionBehavior.DisableAllVirus();
             destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
         }
-        if(cleanCancer == true)
+        if (destructionBehavior.cancerInTheScene == true)
         {
-            destructionBehavior.cancerBehavior.ResetAllCancer();
+            if (cleanCancer == true)
+            {
+                destructionBehavior.cancerBehavior.ResetAllCancer();
+            }
         }
 
         canLaunchVirus = false;

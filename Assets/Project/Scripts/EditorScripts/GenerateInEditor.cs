@@ -31,7 +31,9 @@ public struct MaterialFeedBackVariables
 [ExecuteInEditMode]
 public class GenerateInEditor : MonoBehaviour {
 
+    public bool isPavageScene;
     public WorldGenerate worldGenerate;
+    public Transform pavageParentToCustom;
 
     [Space(10)]
     [Header("[ Diametre de l'HexagonWorld ]")]
@@ -66,13 +68,17 @@ public class GenerateInEditor : MonoBehaviour {
         if (alreadyAWorld == false)
         {
             worldGenerate.GenerateHexagonWorld(diametreWorldHexagon, matColors);
-            worldGenerate.GetAllCellNeighbours();
+            worldGenerate.GetAllCellNeighbours(worldGenerate.transform);
             alreadyAWorld = true;
         }
         else
         {
             Debug.Log("Il y déjà un monde. Utilise le bouton Clean");
         }
+    }
+    public void AddCellTwoToPavage()
+    {
+        worldGenerate.ApplyCellTwoToPavage(pavageParentToCustom, matColors);
     }
 
    

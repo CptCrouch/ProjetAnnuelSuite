@@ -46,17 +46,35 @@ public class CustomCellsEditor : Editor {
 
     void DrawCreateCleanWorld()
     {
-        GUILayout.Space(5);
-        if (GUILayout.Button("Generate World",GUILayout.Height(30)))
+        if (m_targetedScript.isPavageScene == false)
         {
-            m_targetedScript.CreateWorld();
+            GUILayout.Space(5);
+            if (GUILayout.Button("Generate World", GUILayout.Height(30)))
+            {
+                m_targetedScript.CreateWorld();
+            }
+            GUILayout.Space(5);
+            if (GUILayout.Button("Clean World", GUILayout.Height(30)))
+            {
+                m_targetedScript.CleanWorld();
+            }
+            GUILayout.Space(5);
+            if (GUILayout.Button("Force To Get Neighbours", GUILayout.Height(30)))
+            {
+                m_targetedScript.worldGenerate.GetAllCellNeighbours(m_targetedScript.worldGenerate.transform);
+            }
+            GUILayout.Space(15);
         }
-        GUILayout.Space(5);
-        if (GUILayout.Button("Clean World", GUILayout.Height(30)))
+        else
         {
-            m_targetedScript.CleanWorld();
+            if (GUILayout.Button("Apply CellTwo To Pavage Parent", GUILayout.Height(30)))
+            {
+                m_targetedScript.AddCellTwoToPavage() ;
+            }
         }
+
         
+
     }
 
     // A chaque ligne, on va draw la liste des variables ciblées de CellType sous la forme de GUI pouvant etre modifié
@@ -165,27 +183,60 @@ public class CustomCellsEditor : Editor {
    // Ici On update toute les cellules lorsque une variable a été modifié dans la GUI
     public void UpdateAllCellTypes()
     {
-        for (int i = 0; i < m_targetedScript.worldGenerate.transform.childCount; i++)
+        #region SansPavage
+        if (m_targetedScript.isPavageScene == false)
         {
-            if (m_targetedScript.worldGenerate.transform.GetChild(i).name != "Cell")
+            for (int i = 0; i < m_targetedScript.worldGenerate.transform.childCount; i++)
             {
-                for (int j = 0; j < m_targetedScript.cellTypes.Count; j++)
+                if (m_targetedScript.worldGenerate.transform.GetChild(i).name != "Cell")
                 {
-                    if (m_targetedScript.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>().cellType.name == m_targetedScript.cellTypes[j].name)
+                    for (int j = 0; j < m_targetedScript.cellTypes.Count; j++)
                     {
-                        CellTwo cellTwoTemp = m_targetedScript.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                        CellType cellTypeTemp = m_targetedScript.cellTypes[j];
+                        if (m_targetedScript.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>().cellType.name == m_targetedScript.cellTypes[j].name)
+                        {
+                            CellTwo cellTwoTemp = m_targetedScript.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+                            CellType cellTypeTemp = m_targetedScript.cellTypes[j];
 
-                        Undo.RecordObject(cellTwoTemp, "Update Cell");
-                        //cellTwoTemp.cellType.color = cellTypeTemp.color;
-                        cellTwoTemp.cellType.isCancer = cellTypeTemp.isCancer;
-                        cellTwoTemp.cellType.speedUp = cellTypeTemp.speedUp;
-                        cellTwoTemp.cellType.diffWithBasePosY = cellTypeTemp.diffWithBasePosY;
-                        cellTwoTemp.cellType.feedBackOnEmission = cellTypeTemp.feedBackOnEmission;
-                        cellTwoTemp.cellType.feedBackOnMaterial = cellTypeTemp.feedBackOnMaterial;
-                        cellTwoTemp.UpdateCellType();
-                        EditorUtility.SetDirty(cellTwoTemp);
+                            Undo.RecordObject(cellTwoTemp, "Update Cell");
+                            //cellTwoTemp.cellType.color = cellTypeTemp.color;
+                            cellTwoTemp.cellType.isCancer = cellTypeTemp.isCancer;
+                            cellTwoTemp.cellType.speedUp = cellTypeTemp.speedUp;
+                            cellTwoTemp.cellType.diffWithBasePosY = cellTypeTemp.diffWithBasePosY;
+                            cellTwoTemp.cellType.feedBackOnEmission = cellTypeTemp.feedBackOnEmission;
+                            cellTwoTemp.cellType.feedBackOnMaterial = cellTypeTemp.feedBackOnMaterial;
+                            cellTwoTemp.UpdateCellType();
+                            EditorUtility.SetDirty(cellTwoTemp);
 
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
+        else
+        {
+            for (int i = 0; i < m_targetedScript.pavageParentToCustom.childCount; i++)
+            {
+                if (m_targetedScript.pavageParentToCustom.GetChild(i).name != "Cell")
+                {
+                    for (int j = 0; j < m_targetedScript.cellTypes.Count; j++)
+                    {
+                        if (m_targetedScript.pavageParentToCustom.GetChild(i).GetComponent<CellTwo>().cellType.name == m_targetedScript.cellTypes[j].name)
+                        {
+                            CellTwo cellTwoTemp = m_targetedScript.pavageParentToCustom.GetChild(i).GetComponent<CellTwo>();
+                            CellType cellTypeTemp = m_targetedScript.cellTypes[j];
+
+                            Undo.RecordObject(cellTwoTemp, "Update Cell");
+                            //cellTwoTemp.cellType.color = cellTypeTemp.color;
+                            cellTwoTemp.cellType.isCancer = cellTypeTemp.isCancer;
+                            cellTwoTemp.cellType.speedUp = cellTypeTemp.speedUp;
+                            cellTwoTemp.cellType.diffWithBasePosY = cellTypeTemp.diffWithBasePosY;
+                            cellTwoTemp.cellType.feedBackOnEmission = cellTypeTemp.feedBackOnEmission;
+                            cellTwoTemp.cellType.feedBackOnMaterial = cellTypeTemp.feedBackOnMaterial;
+                            cellTwoTemp.UpdateCellType();
+                            EditorUtility.SetDirty(cellTwoTemp);
+
+                        }
                     }
                 }
             }

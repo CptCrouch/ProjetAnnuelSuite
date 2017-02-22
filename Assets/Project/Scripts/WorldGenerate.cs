@@ -100,6 +100,22 @@ public class WorldGenerate : MonoBehaviour {
             
         
     }*/
+    public void ApplyCellTwoToPavage(Transform pavageParent, MaterialFeedBackVariables matFeedBacks)
+    {
+        for (int i = 0; i < pavageParent.childCount; i++)
+        {
+            GameObject temp = pavageParent.GetChild(i).gameObject;
+            temp.name = "Cell";
+            CellTwo cell = temp.AddComponent<CellTwo>();
+            cell.startPosYbyWorldGenerate = temp.transform.position.y;
+            //cell.startScaleY = height;
+
+            //temp.GetComponent<MeshRenderer>().sharedMaterial.color = matFeedBacks.startCellColor;
+            //newObject.GetComponent<MeshRenderer>().material.SetVector("_ObjectPosition", new Vector3(transform.position.x, 1, transform.position.z));
+
+            cell.variables = matFeedBacks;
+        }
+    }
 
     public void GenerateHexagonWorld(int diametre, MaterialFeedBackVariables matFeedBacks)
     {
@@ -123,8 +139,8 @@ public class WorldGenerate : MonoBehaviour {
                     newObject.transform.SetParent(transform);
                     newObject.SetActive(true);
                     newObject.name = "Cell";
-                    newObject.AddComponent<CellTwo>();
-                    CellTwo cell = newObject.GetComponent<CellTwo>();
+                    
+                    CellTwo cell = newObject.AddComponent<CellTwo>();
                     cell.startPosYbyWorldGenerate = /*-height*/ (tailleYBigHexagon * 50) / 2;
                     //cell.startScaleY = height;
 
@@ -157,8 +173,8 @@ public class WorldGenerate : MonoBehaviour {
                     newObject.transform.SetParent(transform);
                     newObject.SetActive(true);
                     newObject.name = "Cell";
-                    newObject.AddComponent<CellTwo>();
-                    CellTwo cell = newObject.GetComponent<CellTwo>();
+                    
+                    CellTwo cell = newObject.AddComponent<CellTwo>();
                     cell.startPosYbyWorldGenerate = /*-height*/ (tailleYBigHexagon * 50) / 2;
                     //cell.startScaleY = height;
 
@@ -197,16 +213,16 @@ public class WorldGenerate : MonoBehaviour {
         newObject.transform.localScale = new Vector3(newObject.transform.localScale.x, height+100, newObject.transform.localScale.z);
         newObject.SetActive(true);
     }
-    public void GetAllCellNeighbours()
+    public void GetAllCellNeighbours(Transform transformTarget)
     {
-       for (int i = 0; i < transform.childCount; i++)
+       for (int i = 0; i < transformTarget.childCount; i++)
         {
-            CellTwo cellTwoCenter = transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cellTwoCenter = transformTarget.GetChild(i).GetComponent<CellTwo>();
             Vector3 centerVector = new Vector3(cellTwoCenter.transform.position.x, 0, cellTwoCenter.transform.position.z);
             
-            for (int j = 0; j < transform.childCount; j++)
+            for (int j = 0; j < transformTarget.childCount; j++)
             {
-                CellTwo cellTwoAdjacent = transform.GetChild(j).GetComponent<CellTwo>();
+                CellTwo cellTwoAdjacent = transformTarget.GetChild(j).GetComponent<CellTwo>();
                 Vector3 targetVector = new Vector3(cellTwoAdjacent.transform.position.x, 0, cellTwoAdjacent.transform.position.z);
                 float distanceFromCenterHexagon = Vector3.Distance(centerVector, targetVector);
                 

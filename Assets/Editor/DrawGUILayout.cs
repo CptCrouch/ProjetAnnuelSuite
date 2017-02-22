@@ -298,29 +298,60 @@ public class DrawGUILayout : Editor {
     }
     public static void ApplyNewCellTypeToAll(int indexCellTypes)
     {
-        for (int i = 0; i < generateInEditor.worldGenerate.transform.childCount; i++)
+        if (generateInEditor.isPavageScene == false)
         {
-            if (generateInEditor.worldGenerate.transform.GetChild(i).tag == "Cell")
+            for (int i = 0; i < generateInEditor.worldGenerate.transform.childCount; i++)
             {
-                CellTwo cellTwo = generateInEditor.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-                Undo.RecordObject(cellTwo, "Update Cell");
+                if (generateInEditor.worldGenerate.transform.GetChild(i).tag == "Cell")
+                {
+                    CellTwo cellTwo = generateInEditor.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+                    Undo.RecordObject(cellTwo, "Update Cell");
 
-                cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
-                cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
-                //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
-                //cellTwo.cellType.speedUp = generateInEditor.cellTypes[indexCellTypes].speedUp;
-                cellTwo.cellType.diffWithBasePosY = generateInEditor.cellTypes[indexCellTypes].diffWithBasePosY;
-                cellTwo.GetComponent<MeshRenderer>().material = generateInEditor.cellTypes[indexCellTypes].mat;
-                cellTwo.cellType.matAlt1 = generateInEditor.cellTypes[indexCellTypes].matAlt1;
-                cellTwo.cellType.matAlt2 = generateInEditor.cellTypes[indexCellTypes].matAlt2;
-                cellTwo.cellType.matAlt3 = generateInEditor.cellTypes[indexCellTypes].matAlt3;
-                cellTwo.cellType.feedBackOnEmission = generateInEditor.cellTypes[indexCellTypes].feedBackOnEmission;
-                cellTwo.cellType.feedBackOnMaterial = generateInEditor.cellTypes[indexCellTypes].feedBackOnMaterial;
-                cellTwo.cellType.imAppliedToCell = true;
+                    cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
+                    cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
+                    //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
+                    //cellTwo.cellType.speedUp = generateInEditor.cellTypes[indexCellTypes].speedUp;
+                    cellTwo.cellType.diffWithBasePosY = generateInEditor.cellTypes[indexCellTypes].diffWithBasePosY;
+                    cellTwo.GetComponent<MeshRenderer>().material = generateInEditor.cellTypes[indexCellTypes].mat;
+                    cellTwo.cellType.matAlt1 = generateInEditor.cellTypes[indexCellTypes].matAlt1;
+                    cellTwo.cellType.matAlt2 = generateInEditor.cellTypes[indexCellTypes].matAlt2;
+                    cellTwo.cellType.matAlt3 = generateInEditor.cellTypes[indexCellTypes].matAlt3;
+                    cellTwo.cellType.feedBackOnEmission = generateInEditor.cellTypes[indexCellTypes].feedBackOnEmission;
+                    cellTwo.cellType.feedBackOnMaterial = generateInEditor.cellTypes[indexCellTypes].feedBackOnMaterial;
+                    cellTwo.cellType.imAppliedToCell = true;
 
 
-                cellTwo.UpdateCellType();
-                EditorUtility.SetDirty(cellTwo);
+                    cellTwo.UpdateCellType();
+                    EditorUtility.SetDirty(cellTwo);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < generateInEditor.pavageParentToCustom.childCount; i++)
+            {
+                if (generateInEditor.pavageParentToCustom.GetChild(i).tag == "Cell")
+                {
+                    CellTwo cellTwo = generateInEditor.pavageParentToCustom.GetChild(i).GetComponent<CellTwo>();
+                    Undo.RecordObject(cellTwo, "Update Cell");
+
+                    cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
+                    cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
+                    //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
+                    //cellTwo.cellType.speedUp = generateInEditor.cellTypes[indexCellTypes].speedUp;
+                    cellTwo.cellType.diffWithBasePosY = generateInEditor.cellTypes[indexCellTypes].diffWithBasePosY;
+                    cellTwo.GetComponent<MeshRenderer>().material = generateInEditor.cellTypes[indexCellTypes].mat;
+                    cellTwo.cellType.matAlt1 = generateInEditor.cellTypes[indexCellTypes].matAlt1;
+                    cellTwo.cellType.matAlt2 = generateInEditor.cellTypes[indexCellTypes].matAlt2;
+                    cellTwo.cellType.matAlt3 = generateInEditor.cellTypes[indexCellTypes].matAlt3;
+                    cellTwo.cellType.feedBackOnEmission = generateInEditor.cellTypes[indexCellTypes].feedBackOnEmission;
+                    cellTwo.cellType.feedBackOnMaterial = generateInEditor.cellTypes[indexCellTypes].feedBackOnMaterial;
+                    cellTwo.cellType.imAppliedToCell = true;
+
+
+                    cellTwo.UpdateCellType();
+                    EditorUtility.SetDirty(cellTwo);
+                }
             }
         }
     }

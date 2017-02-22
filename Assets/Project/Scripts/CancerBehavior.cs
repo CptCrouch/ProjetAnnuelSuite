@@ -17,6 +17,8 @@ public class CancerBehavior : MonoBehaviour {
 
     public GameObject dissolveCancer;
     public float timeToWaitForRespawn = 0.5f;
+
+    private Transform cellParentUsed;
     
 
 
@@ -24,6 +26,15 @@ public class CancerBehavior : MonoBehaviour {
     void Start () {
         destructionBehav = FindObjectOfType<DestructionBehavior>();
         worldGenerate = FindObjectOfType<WorldGenerate>();
+
+        if (generateInEditor.isPavageScene == false)
+        {
+            cellParentUsed = worldGenerate.transform;
+        }
+        else
+        {
+            cellParentUsed = generateInEditor.pavageParentToCustom;
+        }
 
         // VERSION CRADE A MODIFIER
         for (int i = 0; i < generateInEditor.cellTypes.Count; i++)
@@ -118,9 +129,9 @@ public class CancerBehavior : MonoBehaviour {
     } 
     public void ResetAllCancer()
     {
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cellParentUsed.childCount; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
             if (cell.cellType.onWaitForCancer == true)
             {
                 ResetCellCancer(cell);

@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public enum DestroyState { Idle, OnDestroy, OnMove, AdjacentCell}
 
 public class DestructionBehavior : MonoBehaviour {
-    WorldGenerate worldGenerate; 
+    WorldGenerate worldGenerate;
+    GenerateInEditor generateInEditor;
     PunchHexagon punchHexagon;
 
     [HideInInspector]
@@ -49,10 +50,12 @@ public class DestructionBehavior : MonoBehaviour {
     [HideInInspector]
     public int currentLvlOnChainSound =0 ;
 
-    [HideInInspector]
+    
     public bool cancerInTheScene;
     //[HideInInspector]
     //public bool cancerInTheScene;
+
+    private Transform cellParentUsed;
 
 
 
@@ -63,16 +66,31 @@ public class DestructionBehavior : MonoBehaviour {
         worldGenerate = FindObjectOfType<WorldGenerate>();
         punchHexagon = FindObjectOfType<PunchHexagon>();
         cancerBehavior = FindObjectOfType<CancerBehavior>();
-        if(cancerBehavior != null)
+        generateInEditor = FindObjectOfType<GenerateInEditor>();
+
+         if(generateInEditor.isPavageScene == false)
         {
-            cancerInTheScene = true;
+            cellParentUsed = worldGenerate.transform;
         }
-  
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+         else
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
-            if (cell.cellType.isCancer == false)
-            listOfCellOnStart.Add(cell);
+            cellParentUsed = generateInEditor.pavageParentToCustom;
+        }
+
+       
+  
+        for (int i = 0; i < cellParentUsed.childCount; i++)
+        {
+            CellTwo cell = cellParentUsed.GetComponent<CellTwo>();
+            if (cancerInTheScene == true)
+            {
+                if (cell.cellType.isCancer == false)
+                    listOfCellOnStart.Add(cell);
+            }
+            else
+            {
+                listOfCellOnStart.Add(cell);
+            }
         }
         
         
@@ -80,17 +98,17 @@ public class DestructionBehavior : MonoBehaviour {
 
     public void DisableAllVirus()
     {
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cellParentUsed.childCount; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
             cell.canLaunchVirus = false;
         }
     }
     public void DisableAllCellDestruction()
     {
-        for(int i = 0; i < worldGenerate.transform.childCount; i++)
+        for(int i = 0; i < cellParentUsed.childCount; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
             cell.DisableCell();
         }
     }
@@ -99,9 +117,9 @@ public class DestructionBehavior : MonoBehaviour {
     {
         float speed;
         int numOfCellUp = 0;
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cellParentUsed.childCount; i++)
         {
-            if(worldGenerate.transform.GetChild(i).GetComponent<CellTwo>().imAtStartPos == false)
+            if(cellParentUsed.GetChild(i).GetComponent<CellTwo>().imAtStartPos == false)
             {
                 numOfCellUp++;
             }
@@ -364,9 +382,9 @@ public class DestructionBehavior : MonoBehaviour {
         float closestDistance = Mathf.Infinity;
         Transform closestPosition = null;
         Vector3 hitVector = new Vector3(currentCell.transform.position.x, 0, currentCell.transform.position.z);
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cellParentUsed.childCount; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
            if(cell.imAtStartPos == false && cell != currentCell )
             {
                 Vector3 targetVector = new Vector3(cell.transform.position.x, 0, cell.transform.position.z);
@@ -380,9 +398,9 @@ public class DestructionBehavior : MonoBehaviour {
         }
 
         List<CellTwo> newList = new List<CellTwo>();
-        for (int i = 0; i < worldGenerate.transform.childCount; i++)
+        for (int i = 0; i < cellParentUsed.childCount; i++)
         {
-            CellTwo cell = worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
+            CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
             if (cell.imAtStartPos == false)
             {
                 if (cell.transform.position == closestPosition.position && cell.state != DestroyState.OnDestroy)
