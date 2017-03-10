@@ -59,6 +59,8 @@ public class CancerBehavior : MonoBehaviour {
 	public IEnumerator DestroyCellWithCancer(CellTwo cell)
     {
         Vector3 firstPos = cell.transform.position;
+        Quaternion firstRot = cell.transform.rotation;
+        Vector3 firstScale = cell.transform.localScale;
 
         if (CheckGroupClean(cell) == true)
         {
@@ -69,7 +71,8 @@ public class CancerBehavior : MonoBehaviour {
             UpdateForcingMaterial(cell, cellTypeOnWait);
         }
 
-        GameObject feedBackDissolve = Instantiate(dissolveCancer, firstPos, Quaternion.identity) as GameObject;
+        GameObject feedBackDissolve = cell.CreateFeedBackExplosion(firstPos,firstRot,firstScale,dissolveCancer);
+
         Renderer mat = feedBackDissolve.GetComponent<Renderer>();
         mat.material.SetFloat("_Didi", 1);
         mat.material.SetVector("_ObjectPosition", new Vector4(transform.position.x, 1, transform.position.z, 1));

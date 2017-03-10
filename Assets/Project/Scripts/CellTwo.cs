@@ -218,6 +218,9 @@ public class CellTwo : MonoBehaviour
     public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve,bool launchPassive, int chainParameter,bool launchByVirus,bool cleanCancer)
     {
         Vector3 firstPos = transform.position;
+        Quaternion firstRot = transform.rotation;
+        Vector3 firstScale = transform.localScale;
+        Color firstColor = GetComponent<Renderer>().material.color;
 
         if(destructionBehavior.cancerInTheScene == true)
         {
@@ -247,10 +250,13 @@ public class CellTwo : MonoBehaviour
         transform.position = new Vector3(transform.position.x, startPosYbyWorldGenerate + cellType.diffWithBasePosY, transform.position.z);
 
         imAtStartPos = true;
-        GameObject feedBackDissolve = Instantiate(prefabDissolve, firstPos,Quaternion.identity) as GameObject;
+        GameObject feedBackDissolve = CreateFeedBackExplosion(firstPos, firstRot, firstScale, prefabDissolve);
+
+
         Renderer mat = feedBackDissolve.GetComponent<Renderer>();
         mat.material.SetFloat("_Didi", 1);
         mat.material.SetVector("_ObjectPosition", new Vector4(transform.position.x, 1, transform.position.z,1));
+        mat.material.SetColor("_MainColor", firstColor);
         //Debug.Log(mat.sharedMaterial.GetFloat("_Didi"));
         while (mat.material.GetFloat("_Didi") >=0.5f)
         {
@@ -262,8 +268,8 @@ public class CellTwo : MonoBehaviour
 
         if (launchPassive == true && canLaunchVirus == true)
         {
-            destructionBehavior.DisableAllVirus();
-            destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
+            //destructionBehavior.DisableAllVirus();
+            //destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
         }
         if (destructionBehavior.cancerInTheScene == true)
         {
@@ -295,6 +301,7 @@ public class CellTwo : MonoBehaviour
             destructionBehavior.LaunchCellDestruction(this,false);
             destructionBehavior.DisableAllVirus();
             destructionBehavior.DisableAllCellDestruction();
+            Debug.Log("pouet");
         }
         else
         {
@@ -329,14 +336,26 @@ public class CellTwo : MonoBehaviour
 
             _imMoving = true;
 
-
-            while (transform.position.y <= firstPos.y + (strength * direction.y))
+            //if (destructionBehavior.generateInEditor.isPavageScene == false)
+            //{
+                while (transform.position.y <= firstPos.y + (strength * direction.y))
+                {
+                    transform.Translate(direction * Time.deltaTime * speed);
+                    yield return null;
+                }
+                transform.position = new Vector3(transform.position.x, firstPos.y + (strength * direction.y), transform.position.z);
+            //}
+            /*else
             {
-                transform.Translate(direction * Time.deltaTime * speed);
-                yield return null;
-            }
+                while (transform.position.y <= firstPos.y + (strength ))
+                {
+                    transform.Translate(direction * Time.deltaTime * speed);
+                    yield return null;
+                }
 
-            transform.position = new Vector3(transform.position.x, firstPos.y + (strength * direction.y), transform.position.z);
+                //transform.position = new Vector3(transform.position.x, transform.position.y, firstPos.z + (strength * direction.z));
+                //transform.position = new Vector3(transform.position.x, firstPos.y + (strength * direction.y), transform.position.z);
+            }*/
 
             _imMoving = false;
 
@@ -367,6 +386,17 @@ public class CellTwo : MonoBehaviour
 
     }
 
+
+    public GameObject CreateFeedBackExplosion(Vector3 position, Quaternion rotation, Vector3 scale, GameObject basePrefab)
+    {
+        GameObject instantiate = Instantiate(basePrefab, position, rotation) as GameObject;
+        instantiate.transform.localScale = scale*destructionBehavior.cellParentUsed.localScale.x;
+        instantiate.GetComponent<MeshFilter>().mesh = GetComponent<MeshFilter>().mesh;
+
+
+
+        return instantiate;
+    }
     #endregion
 
 

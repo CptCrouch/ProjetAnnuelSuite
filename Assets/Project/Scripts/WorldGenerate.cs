@@ -102,10 +102,17 @@ public class WorldGenerate : MonoBehaviour {
     }*/
     public void ApplyCellTwoToPavage(Transform pavageParent, MaterialFeedBackVariables matFeedBacks)
     {
+        pavageParent.tag = "WorldGenerate";
         for (int i = 0; i < pavageParent.childCount; i++)
         {
             GameObject temp = pavageParent.GetChild(i).gameObject;
             temp.name = "Cell";
+            temp.tag = "Cell";
+            temp.layer = 8;
+            temp.AddComponent<MeshCollider>();
+            Rigidbody rb = temp.AddComponent<Rigidbody>();
+            rb.isKinematic = true;
+            rb.useGravity = false;
             CellTwo cell = temp.AddComponent<CellTwo>();
             cell.startPosYbyWorldGenerate = temp.transform.position.y;
             //cell.startScaleY = height;

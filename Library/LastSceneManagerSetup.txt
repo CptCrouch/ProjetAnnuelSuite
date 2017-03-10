@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Project/Scenes/Menu3D.unity
+- path: Assets/Project/Scenes/MenuScene/NewMecaHexa.unity
   isLoaded: 1
   isActive: 1

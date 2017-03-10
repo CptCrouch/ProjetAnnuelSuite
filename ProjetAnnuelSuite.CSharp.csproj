@@ -86,6 +86,7 @@
     <Compile Include="Assets\Project\Scripts\DestructionBehavior.cs" />
     <Compile Include="Assets\Project\Scripts\EditorScripts\CellType.cs" />
     <Compile Include="Assets\Project\Scripts\EditorScripts\GenerateInEditor.cs" />
+    <Compile Include="Assets\Project\Scripts\GetNeighbours.cs" />
     <Compile Include="Assets\Project\Scripts\LoadingScene\LoadTargetSceneButton.cs" />
     <Compile Include="Assets\Project\Scripts\LoadingScene\LoadingScreenManager.cs" />
     <Compile Include="Assets\Project\Scripts\MoveOnPlane.cs" />
@@ -95,6 +96,8 @@
     <Compile Include="Assets\Project\Scripts\SoundScripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Project\Scripts\SoundScripts\SoundManager.cs" />
     <Compile Include="Assets\Project\Scripts\SoundScripts\SoundOnMenu.cs" />
+    <Compile Include="Assets\Project\Scripts\Triangle.cs" />
+    <Compile Include="Assets\Project\Scripts\TriangleGenerate.cs" />
     <Compile Include="Assets\Project\Scripts\WorldGenerate.cs" />
   </ItemGroup>
   <ItemGroup>

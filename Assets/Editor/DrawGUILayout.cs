@@ -51,6 +51,7 @@ public class DrawGUILayout : Editor {
             SceneView.RepaintAll();
             DrawCancerGUIButtons(_sceneView);
             
+
             /*for (int i = 0; i < generateInEditor.cancerGroups.Count; i++)
             {
                 for (int j = 0; j < generateInEditor.cancerGroups[i].Length; j++)
