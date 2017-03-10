@@ -154,7 +154,14 @@ public class DestructionBehavior : MonoBehaviour {
         int alt = cell.currentAltitude;
         if (alt == 1)
         {
-            StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, launchByVirus,true));
+            if (CheckIfThisWillLaunchChain(cell) == true)
+            {
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, false, currentLvlOnChainSound, launchByVirus, false));
+            }
+            else
+            {
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, launchByVirus, true));
+            }
         }
         if (alt == 2)
         {
@@ -193,9 +200,10 @@ public class DestructionBehavior : MonoBehaviour {
     {
         if(altitude ==1)
         {
-            if(alt1WithRepop == true)
-            UpOneCellRandom(target);
-           
+            //if(alt1WithRepop == true)
+            //UpOneCellRandom(target);
+            StartCoroutine(WaitForDominosEffect(target, nombreChaineDestruction));
+
         }
         else if(altitude == 2)
         {      
@@ -238,7 +246,7 @@ public class DestructionBehavior : MonoBehaviour {
             }
            if(listCloseCell.Count == 1)
             {
-                if (listCloseCell[0].currentAltitude == 1 || listCloseCell[0].currentAltitude == 3)
+                if ( listCloseCell[0].currentAltitude == 3)
                     ChooseAndLaunchProperty(listCloseCell[0].currentAltitude, listCloseCell[0]);
                 else
                 {
@@ -279,6 +287,7 @@ public class DestructionBehavior : MonoBehaviour {
                 if (cancerInTheScene == true)
                 {
                     cancerBehavior.ResetAllCancer();
+                    Debug.Log("pouet");
                 }
 
 
@@ -418,6 +427,8 @@ public class DestructionBehavior : MonoBehaviour {
             //GetAreaEnableFeedbacks(1, list[random]);
         }
     }
+
+    
 
 }
            

@@ -61,15 +61,18 @@ public class CustomCellsEditor : Editor {
             GUILayout.Space(5);
             if (GUILayout.Button("Force To Get Neighbours", GUILayout.Height(30)))
             {
+                m_targetedScript.worldGenerate.CleanNeighbours(m_targetedScript.worldGenerate.transform);
                 m_targetedScript.worldGenerate.GetAllCellNeighbours(m_targetedScript.worldGenerate.transform);
+                m_targetedScript.worldGenerate.GetFarNeighboursHexagon(m_targetedScript.worldGenerate.transform);
             }
+           
             GUILayout.Space(15);
         }
         else
         {
             if (GUILayout.Button("Apply CellTwo To Pavage Parent", GUILayout.Height(30)))
             {
-                m_targetedScript.AddCellTwoToPavage() ;
+                m_targetedScript.AddCellTwoToPavage();
             }
         }
 

@@ -240,8 +240,57 @@ public class WorldGenerate : MonoBehaviour {
                 }
             }
         }
+        for (int i = 0; i < transformTarget.childCount; i++)
+        {
+
+        }
         
 
+    }
+
+    public void GetFarNeighboursHexagon(Transform transformTarget)
+    {
+        for (int i = 0; i < transformTarget.childCount; i++)
+        {
+            CellTwo targetTemp = transformTarget.GetChild(i).GetComponent<CellTwo>();
+            List<CellTwo> listTemp = targetTemp.neighbours;
+            for (int j = 0; j < listTemp.Count; j++)
+            {
+                List<CellTwo> listSecondCell;
+                // si on est a la première cellule on prend la dernière de la liste comme comparaison
+                if (j == 0)
+                {
+                     listSecondCell = listTemp[listTemp.Count - 1].neighbours;
+                }
+                else
+                {
+                    listSecondCell = listTemp[j - 1].neighbours;
+                }
+
+                // première cellule
+                for (int k = 0; k < listTemp[j].neighbours.Count; k++)
+                {
+                    // cell comparaison
+                    for (int l = 0; l < listSecondCell.Count; l++)
+                    {
+                        if(listTemp[j].neighbours[k] == listSecondCell[l] && listSecondCell[l] != targetTemp && listTemp[j].neighbours[k] != targetTemp)
+                        {
+                            targetTemp.cornerNeighbours.Add(listTemp[j].neighbours[k]);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    public void CleanNeighbours(Transform transformTarget)
+    {
+        for (int i = 0; i < transformTarget.childCount; i++)
+        {
+            CellTwo temp = transformTarget.GetChild(i).GetComponent<CellTwo>();
+            temp.neighbours.Clear();
+            temp.cornerNeighbours.Clear();
+        }
     }
 	
 	

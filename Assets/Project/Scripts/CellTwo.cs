@@ -62,6 +62,7 @@ public class CellTwo : MonoBehaviour
     
     
     public List<CellTwo> neighbours = new List<CellTwo>();
+    public List<CellTwo> cornerNeighbours = new List<CellTwo>();
 
 
 
@@ -268,8 +269,8 @@ public class CellTwo : MonoBehaviour
 
         if (launchPassive == true && canLaunchVirus == true)
         {
-            //destructionBehavior.DisableAllVirus();
-            //destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
+            destructionBehavior.DisableAllVirus();
+            destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
         }
         if (destructionBehavior.cancerInTheScene == true)
         {
