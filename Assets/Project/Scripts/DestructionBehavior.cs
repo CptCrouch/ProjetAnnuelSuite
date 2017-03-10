@@ -187,9 +187,6 @@ public class DestructionBehavior : MonoBehaviour {
         }
 
 
-        List<CellTwo> cellListTemp = new List<CellTwo>();
-        cellListTemp.Add(cell);
-        //GetAreaDisableFeedbacks(1, cellListTemp, false);
         listOfCellOnStart.Add(cell);
         ChooseAndLaunchProperty(alt, cell);
     }
@@ -202,12 +199,12 @@ public class DestructionBehavior : MonoBehaviour {
         {
             //if(alt1WithRepop == true)
             //UpOneCellRandom(target);
-            StartCoroutine(WaitForDominosEffect(target, nombreChaineDestruction));
+            StartCoroutine(WaitForDominosEffect(target, nombreChaineDestruction,altitude));
 
         }
         else if(altitude == 2)
         {      
-            StartCoroutine(WaitForDominosEffect(target, nombreChaineDestruction));
+            StartCoroutine(WaitForDominosEffect(target, nombreChaineDestruction,altitude));
         }
         else if(altitude >= 3)
         {
@@ -232,18 +229,36 @@ public class DestructionBehavior : MonoBehaviour {
         }
     }
 
-    public void LaunchChainDestruction(CellTwo center, int currentIndex)
+    public void LaunchChainDestruction(CellTwo center, int currentIndex, int startAltitude)
     {
         if (currentIndex > 0)
         {
+
+            // On récupère tout les cellules voisine et check si elles sont élevées ou non
             List<CellTwo> listCloseCell = new List<CellTwo>();
-            for (int i = 0; i < center.neighbours.Count; i++)
+
+            if (startAltitude == 1)
             {
-                if(center.neighbours[i]._imMoving == false && center.neighbours[i].imAtStartPos == false)
+                for (int i = 0; i < center.neighbours.Count; i++)
                 {
-                    listCloseCell.Add(center.neighbours[i]);
+                    if (center.neighbours[i]._imMoving == false && center.neighbours[i].imAtStartPos == false)
+                    {
+                        listCloseCell.Add(center.neighbours[i]);
+                    }
                 }
             }
+            else
+            {
+                for (int i = 0; i < center.cornerNeighbours.Count; i++)
+                {
+                    if (center.cornerNeighbours[i]._imMoving == false && center.cornerNeighbours[i].imAtStartPos == false)
+                    {
+                        listCloseCell.Add(center.cornerNeighbours[i]);
+                    }
+                }
+            }
+
+
            if(listCloseCell.Count == 1)
             {
                 if ( listCloseCell[0].currentAltitude == 3)
@@ -253,11 +268,12 @@ public class DestructionBehavior : MonoBehaviour {
                     currentIndex = nombreChaineDestruction;
                 }
                 bool cleanCancer = false;
+                int altBeforeReset = listCloseCell[0].currentAltitude;
                 StartCoroutine(listCloseCell[0].ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, false, currentLvlOnChainSound, false, cleanCancer));
                 
 
                 listOfCellOnStart.Add(listCloseCell[0]);
-                StartCoroutine(WaitForDominosEffect(listCloseCell[0], currentIndex - 1));
+                StartCoroutine(WaitForDominosEffect(listCloseCell[0], currentIndex - 1,altBeforeReset));
             }
             /*if(listCloseCell.Count > 0)
             {
@@ -313,10 +329,10 @@ public class DestructionBehavior : MonoBehaviour {
         yield return new WaitForSeconds(timeToWaitForDominoEffect);
         GetAreaOfCellAndLaunchReturn(center,startAltitude);
     }
-    IEnumerator WaitForDominosEffect( CellTwo center, int currentIndex)
+    IEnumerator WaitForDominosEffect( CellTwo center, int currentIndex, int startAltitude)
     {
         yield return new WaitForSeconds(timeToWaitForDominoEffect);
-        LaunchChainDestruction(center, currentIndex);
+        LaunchChainDestruction(center, currentIndex, startAltitude);
         Debug.Log(currentLvlOnChainSound);
         if(currentLvlOnChainSound < 30)
         currentLvlOnChainSound++;

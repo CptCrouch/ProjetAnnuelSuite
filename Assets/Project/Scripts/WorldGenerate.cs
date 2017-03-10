@@ -238,19 +238,20 @@ public class WorldGenerate : MonoBehaviour {
                     cellTwoCenter.neighbours.Add(cellTwoAdjacent);
                     
                 }
+                else if(distanceFromCenterHexagon < 3f && cellTwoAdjacent != cellTwoCenter)
+                {
+                    cellTwoCenter.cornerNeighbours.Add(cellTwoAdjacent);
+                }
             }
         }
-        for (int i = 0; i < transformTarget.childCount; i++)
-        {
-
-        }
+        
         
 
     }
 
     public void GetFarNeighboursHexagon(Transform transformTarget)
     {
-        for (int i = 0; i < transformTarget.childCount; i++)
+        /*for (int i = 0; i < transformTarget.childCount; i++)
         {
             CellTwo targetTemp = transformTarget.GetChild(i).GetComponent<CellTwo>();
             List<CellTwo> listTemp = targetTemp.neighbours;
@@ -281,7 +282,9 @@ public class WorldGenerate : MonoBehaviour {
                     }
                 }
             }
-        }
+        }*/
+        
+
     }
     public void CleanNeighbours(Transform transformTarget)
     {

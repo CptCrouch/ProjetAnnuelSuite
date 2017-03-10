@@ -225,7 +225,7 @@ public class CellTwo : MonoBehaviour
 
         if(destructionBehavior.cancerInTheScene == true)
         {
-            destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this);
+            destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this,currentAltitude);
         }
 
         if (launchByVirus == false)

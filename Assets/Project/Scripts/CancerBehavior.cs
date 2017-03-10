@@ -114,13 +114,26 @@ public class CancerBehavior : MonoBehaviour {
         }
     }
 
-    public void DestroyAllCellCancerClose(CellTwo center)
+    public void DestroyAllCellCancerClose(CellTwo center, int altitude)
     {
-        for (int i = 0; i < center.neighbours.Count; i++)
+        if (altitude == 1)
         {
-            if (center.neighbours[i].cellType.isCancer == true && center.neighbours[i].cellType.onWaitForCancer == false)
+            for (int i = 0; i < center.neighbours.Count; i++)
             {
-                StartCoroutine(DestroyCellWithCancer(center.neighbours[i]));
+                if (center.neighbours[i].cellType.isCancer == true && center.neighbours[i].cellType.onWaitForCancer == false)
+                {
+                    StartCoroutine(DestroyCellWithCancer(center.neighbours[i]));
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < center.cornerNeighbours.Count; i++)
+            {
+                if (center.cornerNeighbours[i].cellType.isCancer == true && center.cornerNeighbours[i].cellType.onWaitForCancer == false)
+                {
+                    StartCoroutine(DestroyCellWithCancer(center.cornerNeighbours[i]));
+                }
             }
         }
     }
