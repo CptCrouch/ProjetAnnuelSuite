@@ -159,6 +159,14 @@ public class PunchHexagon : MonoBehaviour {
                         
                     }
                 }
+                else if(Input.GetMouseButtonDown(1))
+                {
+                    CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
+                    if(cellHit.imAtStartPos == false && cellHit._imMoving == false && cellHit.cellType.isCancer == false)
+                    {
+                        cellHit.OnlyDestroyCell();
+                    }
+                }
                 
                 #endregion
 

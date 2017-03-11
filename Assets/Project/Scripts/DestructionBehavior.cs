@@ -275,30 +275,10 @@ public class DestructionBehavior : MonoBehaviour {
                 listOfCellOnStart.Add(listCloseCell[0]);
                 StartCoroutine(WaitForDominosEffect(listCloseCell[0], currentIndex - 1,altBeforeReset));
             }
-            /*if(listCloseCell.Count > 0)
-            {
-                int random = Random.Range(0, listCloseCell.Count - 1);
-                if(listCloseCell[random].currentAltitude ==1 || listCloseCell[random].currentAltitude == 3)
-                ChooseAndLaunchProperty(listCloseCell[random].currentAltitude, listCloseCell[random]);
-                else
-                {
-                    currentIndex = nombreChaineDestruction;
-                }
-                bool cleanCancer = false;
-
-                if (listCloseCell[random].currentAltitude == 1)
-                    StartCoroutine(listCloseCell[random].ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolveAlt1, false, currentLvlOnChainSound,false,cleanCancer));
-                if (listCloseCell[random].currentAltitude == 2)
-                    StartCoroutine(listCloseCell[random].ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolveAlt2, false, currentLvlOnChainSound,false,cleanCancer));
-                if (listCloseCell[random].currentAltitude >= 3)
-                    StartCoroutine(listCloseCell[random].ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolveAlt3, false, currentLvlOnChainSound,false,cleanCancer));
-
-                listOfCellOnStart.Add(listCloseCell[random]);
-                StartCoroutine(WaitForDominosEffect(listCloseCell[random], currentIndex - 1));
-            }*/
+            
             else
             {
-                ChooseRandomClosestCell(GetClosestCells(center));
+                
                 currentLvlOnChainSound = -1;
                 if (cancerInTheScene == true)
                 {
@@ -366,7 +346,7 @@ public class DestructionBehavior : MonoBehaviour {
                     Debug.Log("NOP");
                     StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, false, cleanCancer));
                     
-                    ChooseRandomClosestCell(GetClosestCells(center));
+                    //ChooseRandomClosestCell(GetClosestCells(center));
                 }
 
 

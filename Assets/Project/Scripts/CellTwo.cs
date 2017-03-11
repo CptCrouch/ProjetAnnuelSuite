@@ -160,6 +160,11 @@ public class CellTwo : MonoBehaviour
         }
     }
 
+    public void OnlyDestroyCell()
+    {
+        destructionBehavior.LaunchCellDestruction(this, false);
+    }
+
     public IEnumerator StartTimerDestruction(float timerToDestroyCell, bool launchByVirus)
     {
         state = DestroyState.OnDestroy;
@@ -183,8 +188,7 @@ public class CellTwo : MonoBehaviour
         {
             
             destructionBehavior.LaunchCellDestruction(this,launchByVirus);
-            
- 
+
         }
         currentMat.SetColor("_EmissionColor", Color.black);
         currentMat.SetFloat("_EmissionColor", 0);
@@ -269,8 +273,8 @@ public class CellTwo : MonoBehaviour
 
         if (launchPassive == true && canLaunchVirus == true)
         {
-            destructionBehavior.DisableAllVirus();
-            destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
+            //destructionBehavior.DisableAllVirus();
+            //destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
         }
         if (destructionBehavior.cancerInTheScene == true)
         {
@@ -300,8 +304,8 @@ public class CellTwo : MonoBehaviour
         if (currentAltitude == 3)
         {
             destructionBehavior.LaunchCellDestruction(this,false);
-            destructionBehavior.DisableAllVirus();
-            destructionBehavior.DisableAllCellDestruction();
+            //destructionBehavior.DisableAllVirus();
+            //destructionBehavior.DisableAllCellDestruction();
             Debug.Log("pouet");
         }
         else
@@ -309,11 +313,9 @@ public class CellTwo : MonoBehaviour
             soundManager.EmittGrowSound(currentAltitude+1);
             if (isByPlayer == true)
             {
+                /*
                 destructionBehavior.DisableAllVirus();
-                /*if (destructionBehavior.cellOnWaitForDestruction != null && destructionBehavior.cellOnWaitForDestruction.onDestroy == true)
-                {
-                    destructionBehavior.cellOnWaitForDestruction.DisableCell();
-                }*/
+                
                 destructionBehavior.DisableAllCellDestruction();
                 if (onDestroy == false)
                     destroyCoroutine = StartCoroutine(StartTimerDestruction(destructionBehavior.CalculateSpeedWithNumberOfCellUp(),false));
@@ -325,8 +327,8 @@ public class CellTwo : MonoBehaviour
                     destroyCoroutine = StartCoroutine(StartTimerDestruction(destructionBehavior.CalculateSpeedWithNumberOfCellUp(),false));
                 }
 
-                destructionBehavior.cellOnWaitForDestruction = this;
-
+                destructionBehavior.cellOnWaitForDestruction = this;*/
+                state = DestroyState.Idle;
 
             }
             else
