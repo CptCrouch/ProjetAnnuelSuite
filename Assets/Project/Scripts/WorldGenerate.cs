@@ -17,6 +17,10 @@ public class WorldGenerate : MonoBehaviour {
     public float increaseZ = 1.3f;
     public float increaseX = 0.75f;
 
+    [Space(10)]
+    public float distanceToGetCloseNB =1.6f;
+    public float distanceToGetCornerNB = 2.5f;
+
 
     //public int diametreGrille = 10;
 
@@ -233,12 +237,12 @@ public class WorldGenerate : MonoBehaviour {
                 Vector3 targetVector = new Vector3(cellTwoAdjacent.transform.position.x, 0, cellTwoAdjacent.transform.position.z);
                 float distanceFromCenterHexagon = Vector3.Distance(centerVector, targetVector);
                 
-                if (distanceFromCenterHexagon < 1.6f && cellTwoAdjacent != cellTwoCenter)
+                if (distanceFromCenterHexagon < distanceToGetCloseNB && cellTwoAdjacent != cellTwoCenter)
                 {
                     cellTwoCenter.neighbours.Add(cellTwoAdjacent);
                     
                 }
-                else if(distanceFromCenterHexagon < 3f && cellTwoAdjacent != cellTwoCenter)
+                else if(distanceFromCenterHexagon < distanceToGetCornerNB && cellTwoAdjacent != cellTwoCenter)
                 {
                     cellTwoCenter.cornerNeighbours.Add(cellTwoAdjacent);
                 }

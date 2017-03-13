@@ -301,7 +301,7 @@ public class CellTwo : MonoBehaviour
         imAtStartPos = false;
 
 
-        if (currentAltitude == 3)
+        if (currentAltitude == 2)
         {
             destructionBehavior.LaunchCellDestruction(this,false);
             //destructionBehavior.DisableAllVirus();
