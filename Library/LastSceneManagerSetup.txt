@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Project/Scenes/Hexagon/Level01_Hexa.unity
+- path: Assets/Project/Scenes/Hexagon/CreationBaseLvl.unity
   isLoaded: 1
   isActive: 1
