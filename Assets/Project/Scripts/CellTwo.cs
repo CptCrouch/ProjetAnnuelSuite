@@ -162,7 +162,8 @@ public class CellTwo : MonoBehaviour
 
     public void OnlyDestroyCell()
     {
-        destructionBehavior.LaunchCellDestruction(this, false);
+        StartCoroutine(ReturnToStartPos(destructionBehavior.speedFeedbackDissolveAlt1,destructionBehavior.prefabDissolve, false, 0, false, false));
+        destructionBehavior.listOfCellOnStart.Add(this);
     }
 
     public IEnumerator StartTimerDestruction(float timerToDestroyCell, bool launchByVirus)
@@ -291,7 +292,48 @@ public class CellTwo : MonoBehaviour
 
     }
 
+    public IEnumerator DestroyTrigger(float speed, GameObject prefabDissolve)
+    {
+        Vector3 firstPos = transform.position;
+        Quaternion firstRot = transform.rotation;
+        Vector3 firstScale = transform.localScale;
+        Color firstColor = GetComponent<Renderer>().material.color;
 
+        if (destructionBehavior.cancerInTheScene == true)
+        {
+            destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this, currentAltitude);
+        }
+
+        destructionBehavior.cancerBehavior.UpdateForcingMaterial(this, destructionBehavior.cancerBehavior.cellTypeTriggerOnWait);
+        destructionBehavior.ChooseAndLaunchProperty(1, this);
+        //soundManager.EmittDestroySound(0, currentAltitude);
+
+
+
+        GameObject feedBackDissolve = CreateFeedBackExplosion(firstPos, firstRot, firstScale, prefabDissolve);
+
+
+        Renderer mat = feedBackDissolve.GetComponent<Renderer>();
+        mat.material.SetFloat("_Didi", 1);
+        mat.material.SetVector("_ObjectPosition", new Vector4(transform.position.x, 1, transform.position.z, 1));
+        mat.material.SetColor("_MainColor", firstColor);
+        //Debug.Log(mat.sharedMaterial.GetFloat("_Didi"));
+        while (mat.material.GetFloat("_Didi") >= 0.5f)
+        {
+            //Debug.Log(mat.sharedMaterial.GetFloat("_Didi"));
+            float time = mat.material.GetFloat("_Didi") - Time.deltaTime * speed;
+            mat.material.SetFloat("_Didi", time);
+            yield return null;
+        }
+
+        
+        
+
+        
+        feedBackDissolve.GetComponent<MeshRenderer>().enabled = false;
+        yield return new WaitForSeconds(1f);
+        Destroy(feedBackDissolve);
+    }
 
 
     public IEnumerator GetPunch(float strength, float speed, Vector3 direction, bool isByPlayer)

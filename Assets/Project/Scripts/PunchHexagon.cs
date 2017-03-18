@@ -139,7 +139,8 @@ public class PunchHexagon : MonoBehaviour {
                     CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
 
 
-                    if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell && cellHit.cellType.isCancer == false)
+
+                    if (cellHit._imMoving == false && hit.collider.gameObject != lastTargetedCell && cellHit.cellType.isCancer == false && cellHit.cellType.isTriggerDestruction == false)
                     {
                         float hitPosX = hit.collider.transform.position.x;
                         float hitPosY = hit.collider.transform.position.y;
@@ -162,10 +163,14 @@ public class PunchHexagon : MonoBehaviour {
                 else if(Input.GetMouseButtonDown(1))
                 {
                     CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
-                    if(cellHit.imAtStartPos == false && cellHit._imMoving == false && cellHit.cellType.isCancer == false)
+                    if(cellHit.imAtStartPos == false && cellHit._imMoving == false && cellHit.cellType.isCancer == false && cellHit.cellType.isTriggerDestruction == false)
                     {
+                        
                         cellHit.OnlyDestroyCell();
+                        
                     }
+                    if(cellHit.cellType.isTriggerDestruction == true)
+                        StartCoroutine(cellHit.DestroyTrigger(destroyManager.speedFeedbackDissolveAlt1, destroyManager.prefabDissolve));
                 }
                 
                 #endregion

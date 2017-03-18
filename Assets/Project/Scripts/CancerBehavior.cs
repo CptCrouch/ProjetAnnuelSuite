@@ -11,6 +11,8 @@ public class CancerBehavior : MonoBehaviour {
 
     [SerializeField]
     public CellType cellTypeOnWait;
+    [SerializeField]
+    public CellType cellTypeTriggerOnWait;
 
     private DestructionBehavior destructionBehav;
     private WorldGenerate worldGenerate;
@@ -150,8 +152,15 @@ public class CancerBehavior : MonoBehaviour {
             CellTwo cell = cellParentUsed.GetChild(i).GetComponent<CellTwo>();
             if (cell.cellType.onWaitForCancer == true)
             {
-                ResetCellCancer(cell);
+                if (cell.cellType.isTriggerDestruction == false)
+                    ResetCellCancer(cell);
+                else
+                {
+                    UpdateForcingMaterial(cell, destructionBehav.generateInEditor.cellTypes[destructionBehav.cellTypeTriggerIndex]);
+                }
             }
+            
+            
         }
     }
     

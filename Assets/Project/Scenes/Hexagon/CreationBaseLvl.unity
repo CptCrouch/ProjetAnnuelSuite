@@ -137,6 +137,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -172,12 +173,18 @@ MonoBehaviour:
   - {fileID: 411724947}
   - {fileID: 1901250378}
   cornerNeighbours:
+  - {fileID: 1999087181}
   - {fileID: 807232223}
+  - {fileID: 1574066999}
   - {fileID: 1244353582}
   - {fileID: 48313433}
+  - {fileID: 16027363}
+  - {fileID: 1819482875}
   - {fileID: 885874751}
   - {fileID: 1033797433}
+  - {fileID: 138399653}
   - {fileID: 1108158590}
+  - {fileID: 1848099109}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -380,6 +387,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -415,12 +423,18 @@ MonoBehaviour:
   - {fileID: 1996431693}
   - {fileID: 885874751}
   cornerNeighbours:
+  - {fileID: 1756732202}
   - {fileID: 367949446}
+  - {fileID: 1999087181}
   - {fileID: 983245440}
   - {fileID: 1536284082}
+  - {fileID: 1001675603}
+  - {fileID: 4283638}
   - {fileID: 1776628587}
   - {fileID: 411724947}
+  - {fileID: 2064970810}
   - {fileID: 1482046694}
+  - {fileID: 138399653}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -646,6 +660,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -681,12 +696,18 @@ MonoBehaviour:
   - {fileID: 628857881}
   - {fileID: 1718363394}
   cornerNeighbours:
+  - {fileID: 100683672}
   - {fileID: 277346579}
+  - {fileID: 1776628587}
   - {fileID: 1627973347}
   - {fileID: 2064970810}
+  - {fileID: 1710252349}
+  - {fileID: 71284072}
   - {fileID: 1130691786}
   - {fileID: 110548406}
+  - {fileID: 1732061763}
   - {fileID: 1891664267}
+  - {fileID: 595050015}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -815,6 +836,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -850,12 +872,18 @@ MonoBehaviour:
   - {fileID: 1756732202}
   - {fileID: 367949446}
   cornerNeighbours:
+  - {fileID: 445345328}
   - {fileID: 1579752869}
+  - {fileID: 345139184}
   - {fileID: 910133713}
   - {fileID: 1368799291}
+  - {fileID: 301527954}
+  - {fileID: 1863423673}
   - {fileID: 2016354351}
   - {fileID: 1999087181}
+  - {fileID: 983245440}
   - {fileID: 1724422696}
+  - {fileID: 1244353582}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -984,6 +1012,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1019,9 +1048,12 @@ MonoBehaviour:
   - {fileID: 92060625}
   - {fileID: 929139163}
   cornerNeighbours:
+  - {fileID: 402107330}
   - {fileID: 607437661}
+  - {fileID: 307508376}
   - {fileID: 2100520834}
   - {fileID: 1983686664}
+  - {fileID: 796106565}
   - {fileID: 1294520388}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -1151,6 +1183,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1184,9 +1217,13 @@ MonoBehaviour:
   - {fileID: 1951332756}
   - {fileID: 234120285}
   cornerNeighbours:
+  - {fileID: 1538933559}
   - {fileID: 981957513}
+  - {fileID: 1440758663}
   - {fileID: 1773170063}
+  - {fileID: 354750573}
   - {fileID: 250971665}
+  - {fileID: 1250442779}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -1315,6 +1352,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1350,12 +1388,18 @@ MonoBehaviour:
   - {fileID: 1145899758}
   - {fileID: 1819482875}
   cornerNeighbours:
+  - {fileID: 1135321941}
   - {fileID: 2126398020}
+  - {fileID: 579817258}
   - {fileID: 807232223}
   - {fileID: 1679567198}
+  - {fileID: 1536284082}
+  - {fileID: 1302226476}
   - {fileID: 4283638}
   - {fileID: 1471220658}
+  - {fileID: 1901250378}
   - {fileID: 1033797433}
+  - {fileID: 385610587}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -1484,6 +1528,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1520,10 +1565,14 @@ MonoBehaviour:
   - {fileID: 1756732202}
   cornerNeighbours:
   - {fileID: 445345328}
+  - {fileID: 1579752869}
   - {fileID: 1089364919}
+  - {fileID: 1204078940}
   - {fileID: 1552429656}
   - {fileID: 367949446}
+  - {fileID: 649317626}
   - {fileID: 983245440}
+  - {fileID: 1724422696}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -1720,6 +1769,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1755,11 +1805,15 @@ MonoBehaviour:
   - {fileID: 1130691786}
   - {fileID: 628857881}
   cornerNeighbours:
+  - {fileID: 1101591395}
   - {fileID: 100683672}
+  - {fileID: 277346579}
   - {fileID: 1057189852}
   - {fileID: 348833613}
+  - {fileID: 1425328349}
   - {fileID: 1718363394}
   - {fileID: 1732061763}
+  - {fileID: 1891664267}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -1888,6 +1942,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1923,12 +1978,18 @@ MonoBehaviour:
   - {fileID: 110548406}
   - {fileID: 776334722}
   cornerNeighbours:
+  - {fileID: 1776628587}
   - {fileID: 1996431693}
+  - {fileID: 885874751}
   - {fileID: 348833613}
   - {fileID: 138399653}
+  - {fileID: 24759785}
+  - {fileID: 876184498}
   - {fileID: 1718363394}
   - {fileID: 1939340133}
+  - {fileID: 595050015}
   - {fileID: 326953658}
+  - {fileID: 281942685}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2057,6 +2118,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2089,8 +2151,11 @@ MonoBehaviour:
   - {fileID: 30260115}
   - {fileID: 929139163}
   cornerNeighbours:
+  - {fileID: 2100520834}
   - {fileID: 1662375773}
+  - {fileID: 1436311770}
   - {fileID: 2047022942}
+  - {fileID: 1294520388}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2219,6 +2284,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2255,10 +2321,14 @@ MonoBehaviour:
   - {fileID: 226694312}
   cornerNeighbours:
   - {fileID: 1156609015}
+  - {fileID: 649317626}
   - {fileID: 1001675603}
+  - {fileID: 1776628587}
   - {fileID: 1057189852}
   - {fileID: 348833613}
+  - {fileID: 1710252349}
   - {fileID: 65163684}
+  - {fileID: 24759785}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2387,6 +2457,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2422,12 +2493,18 @@ MonoBehaviour:
   - {fileID: 595050015}
   - {fileID: 326953658}
   cornerNeighbours:
+  - {fileID: 348833613}
   - {fileID: 2064970810}
+  - {fileID: 1482046694}
   - {fileID: 24759785}
   - {fileID: 121994050}
+  - {fileID: 628857881}
+  - {fileID: 1939340133}
   - {fileID: 1891664267}
   - {fileID: 281942685}
+  - {fileID: 402107330}
   - {fileID: 607437661}
+  - {fileID: 307508376}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2556,6 +2633,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2591,12 +2669,18 @@ MonoBehaviour:
   - {fileID: 776334722}
   - {fileID: 1939340133}
   cornerNeighbours:
+  - {fileID: 1996431693}
   - {fileID: 885874751}
+  - {fileID: 411724947}
   - {fileID: 2064970810}
   - {fileID: 1108158590}
+  - {fileID: 1425328349}
+  - {fileID: 629327867}
   - {fileID: 110548406}
   - {fileID: 535906078}
+  - {fileID: 326953658}
   - {fileID: 281942685}
+  - {fileID: 1234368827}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2822,6 +2906,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2857,12 +2942,18 @@ MonoBehaviour:
   - {fileID: 121994050}
   - {fileID: 876184498}
   cornerNeighbours:
+  - {fileID: 16027363}
   - {fileID: 532817466}
+  - {fileID: 4283638}
   - {fileID: 1996431693}
   - {fileID: 1901250378}
+  - {fileID: 2064970810}
+  - {fileID: 1848099109}
   - {fileID: 71284072}
   - {fileID: 629327867}
+  - {fileID: 776334722}
   - {fileID: 1939340133}
+  - {fileID: 535906078}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -2991,6 +3082,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3026,12 +3118,18 @@ MonoBehaviour:
   - {fileID: 1834067945}
   - {fileID: 1124842085}
   cornerNeighbours:
+  - {fileID: 876184498}
   - {fileID: 629327867}
+  - {fileID: 244372071}
   - {fileID: 1939340133}
   - {fileID: 362869722}
+  - {fileID: 281942685}
+  - {fileID: 1314729020}
   - {fileID: 1557042875}
   - {fileID: 1983669179}
+  - {fileID: 440504823}
   - {fileID: 308267996}
+  - {fileID: 568719645}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -3354,6 +3452,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3389,12 +3488,18 @@ MonoBehaviour:
   - {fileID: 2134719023}
   - {fileID: 1295139580}
   cornerNeighbours:
+  - {fileID: 1471220658}
   - {fileID: 1502567370}
+  - {fileID: 1019391273}
   - {fileID: 385610587}
   - {fileID: 1365533972}
+  - {fileID: 1584270450}
+  - {fileID: 1378854678}
   - {fileID: 398869958}
   - {fileID: 1880153328}
+  - {fileID: 1924836870}
   - {fileID: 642948419}
+  - {fileID: 2030876851}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -3557,6 +3662,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3592,12 +3698,18 @@ MonoBehaviour:
   - {fileID: 65163684}
   - {fileID: 24759785}
   cornerNeighbours:
+  - {fileID: 1047304360}
   - {fileID: 664480206}
+  - {fileID: 1001675603}
   - {fileID: 1101591395}
   - {fileID: 1776628587}
+  - {fileID: 1057189852}
+  - {fileID: 2064970810}
   - {fileID: 1710252349}
   - {fileID: 1425328349}
+  - {fileID: 1130691786}
   - {fileID: 628857881}
+  - {fileID: 1718363394}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -3823,6 +3935,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3858,11 +3971,15 @@ MonoBehaviour:
   - {fileID: 1502567370}
   - {fileID: 1019391273}
   cornerNeighbours:
+  - {fileID: 970189732}
   - {fileID: 664520541}
   - {fileID: 1679567198}
+  - {fileID: 1772130387}
   - {fileID: 1471220658}
   - {fileID: 973201951}
+  - {fileID: 1510632587}
   - {fileID: 2135418571}
+  - {fileID: 1365533972}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -3991,6 +4108,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4024,8 +4142,11 @@ MonoBehaviour:
   - {fileID: 250971665}
   - {fileID: 1250442779}
   cornerNeighbours:
+  - {fileID: 1773170063}
   - {fileID: 1524644058}
+  - {fileID: 601977458}
   - {fileID: 354750573}
+  - {fileID: 474950104}
   - {fileID: 1883341455}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -4155,6 +4276,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4190,12 +4312,18 @@ MonoBehaviour:
   - {fileID: 470462889}
   - {fileID: 362869722}
   cornerNeighbours:
+  - {fileID: 1901250378}
   - {fileID: 1033797433}
+  - {fileID: 385610587}
   - {fileID: 1108158590}
   - {fileID: 1500483515}
+  - {fileID: 876184498}
+  - {fileID: 2134719023}
   - {fileID: 535906078}
   - {fileID: 1924836870}
+  - {fileID: 172344413}
   - {fileID: 1369941427}
+  - {fileID: 1314729020}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -4324,6 +4452,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4359,9 +4488,12 @@ MonoBehaviour:
   - {fileID: 1883341455}
   - {fileID: 1250442779}
   cornerNeighbours:
+  - {fileID: 1983669179}
   - {fileID: 1773170063}
+  - {fileID: 1524644058}
   - {fileID: 568719645}
   - {fileID: 38793467}
+  - {fileID: 2122387167}
   - {fileID: 1889674508}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -4491,6 +4623,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4524,9 +4657,13 @@ MonoBehaviour:
   - {fileID: 1368799291}
   - {fileID: 254162057}
   cornerNeighbours:
+  - {fileID: 1579752869}
+  - {fileID: 1611787287}
   - {fileID: 1089364919}
   - {fileID: 1038804093}
+  - {fileID: 1204078940}
   - {fileID: 1863423673}
+  - {fileID: 1135321941}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -4655,6 +4792,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4692,9 +4830,13 @@ MonoBehaviour:
   cornerNeighbours:
   - {fileID: 345139184}
   - {fileID: 1611787287}
+  - {fileID: 1089364919}
+  - {fileID: 337481965}
   - {fileID: 1204078940}
   - {fileID: 2126398020}
+  - {fileID: 1999087181}
   - {fileID: 807232223}
+  - {fileID: 1574066999}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -4891,6 +5033,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -4926,12 +5069,18 @@ MonoBehaviour:
   - {fileID: 226694312}
   - {fileID: 348833613}
   cornerNeighbours:
+  - {fileID: 1156609015}
   - {fileID: 649317626}
+  - {fileID: 983245440}
   - {fileID: 1047304360}
   - {fileID: 2117304900}
+  - {fileID: 1101591395}
+  - {fileID: 1996431693}
   - {fileID: 1627973347}
   - {fileID: 2064970810}
+  - {fileID: 65163684}
   - {fileID: 24759785}
+  - {fileID: 1425328349}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -5060,6 +5209,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -5095,12 +5245,18 @@ MonoBehaviour:
   - {fileID: 307508376}
   - {fileID: 1557042875}
   cornerNeighbours:
+  - {fileID: 71284072}
   - {fileID: 121994050}
+  - {fileID: 876184498}
   - {fileID: 110548406}
   - {fileID: 535906078}
+  - {fileID: 595050015}
+  - {fileID: 172344413}
   - {fileID: 607437661}
   - {fileID: 1834067945}
+  - {fileID: 1436311770}
   - {fileID: 1983686664}
+  - {fileID: 440504823}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -5396,6 +5552,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -5429,9 +5586,13 @@ MonoBehaviour:
   - {fileID: 1552429656}
   - {fileID: 2016354351}
   cornerNeighbours:
+  - {fileID: 445345328}
   - {fileID: 1117810770}
+  - {fileID: 26061103}
   - {fileID: 1756732202}
+  - {fileID: 1156609015}
   - {fileID: 649317626}
+  - {fileID: 983245440}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -5725,6 +5886,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -5760,12 +5922,18 @@ MonoBehaviour:
   - {fileID: 1436311770}
   - {fileID: 1983686664}
   cornerNeighbours:
+  - {fileID: 110548406}
   - {fileID: 776334722}
+  - {fileID: 1939340133}
   - {fileID: 595050015}
   - {fileID: 1234368827}
+  - {fileID: 402107330}
+  - {fileID: 1834067945}
   - {fileID: 1662375773}
   - {fileID: 440504823}
+  - {fileID: 30260115}
   - {fileID: 2047022942}
+  - {fileID: 796106565}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -5894,6 +6062,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -5929,12 +6098,18 @@ MonoBehaviour:
   - {fileID: 709140192}
   - {fileID: 2122387167}
   cornerNeighbours:
+  - {fileID: 1234368827}
   - {fileID: 172344413}
+  - {fileID: 1369941427}
   - {fileID: 1557042875}
   - {fileID: 1983669179}
+  - {fileID: 1983686664}
+  - {fileID: 354750573}
   - {fileID: 796106565}
   - {fileID: 474950104}
+  - {fileID: 967533950}
   - {fileID: 1883096161}
+  - {fileID: 1889674508}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -6063,6 +6238,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6098,12 +6274,18 @@ MonoBehaviour:
   - {fileID: 607437661}
   - {fileID: 307508376}
   cornerNeighbours:
+  - {fileID: 1425328349}
   - {fileID: 71284072}
+  - {fileID: 121994050}
   - {fileID: 1718363394}
   - {fileID: 1939340133}
+  - {fileID: 1891664267}
+  - {fileID: 1234368827}
   - {fileID: 402107330}
   - {fileID: 1557042875}
+  - {fileID: 1662375773}
   - {fileID: 1436311770}
+  - {fileID: 1983686664}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -6232,6 +6414,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6269,9 +6452,13 @@ MonoBehaviour:
   cornerNeighbours:
   - {fileID: 1035878400}
   - {fileID: 1093769626}
+  - {fileID: 254162057}
+  - {fileID: 1643974072}
   - {fileID: 1135321941}
   - {fileID: 970189732}
+  - {fileID: 1574066999}
   - {fileID: 1958954996}
+  - {fileID: 1679567198}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -6497,6 +6684,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6530,9 +6718,13 @@ MonoBehaviour:
   - {fileID: 1089364919}
   - {fileID: 1368799291}
   cornerNeighbours:
+  - {fileID: 445345328}
+  - {fileID: 1035878400}
   - {fileID: 1117810770}
   - {fileID: 254162057}
+  - {fileID: 26061103}
   - {fileID: 1204078940}
+  - {fileID: 1863423673}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -6661,6 +6853,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6696,12 +6889,18 @@ MonoBehaviour:
   - {fileID: 24759785}
   - {fileID: 1425328349}
   cornerNeighbours:
+  - {fileID: 664480206}
   - {fileID: 1001675603}
+  - {fileID: 2117304900}
   - {fileID: 100683672}
   - {fileID: 1996431693}
+  - {fileID: 1627973347}
+  - {fileID: 1482046694}
   - {fileID: 65163684}
   - {fileID: 71284072}
+  - {fileID: 628857881}
   - {fileID: 1718363394}
+  - {fileID: 110548406}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -6830,6 +7029,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -6865,12 +7065,18 @@ MonoBehaviour:
   - {fileID: 474950104}
   - {fileID: 250971665}
   cornerNeighbours:
+  - {fileID: 1369941427}
   - {fileID: 1314729020}
+  - {fileID: 1538933559}
   - {fileID: 1124842085}
   - {fileID: 1524644058}
+  - {fileID: 308267996}
+  - {fileID: 38793467}
   - {fileID: 2122387167}
   - {fileID: 234120285}
+  - {fileID: 1889674508}
   - {fileID: 1883341455}
+  - {fileID: 1250442779}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -7096,6 +7302,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7131,12 +7338,18 @@ MonoBehaviour:
   - {fileID: 1369941427}
   - {fileID: 1314729020}
   cornerNeighbours:
+  - {fileID: 1848099109}
   - {fileID: 1584270450}
+  - {fileID: 1500483515}
   - {fileID: 629327867}
   - {fileID: 2134719023}
+  - {fileID: 535906078}
+  - {fileID: 642948419}
   - {fileID: 172344413}
   - {fileID: 1538933559}
+  - {fileID: 1124842085}
   - {fileID: 1983669179}
+  - {fileID: 1773170063}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -7355,6 +7568,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7390,12 +7604,18 @@ MonoBehaviour:
   - {fileID: 1724422696}
   - {fileID: 1244353582}
   cornerNeighbours:
+  - {fileID: 1117810770}
   - {fileID: 1089364919}
+  - {fileID: 1368799291}
   - {fileID: 60525596}
   - {fileID: 1863423673}
+  - {fileID: 2016354351}
+  - {fileID: 807232223}
   - {fileID: 983245440}
   - {fileID: 1536284082}
+  - {fileID: 2117304900}
   - {fileID: 16027363}
+  - {fileID: 532817466}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -7524,6 +7744,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7559,12 +7780,18 @@ MonoBehaviour:
   - {fileID: 1584270450}
   - {fileID: 1500483515}
   cornerNeighbours:
+  - {fileID: 48313433}
   - {fileID: 1772130387}
+  - {fileID: 1302226476}
   - {fileID: 1145899758}
   - {fileID: 1502567370}
+  - {fileID: 1901250378}
+  - {fileID: 2135418571}
   - {fileID: 1848099109}
   - {fileID: 218338344}
+  - {fileID: 244372071}
   - {fileID: 398869958}
+  - {fileID: 2134719023}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -7693,6 +7920,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7728,12 +7956,18 @@ MonoBehaviour:
   - {fileID: 362869722}
   - {fileID: 1924836870}
   cornerNeighbours:
+  - {fileID: 1033797433}
   - {fileID: 385610587}
+  - {fileID: 1510632587}
   - {fileID: 1848099109}
   - {fileID: 218338344}
+  - {fileID: 629327867}
+  - {fileID: 1295139580}
   - {fileID: 470462889}
   - {fileID: 642948419}
+  - {fileID: 1369941427}
   - {fileID: 1314729020}
+  - {fileID: 1538933559}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -7862,6 +8096,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7897,11 +8132,15 @@ MonoBehaviour:
   - {fileID: 2100520834}
   - {fileID: 1662375773}
   cornerNeighbours:
+  - {fileID: 628857881}
   - {fileID: 1718363394}
+  - {fileID: 110548406}
   - {fileID: 1732061763}
   - {fileID: 326953658}
+  - {fileID: 307508376}
   - {fileID: 1436311770}
   - {fileID: 2132768089}
+  - {fileID: 30260115}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -8172,6 +8411,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -8207,12 +8447,18 @@ MonoBehaviour:
   - {fileID: 138399653}
   - {fileID: 1108158590}
   cornerNeighbours:
+  - {fileID: 1244353582}
   - {fileID: 1536284082}
+  - {fileID: 1325770185}
   - {fileID: 16027363}
   - {fileID: 1145899758}
+  - {fileID: 1996431693}
+  - {fileID: 1033797433}
   - {fileID: 1482046694}
   - {fileID: 1848099109}
+  - {fileID: 121994050}
   - {fileID: 876184498}
+  - {fileID: 629327867}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -8529,6 +8775,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -8564,12 +8811,18 @@ MonoBehaviour:
   - {fileID: 796106565}
   - {fileID: 709140192}
   cornerNeighbours:
+  - {fileID: 281942685}
   - {fileID: 1234368827}
+  - {fileID: 172344413}
   - {fileID: 307508376}
   - {fileID: 1124842085}
+  - {fileID: 1436311770}
+  - {fileID: 568719645}
   - {fileID: 2047022942}
   - {fileID: 2122387167}
+  - {fileID: 1294520388}
   - {fileID: 967533950}
+  - {fileID: 1883096161}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -8698,6 +8951,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -8730,8 +8984,11 @@ MonoBehaviour:
   - {fileID: 910133713}
   - {fileID: 1117810770}
   cornerNeighbours:
+  - {fileID: 345139184}
   - {fileID: 1089364919}
+  - {fileID: 301527954}
   - {fileID: 60525596}
+  - {fileID: 26061103}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -8860,6 +9117,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -8895,12 +9153,18 @@ MonoBehaviour:
   - {fileID: 172344413}
   - {fileID: 1369941427}
   cornerNeighbours:
+  - {fileID: 1108158590}
   - {fileID: 1848099109}
+  - {fileID: 1584270450}
   - {fileID: 876184498}
   - {fileID: 398869958}
+  - {fileID: 1939340133}
+  - {fileID: 1924836870}
   - {fileID: 1234368827}
   - {fileID: 1314729020}
+  - {fileID: 1834067945}
   - {fileID: 1124842085}
+  - {fileID: 1983669179}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -9075,6 +9339,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -9110,9 +9375,13 @@ MonoBehaviour:
   - {fileID: 1889674508}
   - {fileID: 1883341455}
   cornerNeighbours:
+  - {fileID: 1124842085}
   - {fileID: 1983669179}
+  - {fileID: 1773170063}
   - {fileID: 308267996}
   - {fileID: 1951332756}
+  - {fileID: 709140192}
+  - {fileID: 234120285}
   - {fileID: 1883096161}
   - {fileID: 1250442779}
   currentAltitude: 0
@@ -9243,6 +9512,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -9276,9 +9546,12 @@ MonoBehaviour:
   - {fileID: 1880153328}
   - {fileID: 1596508920}
   cornerNeighbours:
+  - {fileID: 1365533972}
   - {fileID: 983808119}
   - {fileID: 1125950428}
+  - {fileID: 1295139580}
   - {fileID: 2030876851}
+  - {fileID: 1440758663}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -9853,6 +10126,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -9888,12 +10162,18 @@ MonoBehaviour:
   - {fileID: 885874751}
   - {fileID: 411724947}
   cornerNeighbours:
+  - {fileID: 367949446}
   - {fileID: 1999087181}
+  - {fileID: 807232223}
   - {fileID: 1724422696}
   - {fileID: 1325770185}
+  - {fileID: 2117304900}
+  - {fileID: 1145899758}
   - {fileID: 1996431693}
   - {fileID: 1901250378}
+  - {fileID: 1482046694}
   - {fileID: 138399653}
+  - {fileID: 1108158590}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -10022,6 +10302,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -10057,12 +10338,18 @@ MonoBehaviour:
   - {fileID: 1234368827}
   - {fileID: 172344413}
   cornerNeighbours:
+  - {fileID: 138399653}
   - {fileID: 1108158590}
+  - {fileID: 1848099109}
   - {fileID: 121994050}
   - {fileID: 244372071}
+  - {fileID: 776334722}
+  - {fileID: 362869722}
   - {fileID: 281942685}
   - {fileID: 1369941427}
+  - {fileID: 1557042875}
   - {fileID: 1834067945}
+  - {fileID: 1124842085}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -10385,6 +10672,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -10420,12 +10708,18 @@ MonoBehaviour:
   - {fileID: 2122387167}
   - {fileID: 474950104}
   cornerNeighbours:
+  - {fileID: 172344413}
   - {fileID: 1369941427}
+  - {fileID: 1314729020}
   - {fileID: 1834067945}
   - {fileID: 1773170063}
+  - {fileID: 440504823}
+  - {fileID: 1951332756}
   - {fileID: 709140192}
   - {fileID: 250971665}
+  - {fileID: 1883096161}
   - {fileID: 1889674508}
+  - {fileID: 1883341455}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -10651,6 +10945,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -10686,12 +10981,18 @@ MonoBehaviour:
   - {fileID: 1958954996}
   - {fileID: 1679567198}
   cornerNeighbours:
+  - {fileID: 1611787287}
   - {fileID: 1580011824}
+  - {fileID: 1093769626}
   - {fileID: 1038804093}
   - {fileID: 1643974072}
+  - {fileID: 1135321941}
+  - {fileID: 664520541}
   - {fileID: 1574066999}
   - {fileID: 1167733729}
+  - {fileID: 48313433}
   - {fileID: 1772130387}
+  - {fileID: 1302226476}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -11123,6 +11424,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11158,12 +11460,18 @@ MonoBehaviour:
   - {fileID: 402107330}
   - {fileID: 607437661}
   cornerNeighbours:
+  - {fileID: 24759785}
   - {fileID: 1425328349}
+  - {fileID: 71284072}
   - {fileID: 628857881}
   - {fileID: 776334722}
+  - {fileID: 1732061763}
+  - {fileID: 281942685}
   - {fileID: 1672131237}
   - {fileID: 307508376}
+  - {fileID: 2100520834}
   - {fileID: 1662375773}
+  - {fileID: 1436311770}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -11292,6 +11600,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11325,9 +11634,13 @@ MonoBehaviour:
   - {fileID: 1524644058}
   - {fileID: 38793467}
   cornerNeighbours:
+  - {fileID: 642948419}
   - {fileID: 2030876851}
+  - {fileID: 1596508920}
   - {fileID: 1538933559}
+  - {fileID: 1773170063}
   - {fileID: 1951332756}
+  - {fileID: 234120285}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -11456,6 +11769,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11491,12 +11805,18 @@ MonoBehaviour:
   - {fileID: 1662375773}
   - {fileID: 1436311770}
   cornerNeighbours:
+  - {fileID: 1718363394}
   - {fileID: 110548406}
+  - {fileID: 776334722}
   - {fileID: 1891664267}
   - {fileID: 281942685}
+  - {fileID: 1672131237}
+  - {fileID: 1557042875}
   - {fileID: 2100520834}
   - {fileID: 1983686664}
+  - {fileID: 2132768089}
   - {fileID: 30260115}
+  - {fileID: 2047022942}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -11625,6 +11945,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11660,11 +11981,15 @@ MonoBehaviour:
   - {fileID: 1732061763}
   - {fileID: 1891664267}
   cornerNeighbours:
+  - {fileID: 1627973347}
   - {fileID: 226694312}
+  - {fileID: 348833613}
   - {fileID: 1710252349}
   - {fileID: 1425328349}
+  - {fileID: 110548406}
   - {fileID: 595050015}
   - {fileID: 1672131237}
+  - {fileID: 402107330}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -11793,6 +12118,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11828,12 +12154,18 @@ MonoBehaviour:
   - {fileID: 535906078}
   - {fileID: 470462889}
   cornerNeighbours:
+  - {fileID: 411724947}
   - {fileID: 1901250378}
+  - {fileID: 1033797433}
   - {fileID: 138399653}
   - {fileID: 1584270450}
+  - {fileID: 121994050}
+  - {fileID: 398869958}
   - {fileID: 1939340133}
   - {fileID: 362869722}
+  - {fileID: 1234368827}
   - {fileID: 172344413}
+  - {fileID: 1369941427}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -12036,6 +12368,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -12071,12 +12404,18 @@ MonoBehaviour:
   - {fileID: 1538933559}
   - {fileID: 981957513}
   cornerNeighbours:
+  - {fileID: 1500483515}
   - {fileID: 218338344}
+  - {fileID: 1125950428}
   - {fileID: 398869958}
   - {fileID: 1880153328}
+  - {fileID: 362869722}
+  - {fileID: 1596508920}
   - {fileID: 1314729020}
   - {fileID: 1440758663}
+  - {fileID: 1773170063}
   - {fileID: 1524644058}
+  - {fileID: 601977458}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -12205,6 +12544,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -12241,10 +12581,14 @@ MonoBehaviour:
   - {fileID: 1001675603}
   cornerNeighbours:
   - {fileID: 301527954}
+  - {fileID: 60525596}
   - {fileID: 1756732202}
+  - {fileID: 1724422696}
   - {fileID: 1047304360}
   - {fileID: 2117304900}
+  - {fileID: 100683672}
   - {fileID: 277346579}
+  - {fileID: 1776628587}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -12567,6 +12911,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -12603,10 +12948,14 @@ MonoBehaviour:
   - {fileID: 277346579}
   cornerNeighbours:
   - {fileID: 1552429656}
+  - {fileID: 2016354351}
   - {fileID: 983245440}
+  - {fileID: 2117304900}
   - {fileID: 1101591395}
   - {fileID: 1776628587}
+  - {fileID: 1627973347}
   - {fileID: 226694312}
+  - {fileID: 348833613}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -12735,6 +13084,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -12768,9 +13118,13 @@ MonoBehaviour:
   - {fileID: 1167733729}
   - {fileID: 1283661683}
   cornerNeighbours:
+  - {fileID: 1093769626}
   - {fileID: 1301378611}
+  - {fileID: 579817258}
   - {fileID: 1679567198}
+  - {fileID: 1302226476}
   - {fileID: 228830593}
+  - {fileID: 1781231464}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -13035,6 +13389,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -13070,9 +13425,13 @@ MonoBehaviour:
   - {fileID: 967533950}
   - {fileID: 1883096161}
   cornerNeighbours:
+  - {fileID: 1557042875}
   - {fileID: 1834067945}
+  - {fileID: 1124842085}
   - {fileID: 1983686664}
   - {fileID: 568719645}
+  - {fileID: 2047022942}
+  - {fileID: 474950104}
   - {fileID: 1294520388}
   - {fileID: 1889674508}
   currentAltitude: 0
@@ -13524,6 +13883,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -13559,12 +13919,18 @@ MonoBehaviour:
   - {fileID: 326953658}
   - {fileID: 281942685}
   cornerNeighbours:
+  - {fileID: 2064970810}
   - {fileID: 1482046694}
+  - {fileID: 138399653}
   - {fileID: 1425328349}
   - {fileID: 876184498}
+  - {fileID: 1718363394}
+  - {fileID: 535906078}
   - {fileID: 595050015}
   - {fileID: 1234368827}
+  - {fileID: 607437661}
   - {fileID: 307508376}
+  - {fileID: 1557042875}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -13730,6 +14096,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -13765,9 +14132,13 @@ MonoBehaviour:
   - {fileID: 1294520388}
   - {fileID: 967533950}
   cornerNeighbours:
+  - {fileID: 307508376}
   - {fileID: 1557042875}
+  - {fileID: 1834067945}
   - {fileID: 1436311770}
   - {fileID: 308267996}
+  - {fileID: 30260115}
+  - {fileID: 2122387167}
   - {fileID: 929139163}
   - {fileID: 1883096161}
   currentAltitude: 0
@@ -13972,6 +14343,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -14007,12 +14379,18 @@ MonoBehaviour:
   - {fileID: 1536284082}
   - {fileID: 1325770185}
   cornerNeighbours:
+  - {fileID: 1368799291}
   - {fileID: 254162057}
+  - {fileID: 1038804093}
   - {fileID: 1204078940}
   - {fileID: 2126398020}
+  - {fileID: 367949446}
+  - {fileID: 1958954996}
   - {fileID: 1244353582}
   - {fileID: 48313433}
+  - {fileID: 532817466}
   - {fileID: 4283638}
+  - {fileID: 1145899758}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -14131,7 +14509,7 @@ MonoBehaviour:
   increaseZ: 1.08
   increaseX: 0.625
   distanceToGetCloseNB: 1.6
-  distanceToGetCornerNB: 2.2
+  distanceToGetCornerNB: 3
   prefab: {fileID: 1000010865824396, guid: b6db4b6b2306be44c8bf420d08f25e2b, type: 2}
   prefabHexagon: {fileID: 1924908006949532, guid: b8ca32fdf0084e94a80ad99dcc0d0df8,
     type: 2}
@@ -14352,6 +14730,7 @@ MonoBehaviour:
   currentLvlOnChainSound: 0
   cancerInTheScene: 1
   cellParentUsed: {fileID: 0}
+  cellTypeTriggerIndex: 0
 --- !u!1 &855474687
 GameObject:
   m_ObjectHideFlags: 0
@@ -14494,6 +14873,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -14529,12 +14909,18 @@ MonoBehaviour:
   - {fileID: 1939340133}
   - {fileID: 535906078}
   cornerNeighbours:
+  - {fileID: 885874751}
   - {fileID: 411724947}
+  - {fileID: 1901250378}
   - {fileID: 1482046694}
   - {fileID: 1848099109}
+  - {fileID: 71284072}
+  - {fileID: 244372071}
   - {fileID: 776334722}
   - {fileID: 470462889}
+  - {fileID: 281942685}
   - {fileID: 1234368827}
+  - {fileID: 172344413}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -14737,6 +15123,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -14772,12 +15159,18 @@ MonoBehaviour:
   - {fileID: 1482046694}
   - {fileID: 138399653}
   cornerNeighbours:
+  - {fileID: 1724422696}
   - {fileID: 1244353582}
+  - {fileID: 1536284082}
   - {fileID: 2117304900}
   - {fileID: 4283638}
+  - {fileID: 1776628587}
+  - {fileID: 1901250378}
   - {fileID: 2064970810}
   - {fileID: 1108158590}
+  - {fileID: 71284072}
   - {fileID: 121994050}
+  - {fileID: 876184498}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -14919,6 +15312,7 @@ MonoBehaviour:
     feedBackOnEmission: 1
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   - name: CouleursAutomne
     color: {r: 0, g: 0, b: 0, a: 1}
     mat: {fileID: 2100000, guid: 259a469f200cc4e40a0f3e215da60814, type: 2}
@@ -14932,6 +15326,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   - name: Cancer1
     color: {r: 0, g: 0, b: 0, a: 1}
     mat: {fileID: 2100000, guid: 1eeba30517c0e9246bdd08abea87f5e2, type: 2}
@@ -14945,6 +15340,21 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 1
     onWaitForCancer: 0
+    isTriggerDestruction: 0
+  - name: Trigger
+    color: {r: 0, g: 0, b: 0, a: 1}
+    mat: {fileID: 2100000, guid: 24bd23e9e4202fd4f9c5054059099958, type: 2}
+    matAlt1: {fileID: 2100000, guid: 24bd23e9e4202fd4f9c5054059099958, type: 2}
+    matAlt2: {fileID: 0}
+    matAlt3: {fileID: 0}
+    speedUp: 0
+    diffWithBasePosY: 1
+    imAppliedToCell: 0
+    feedBackOnMaterial: 1
+    feedBackOnEmission: 0
+    isCancer: 0
+    onWaitForCancer: 0
+    isTriggerDestruction: 1
 --- !u!4 &892379730
 Transform:
   m_ObjectHideFlags: 0
@@ -14952,7 +15362,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892379728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2946777, y: -52.75, z: 7.1816406}
+  m_LocalPosition: {x: 5.95, y: -52.75, z: 7.1816406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15077,6 +15487,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -15111,8 +15522,11 @@ MonoBehaviour:
   - {fileID: 60525596}
   cornerNeighbours:
   - {fileID: 1579752869}
+  - {fileID: 1089364919}
   - {fileID: 26061103}
+  - {fileID: 1552429656}
   - {fileID: 2016354351}
+  - {fileID: 1756732202}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -15241,6 +15655,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -15274,9 +15689,12 @@ MonoBehaviour:
   - {fileID: 92060625}
   - {fileID: 1294520388}
   cornerNeighbours:
+  - {fileID: 1662375773}
   - {fileID: 1436311770}
+  - {fileID: 1983686664}
   - {fileID: 2132768089}
   - {fileID: 796106565}
+  - {fileID: 967533950}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -15533,6 +15951,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -15566,9 +15985,13 @@ MonoBehaviour:
   - {fileID: 1294520388}
   - {fileID: 1883096161}
   cornerNeighbours:
+  - {fileID: 1983686664}
   - {fileID: 440504823}
+  - {fileID: 308267996}
   - {fileID: 2047022942}
   - {fileID: 2122387167}
+  - {fileID: 929139163}
+  - {fileID: 1889674508}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -15697,6 +16120,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -15732,11 +16156,15 @@ MonoBehaviour:
   - {fileID: 1679567198}
   - {fileID: 1167733729}
   cornerNeighbours:
+  - {fileID: 1580011824}
   - {fileID: 1093769626}
   - {fileID: 337481965}
+  - {fileID: 2126398020}
   - {fileID: 1958954996}
   - {fileID: 1283661683}
+  - {fileID: 1772130387}
   - {fileID: 1302226476}
+  - {fileID: 228830593}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -15865,6 +16293,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -15898,9 +16327,13 @@ MonoBehaviour:
   - {fileID: 1365533972}
   - {fileID: 983808119}
   cornerNeighbours:
+  - {fileID: 1283661683}
   - {fileID: 228830593}
+  - {fileID: 1502567370}
   - {fileID: 2135418571}
+  - {fileID: 1125950428}
   - {fileID: 1378854678}
+  - {fileID: 1154812396}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -16029,6 +16462,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -16064,10 +16498,14 @@ MonoBehaviour:
   - {fileID: 1524644058}
   - {fileID: 601977458}
   cornerNeighbours:
+  - {fileID: 2134719023}
   - {fileID: 1295139580}
+  - {fileID: 1880153328}
   - {fileID: 1924836870}
   - {fileID: 1596508920}
+  - {fileID: 1314729020}
   - {fileID: 1773170063}
+  - {fileID: 1951332756}
   - {fileID: 38793467}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -16197,6 +16635,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -16232,12 +16671,18 @@ MonoBehaviour:
   - {fileID: 1001675603}
   - {fileID: 2117304900}
   cornerNeighbours:
+  - {fileID: 301527954}
   - {fileID: 60525596}
+  - {fileID: 26061103}
   - {fileID: 1552429656}
   - {fileID: 367949446}
+  - {fileID: 1156609015}
+  - {fileID: 1244353582}
   - {fileID: 664480206}
   - {fileID: 16027363}
+  - {fileID: 277346579}
   - {fileID: 1776628587}
+  - {fileID: 1996431693}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -16366,6 +16811,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -16399,8 +16845,11 @@ MonoBehaviour:
   - {fileID: 1378854678}
   - {fileID: 1154812396}
   cornerNeighbours:
+  - {fileID: 1781231464}
   - {fileID: 1019391273}
+  - {fileID: 2135418571}
   - {fileID: 1125950428}
+  - {fileID: 1880153328}
   - {fileID: 476447962}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -16530,6 +16979,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -16565,12 +17015,18 @@ MonoBehaviour:
   - {fileID: 277346579}
   - {fileID: 1776628587}
   cornerNeighbours:
+  - {fileID: 1552429656}
   - {fileID: 2016354351}
+  - {fileID: 1756732202}
   - {fileID: 1156609015}
   - {fileID: 1724422696}
+  - {fileID: 1047304360}
+  - {fileID: 16027363}
   - {fileID: 100683672}
   - {fileID: 1996431693}
+  - {fileID: 226694312}
   - {fileID: 348833613}
+  - {fileID: 2064970810}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -16762,6 +17218,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -16797,11 +17254,15 @@ MonoBehaviour:
   - {fileID: 2135418571}
   - {fileID: 1365533972}
   cornerNeighbours:
+  - {fileID: 1167733729}
   - {fileID: 1283661683}
   - {fileID: 1302226476}
+  - {fileID: 1471220658}
   - {fileID: 1510632587}
   - {fileID: 983808119}
+  - {fileID: 218338344}
   - {fileID: 1125950428}
+  - {fileID: 1378854678}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17095,6 +17556,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -17130,12 +17592,18 @@ MonoBehaviour:
   - {fileID: 1848099109}
   - {fileID: 1584270450}
   cornerNeighbours:
+  - {fileID: 1325770185}
   - {fileID: 48313433}
+  - {fileID: 1772130387}
   - {fileID: 4283638}
   - {fileID: 1471220658}
+  - {fileID: 411724947}
+  - {fileID: 1510632587}
   - {fileID: 1108158590}
   - {fileID: 1500483515}
+  - {fileID: 629327867}
   - {fileID: 244372071}
+  - {fileID: 398869958}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17264,6 +17732,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -17297,9 +17766,13 @@ MonoBehaviour:
   - {fileID: 254162057}
   - {fileID: 1038804093}
   cornerNeighbours:
+  - {fileID: 345139184}
+  - {fileID: 1580011824}
   - {fileID: 1368799291}
   - {fileID: 337481965}
+  - {fileID: 1863423673}
   - {fileID: 1135321941}
+  - {fileID: 2126398020}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17428,6 +17901,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -17465,9 +17939,13 @@ MonoBehaviour:
   cornerNeighbours:
   - {fileID: 251533358}
   - {fileID: 1580011824}
+  - {fileID: 1368799291}
+  - {fileID: 1301378611}
   - {fileID: 1863423673}
   - {fileID: 579817258}
+  - {fileID: 807232223}
   - {fileID: 1574066999}
+  - {fileID: 1958954996}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17596,6 +18074,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -17629,9 +18108,13 @@ MonoBehaviour:
   - {fileID: 1101591395}
   - {fileID: 100683672}
   cornerNeighbours:
+  - {fileID: 1552429656}
   - {fileID: 649317626}
+  - {fileID: 1001675603}
   - {fileID: 277346579}
+  - {fileID: 1057189852}
   - {fileID: 1627973347}
+  - {fileID: 226694312}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17729,7 +18212,7 @@ GameObject:
   - component: {fileID: 1057189853}
   - component: {fileID: 1057189852}
   m_Layer: 8
-  m_Name: CouleursAutomne
+  m_Name: Trigger
   m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17747,19 +18230,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType:
-    name: CouleursAutomne
+    name: Trigger
     color: {r: 0, g: 0, b: 0, a: 1}
     mat: {fileID: 0}
-    matAlt1: {fileID: 2100000, guid: 478af78b2083a2343a37ca96bfb2b3b3, type: 2}
-    matAlt2: {fileID: 2100000, guid: aa19a84c9038b6644a55426a9b195869, type: 2}
-    matAlt3: {fileID: 2100000, guid: 5580e46f0a26efc4082a83aacdb5ecaa, type: 2}
+    matAlt1: {fileID: 0}
+    matAlt2: {fileID: 0}
+    matAlt3: {fileID: 0}
     speedUp: 0
-    diffWithBasePosY: 0
+    diffWithBasePosY: 1
     imAppliedToCell: 1
     feedBackOnMaterial: 1
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 1
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -17792,8 +18276,11 @@ MonoBehaviour:
   - {fileID: 1627973347}
   - {fileID: 1710252349}
   cornerNeighbours:
+  - {fileID: 1047304360}
   - {fileID: 100683672}
+  - {fileID: 226694312}
   - {fileID: 65163684}
+  - {fileID: 1130691786}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -17839,7 +18326,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 259a469f200cc4e40a0f3e215da60814, type: 2}
+  - {fileID: 2100000, guid: 24bd23e9e4202fd4f9c5054059099958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17871,7 +18358,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057189851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.75, y: -37.1159, z: 0}
+  m_LocalPosition: {x: -8.75, y: -36.1159, z: 0}
   m_LocalScale: {x: 1.484636, y: 1.484636, z: 1.484636}
   m_Children: []
   m_Father: {fileID: 828229767}
@@ -18162,6 +18649,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18199,9 +18687,13 @@ MonoBehaviour:
   cornerNeighbours:
   - {fileID: 445345328}
   - {fileID: 251533358}
+  - {fileID: 910133713}
+  - {fileID: 254162057}
   - {fileID: 60525596}
   - {fileID: 1863423673}
+  - {fileID: 1756732202}
   - {fileID: 367949446}
+  - {fileID: 1999087181}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -18375,6 +18867,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18407,8 +18900,11 @@ MonoBehaviour:
   - {fileID: 1301378611}
   - {fileID: 1643974072}
   cornerNeighbours:
+  - {fileID: 1611787287}
   - {fileID: 337481965}
+  - {fileID: 579817258}
   - {fileID: 970189732}
+  - {fileID: 664520541}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -18618,6 +19114,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18651,9 +19148,12 @@ MonoBehaviour:
   - {fileID: 1057189852}
   - {fileID: 1627973347}
   cornerNeighbours:
+  - {fileID: 1156609015}
   - {fileID: 664480206}
+  - {fileID: 277346579}
   - {fileID: 226694312}
   - {fileID: 1710252349}
+  - {fileID: 65163684}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -18782,6 +19282,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18817,12 +19318,18 @@ MonoBehaviour:
   - {fileID: 876184498}
   - {fileID: 629327867}
   cornerNeighbours:
+  - {fileID: 532817466}
   - {fileID: 4283638}
+  - {fileID: 1145899758}
   - {fileID: 885874751}
   - {fileID: 1033797433}
+  - {fileID: 1482046694}
+  - {fileID: 1584270450}
   - {fileID: 121994050}
   - {fileID: 244372071}
+  - {fileID: 1939340133}
   - {fileID: 535906078}
+  - {fileID: 470462889}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -18951,6 +19458,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18987,9 +19495,12 @@ MonoBehaviour:
   - {fileID: 26061103}
   cornerNeighbours:
   - {fileID: 345139184}
+  - {fileID: 1368799291}
   - {fileID: 301527954}
   - {fileID: 1204078940}
+  - {fileID: 2016354351}
   - {fileID: 1756732202}
+  - {fileID: 367949446}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -19210,6 +19721,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -19245,12 +19757,18 @@ MonoBehaviour:
   - {fileID: 308267996}
   - {fileID: 568719645}
   cornerNeighbours:
+  - {fileID: 535906078}
   - {fileID: 470462889}
+  - {fileID: 362869722}
   - {fileID: 1234368827}
   - {fileID: 1314729020}
+  - {fileID: 1557042875}
+  - {fileID: 1773170063}
   - {fileID: 440504823}
   - {fileID: 354750573}
+  - {fileID: 709140192}
   - {fileID: 2122387167}
+  - {fileID: 474950104}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -19379,6 +19897,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -19414,12 +19933,18 @@ MonoBehaviour:
   - {fileID: 1295139580}
   - {fileID: 1880153328}
   cornerNeighbours:
+  - {fileID: 1502567370}
   - {fileID: 1019391273}
+  - {fileID: 973201951}
   - {fileID: 1510632587}
   - {fileID: 983808119}
+  - {fileID: 1500483515}
+  - {fileID: 1154812396}
   - {fileID: 2134719023}
   - {fileID: 476447962}
+  - {fileID: 642948419}
   - {fileID: 2030876851}
+  - {fileID: 1596508920}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -19548,6 +20073,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -19581,9 +20107,13 @@ MonoBehaviour:
   - {fileID: 628857881}
   - {fileID: 1732061763}
   cornerNeighbours:
+  - {fileID: 1057189852}
   - {fileID: 1627973347}
+  - {fileID: 226694312}
   - {fileID: 24759785}
+  - {fileID: 1718363394}
   - {fileID: 1891664267}
+  - {fileID: 1672131237}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -19712,6 +20242,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -19747,12 +20278,18 @@ MonoBehaviour:
   - {fileID: 807232223}
   - {fileID: 1574066999}
   cornerNeighbours:
+  - {fileID: 251533358}
   - {fileID: 1035878400}
+  - {fileID: 1611787287}
   - {fileID: 1368799291}
   - {fileID: 337481965}
+  - {fileID: 1204078940}
+  - {fileID: 579817258}
   - {fileID: 1999087181}
   - {fileID: 1958954996}
+  - {fileID: 1536284082}
   - {fileID: 1325770185}
+  - {fileID: 48313433}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -19881,6 +20418,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -19916,12 +20454,18 @@ MonoBehaviour:
   - {fileID: 1901250378}
   - {fileID: 1033797433}
   cornerNeighbours:
+  - {fileID: 807232223}
   - {fileID: 1574066999}
+  - {fileID: 1958954996}
   - {fileID: 1536284082}
   - {fileID: 1772130387}
+  - {fileID: 532817466}
+  - {fileID: 1471220658}
   - {fileID: 411724947}
   - {fileID: 385610587}
+  - {fileID: 1108158590}
   - {fileID: 1848099109}
+  - {fileID: 1584270450}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20050,6 +20594,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -20082,8 +20627,11 @@ MonoBehaviour:
   - {fileID: 1378854678}
   - {fileID: 476447962}
   cornerNeighbours:
+  - {fileID: 973201951}
   - {fileID: 1365533972}
+  - {fileID: 1125950428}
   - {fileID: 1880153328}
+  - {fileID: 1596508920}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20212,6 +20760,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -20245,9 +20794,13 @@ MonoBehaviour:
   - {fileID: 1047304360}
   - {fileID: 664480206}
   cornerNeighbours:
+  - {fileID: 301527954}
   - {fileID: 2016354351}
+  - {fileID: 983245440}
   - {fileID: 1001675603}
+  - {fileID: 1101591395}
   - {fileID: 100683672}
+  - {fileID: 277346579}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20376,6 +20929,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -20411,11 +20965,15 @@ MonoBehaviour:
   - {fileID: 1302226476}
   - {fileID: 228830593}
   cornerNeighbours:
+  - {fileID: 1301378611}
   - {fileID: 1643974072}
   - {fileID: 579817258}
+  - {fileID: 1958954996}
   - {fileID: 1772130387}
   - {fileID: 1781231464}
+  - {fileID: 1471220658}
   - {fileID: 1502567370}
+  - {fileID: 1019391273}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20544,6 +21102,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -20579,12 +21138,18 @@ MonoBehaviour:
   - {fileID: 367949446}
   - {fileID: 1999087181}
   cornerNeighbours:
+  - {fileID: 1579752869}
   - {fileID: 345139184}
+  - {fileID: 251533358}
   - {fileID: 1117810770}
   - {fileID: 254162057}
+  - {fileID: 60525596}
+  - {fileID: 1135321941}
   - {fileID: 1756732202}
   - {fileID: 807232223}
+  - {fileID: 1724422696}
   - {fileID: 1244353582}
+  - {fileID: 1536284082}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20747,6 +21312,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -20782,12 +21348,18 @@ MonoBehaviour:
   - {fileID: 1557042875}
   - {fileID: 1834067945}
   cornerNeighbours:
+  - {fileID: 121994050}
   - {fileID: 876184498}
+  - {fileID: 629327867}
   - {fileID: 776334722}
   - {fileID: 470462889}
+  - {fileID: 326953658}
+  - {fileID: 1369941427}
   - {fileID: 307508376}
   - {fileID: 1124842085}
+  - {fileID: 1983686664}
   - {fileID: 440504823}
+  - {fileID: 308267996}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -20984,6 +21556,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -21019,12 +21592,18 @@ MonoBehaviour:
   - {fileID: 16027363}
   - {fileID: 532817466}
   cornerNeighbours:
+  - {fileID: 26061103}
   - {fileID: 1204078940}
+  - {fileID: 1863423673}
   - {fileID: 1756732202}
   - {fileID: 807232223}
+  - {fileID: 983245440}
+  - {fileID: 1325770185}
   - {fileID: 2117304900}
   - {fileID: 4283638}
+  - {fileID: 1996431693}
   - {fileID: 885874751}
+  - {fileID: 411724947}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -21271,6 +21850,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -21303,8 +21883,11 @@ MonoBehaviour:
   - {fileID: 234120285}
   - {fileID: 1883341455}
   cornerNeighbours:
+  - {fileID: 354750573}
   - {fileID: 1951332756}
+  - {fileID: 38793467}
   - {fileID: 474950104}
+  - {fileID: 1889674508}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -21488,6 +22071,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -21521,9 +22105,13 @@ MonoBehaviour:
   - {fileID: 228830593}
   - {fileID: 1781231464}
   cornerNeighbours:
+  - {fileID: 1643974072}
   - {fileID: 970189732}
+  - {fileID: 1679567198}
   - {fileID: 1302226476}
+  - {fileID: 1502567370}
   - {fileID: 1019391273}
+  - {fileID: 973201951}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -21887,6 +22475,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -21920,9 +22509,13 @@ MonoBehaviour:
   - {fileID: 929139163}
   - {fileID: 967533950}
   cornerNeighbours:
+  - {fileID: 1436311770}
   - {fileID: 1983686664}
+  - {fileID: 440504823}
   - {fileID: 30260115}
   - {fileID: 709140192}
+  - {fileID: 92060625}
+  - {fileID: 1883096161}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -22051,6 +22644,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22086,12 +22680,18 @@ MonoBehaviour:
   - {fileID: 642948419}
   - {fileID: 2030876851}
   cornerNeighbours:
+  - {fileID: 1510632587}
   - {fileID: 2135418571}
+  - {fileID: 1365533972}
   - {fileID: 1500483515}
   - {fileID: 1378854678}
+  - {fileID: 398869958}
+  - {fileID: 476447962}
   - {fileID: 1924836870}
   - {fileID: 1596508920}
+  - {fileID: 1538933559}
   - {fileID: 981957513}
+  - {fileID: 1440758663}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -22220,6 +22820,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22256,9 +22857,12 @@ MonoBehaviour:
   - {fileID: 970189732}
   cornerNeighbours:
   - {fileID: 1611787287}
+  - {fileID: 1038804093}
   - {fileID: 2126398020}
   - {fileID: 664520541}
+  - {fileID: 1958954996}
   - {fileID: 1679567198}
+  - {fileID: 1167733729}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -22387,6 +22991,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22422,12 +23027,18 @@ MonoBehaviour:
   - {fileID: 1471220658}
   - {fileID: 1502567370}
   cornerNeighbours:
+  - {fileID: 579817258}
   - {fileID: 970189732}
+  - {fileID: 664520541}
   - {fileID: 1958954996}
   - {fileID: 1283661683}
+  - {fileID: 48313433}
+  - {fileID: 1781231464}
   - {fileID: 1819482875}
   - {fileID: 1019391273}
+  - {fileID: 385610587}
   - {fileID: 1510632587}
+  - {fileID: 2135418571}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -22727,6 +23338,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22762,12 +23374,18 @@ MonoBehaviour:
   - {fileID: 1983669179}
   - {fileID: 1773170063}
   cornerNeighbours:
+  - {fileID: 244372071}
   - {fileID: 398869958}
+  - {fileID: 2134719023}
   - {fileID: 470462889}
   - {fileID: 642948419}
+  - {fileID: 172344413}
+  - {fileID: 981957513}
   - {fileID: 1124842085}
   - {fileID: 1524644058}
+  - {fileID: 568719645}
   - {fileID: 354750573}
+  - {fileID: 1951332756}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -22896,6 +23514,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -22931,12 +23550,18 @@ MonoBehaviour:
   - {fileID: 4283638}
   - {fileID: 1145899758}
   cornerNeighbours:
+  - {fileID: 1863423673}
   - {fileID: 1135321941}
+  - {fileID: 2126398020}
   - {fileID: 1999087181}
   - {fileID: 1958954996}
+  - {fileID: 1244353582}
+  - {fileID: 1772130387}
   - {fileID: 532817466}
   - {fileID: 1819482875}
+  - {fileID: 411724947}
   - {fileID: 1901250378}
+  - {fileID: 1033797433}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -23099,6 +23724,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -23134,11 +23760,15 @@ MonoBehaviour:
   - {fileID: 1125950428}
   - {fileID: 1378854678}
   cornerNeighbours:
+  - {fileID: 228830593}
   - {fileID: 1781231464}
   - {fileID: 1502567370}
+  - {fileID: 1510632587}
   - {fileID: 218338344}
   - {fileID: 1154812396}
+  - {fileID: 1295139580}
   - {fileID: 1880153328}
+  - {fileID: 476447962}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -23267,6 +23897,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -23304,9 +23935,13 @@ MonoBehaviour:
   cornerNeighbours:
   - {fileID: 1579752869}
   - {fileID: 1035878400}
+  - {fileID: 1117810770}
+  - {fileID: 1038804093}
   - {fileID: 26061103}
   - {fileID: 1135321941}
+  - {fileID: 367949446}
   - {fileID: 1999087181}
+  - {fileID: 807232223}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -23532,6 +24167,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -23567,12 +24203,18 @@ MonoBehaviour:
   - {fileID: 1124842085}
   - {fileID: 1983669179}
   cornerNeighbours:
+  - {fileID: 629327867}
   - {fileID: 244372071}
+  - {fileID: 398869958}
   - {fileID: 535906078}
   - {fileID: 1924836870}
+  - {fileID: 1234368827}
+  - {fileID: 1538933559}
   - {fileID: 1834067945}
   - {fileID: 1773170063}
+  - {fileID: 308267996}
   - {fileID: 568719645}
+  - {fileID: 354750573}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -23701,6 +24343,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -23736,9 +24379,12 @@ MonoBehaviour:
   - {fileID: 1880153328}
   - {fileID: 476447962}
   cornerNeighbours:
+  - {fileID: 1019391273}
   - {fileID: 973201951}
   - {fileID: 2135418571}
+  - {fileID: 218338344}
   - {fileID: 1295139580}
+  - {fileID: 2030876851}
   - {fileID: 1596508920}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -24149,6 +24795,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -24184,12 +24831,18 @@ MonoBehaviour:
   - {fileID: 1718363394}
   - {fileID: 110548406}
   cornerNeighbours:
+  - {fileID: 277346579}
   - {fileID: 1776628587}
+  - {fileID: 1996431693}
   - {fileID: 226694312}
   - {fileID: 1482046694}
+  - {fileID: 65163684}
+  - {fileID: 121994050}
   - {fileID: 628857881}
   - {fileID: 776334722}
+  - {fileID: 1891664267}
   - {fileID: 595050015}
+  - {fileID: 326953658}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -24392,6 +25045,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -24427,12 +25081,18 @@ MonoBehaviour:
   - {fileID: 30260115}
   - {fileID: 2047022942}
   cornerNeighbours:
+  - {fileID: 595050015}
   - {fileID: 326953658}
+  - {fileID: 281942685}
   - {fileID: 402107330}
   - {fileID: 1557042875}
+  - {fileID: 2100520834}
+  - {fileID: 440504823}
   - {fileID: 2132768089}
   - {fileID: 796106565}
+  - {fileID: 92060625}
   - {fileID: 929139163}
+  - {fileID: 1294520388}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -24561,6 +25221,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -24594,9 +25255,13 @@ MonoBehaviour:
   - {fileID: 981957513}
   - {fileID: 601977458}
   cornerNeighbours:
+  - {fileID: 1295139580}
   - {fileID: 1880153328}
+  - {fileID: 476447962}
   - {fileID: 642948419}
+  - {fileID: 1538933559}
   - {fileID: 1524644058}
+  - {fileID: 38793467}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -24822,6 +25487,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -24857,12 +25523,18 @@ MonoBehaviour:
   - {fileID: 385610587}
   - {fileID: 1510632587}
   cornerNeighbours:
+  - {fileID: 1958954996}
   - {fileID: 1679567198}
+  - {fileID: 1167733729}
   - {fileID: 48313433}
   - {fileID: 228830593}
+  - {fileID: 1145899758}
+  - {fileID: 1019391273}
   - {fileID: 1033797433}
   - {fileID: 2135418571}
+  - {fileID: 1584270450}
   - {fileID: 1500483515}
+  - {fileID: 218338344}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -25088,6 +25760,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -25123,12 +25796,18 @@ MonoBehaviour:
   - {fileID: 71284072}
   - {fileID: 121994050}
   cornerNeighbours:
+  - {fileID: 2117304900}
   - {fileID: 16027363}
+  - {fileID: 532817466}
   - {fileID: 1776628587}
   - {fileID: 411724947}
+  - {fileID: 348833613}
+  - {fileID: 1108158590}
   - {fileID: 1425328349}
   - {fileID: 876184498}
+  - {fileID: 110548406}
   - {fileID: 776334722}
+  - {fileID: 1939340133}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -25357,6 +26036,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -25392,12 +26072,18 @@ MonoBehaviour:
   - {fileID: 398869958}
   - {fileID: 2134719023}
   cornerNeighbours:
+  - {fileID: 1819482875}
   - {fileID: 1471220658}
+  - {fileID: 1502567370}
   - {fileID: 1033797433}
   - {fileID: 2135418571}
+  - {fileID: 1848099109}
+  - {fileID: 1125950428}
   - {fileID: 244372071}
   - {fileID: 1295139580}
+  - {fileID: 362869722}
   - {fileID: 1924836870}
+  - {fileID: 642948419}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -25526,6 +26212,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -25561,12 +26248,18 @@ MonoBehaviour:
   - {fileID: 1510632587}
   - {fileID: 2135418571}
   cornerNeighbours:
+  - {fileID: 1679567198}
   - {fileID: 1167733729}
+  - {fileID: 1283661683}
   - {fileID: 1772130387}
   - {fileID: 1781231464}
+  - {fileID: 1819482875}
+  - {fileID: 973201951}
   - {fileID: 385610587}
   - {fileID: 1365533972}
+  - {fileID: 1500483515}
   - {fileID: 218338344}
+  - {fileID: 1125950428}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -25695,6 +26388,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -25730,12 +26424,18 @@ MonoBehaviour:
   - {fileID: 1500483515}
   - {fileID: 218338344}
   cornerNeighbours:
+  - {fileID: 1772130387}
   - {fileID: 1302226476}
+  - {fileID: 228830593}
   - {fileID: 1819482875}
   - {fileID: 1019391273}
+  - {fileID: 1033797433}
+  - {fileID: 1365533972}
   - {fileID: 1584270450}
   - {fileID: 1125950428}
+  - {fileID: 398869958}
   - {fileID: 2134719023}
+  - {fileID: 1295139580}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -25864,6 +26564,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -25899,10 +26600,14 @@ MonoBehaviour:
   - {fileID: 1951332756}
   - {fileID: 38793467}
   cornerNeighbours:
+  - {fileID: 1924836870}
   - {fileID: 642948419}
+  - {fileID: 2030876851}
   - {fileID: 1314729020}
   - {fileID: 1440758663}
+  - {fileID: 1983669179}
   - {fileID: 354750573}
+  - {fileID: 250971665}
   - {fileID: 234120285}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -26129,6 +26834,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -26164,12 +26870,18 @@ MonoBehaviour:
   - {fileID: 532817466}
   - {fileID: 4283638}
   cornerNeighbours:
+  - {fileID: 1204078940}
   - {fileID: 1863423673}
+  - {fileID: 1135321941}
   - {fileID: 367949446}
   - {fileID: 1574066999}
+  - {fileID: 1724422696}
+  - {fileID: 48313433}
   - {fileID: 16027363}
   - {fileID: 1145899758}
+  - {fileID: 885874751}
   - {fileID: 411724947}
+  - {fileID: 1901250378}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -26298,6 +27010,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -26333,12 +27046,18 @@ MonoBehaviour:
   - {fileID: 1773170063}
   - {fileID: 1524644058}
   cornerNeighbours:
+  - {fileID: 398869958}
   - {fileID: 2134719023}
+  - {fileID: 1295139580}
   - {fileID: 362869722}
   - {fileID: 2030876851}
+  - {fileID: 1369941427}
+  - {fileID: 1440758663}
   - {fileID: 1983669179}
   - {fileID: 601977458}
+  - {fileID: 354750573}
   - {fileID: 1951332756}
+  - {fileID: 38793467}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -26541,6 +27260,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -26574,9 +27294,13 @@ MonoBehaviour:
   - {fileID: 1156609015}
   - {fileID: 649317626}
   cornerNeighbours:
+  - {fileID: 910133713}
   - {fileID: 60525596}
+  - {fileID: 1756732202}
   - {fileID: 983245440}
+  - {fileID: 1047304360}
   - {fileID: 664480206}
+  - {fileID: 1001675603}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -26705,6 +27429,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -26740,12 +27465,18 @@ MonoBehaviour:
   - {fileID: 1983686664}
   - {fileID: 440504823}
   cornerNeighbours:
+  - {fileID: 776334722}
   - {fileID: 1939340133}
+  - {fileID: 535906078}
   - {fileID: 326953658}
   - {fileID: 172344413}
+  - {fileID: 607437661}
+  - {fileID: 1124842085}
   - {fileID: 1436311770}
   - {fileID: 308267996}
+  - {fileID: 2047022942}
   - {fileID: 796106565}
+  - {fileID: 709140192}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -26874,6 +27605,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -26909,12 +27641,18 @@ MonoBehaviour:
   - {fileID: 1325770185}
   - {fileID: 48313433}
   cornerNeighbours:
+  - {fileID: 254162057}
   - {fileID: 1038804093}
+  - {fileID: 337481965}
   - {fileID: 1863423673}
   - {fileID: 579817258}
+  - {fileID: 1999087181}
+  - {fileID: 1679567198}
   - {fileID: 1536284082}
   - {fileID: 1772130387}
+  - {fileID: 4283638}
   - {fileID: 1145899758}
+  - {fileID: 1819482875}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -27043,6 +27781,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -27076,9 +27815,12 @@ MonoBehaviour:
   - {fileID: 1117810770}
   - {fileID: 1089364919}
   cornerNeighbours:
+  - {fileID: 251533358}
   - {fileID: 910133713}
   - {fileID: 1368799291}
+  - {fileID: 60525596}
   - {fileID: 26061103}
+  - {fileID: 1204078940}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -27207,6 +27949,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -27240,9 +27983,12 @@ MonoBehaviour:
   - {fileID: 337481965}
   - {fileID: 1301378611}
   cornerNeighbours:
+  - {fileID: 1035878400}
   - {fileID: 1038804093}
   - {fileID: 1643974072}
+  - {fileID: 2126398020}
   - {fileID: 579817258}
+  - {fileID: 970189732}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -27371,6 +28117,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -27406,12 +28153,18 @@ MonoBehaviour:
   - {fileID: 244372071}
   - {fileID: 398869958}
   cornerNeighbours:
+  - {fileID: 1145899758}
   - {fileID: 1819482875}
+  - {fileID: 1471220658}
   - {fileID: 1901250378}
   - {fileID: 1510632587}
+  - {fileID: 1108158590}
+  - {fileID: 218338344}
   - {fileID: 629327867}
   - {fileID: 2134719023}
+  - {fileID: 470462889}
   - {fileID: 362869722}
+  - {fileID: 1924836870}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -27694,6 +28447,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -27727,9 +28481,13 @@ MonoBehaviour:
   - {fileID: 2030876851}
   - {fileID: 1440758663}
   cornerNeighbours:
+  - {fileID: 1125950428}
   - {fileID: 1378854678}
+  - {fileID: 1154812396}
   - {fileID: 1295139580}
+  - {fileID: 642948419}
   - {fileID: 981957513}
+  - {fileID: 601977458}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -27858,6 +28616,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -27891,9 +28650,13 @@ MonoBehaviour:
   - {fileID: 1038804093}
   - {fileID: 337481965}
   cornerNeighbours:
+  - {fileID: 251533358}
+  - {fileID: 1093769626}
   - {fileID: 254162057}
   - {fileID: 1301378611}
+  - {fileID: 1135321941}
   - {fileID: 2126398020}
+  - {fileID: 579817258}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -28022,6 +28785,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -28058,9 +28822,12 @@ MonoBehaviour:
   - {fileID: 65163684}
   cornerNeighbours:
   - {fileID: 1047304360}
+  - {fileID: 664480206}
   - {fileID: 277346579}
+  - {fileID: 348833613}
   - {fileID: 24759785}
   - {fileID: 1130691786}
+  - {fileID: 628857881}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -28235,6 +29002,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -28269,8 +29037,11 @@ MonoBehaviour:
   - {fileID: 664520541}
   cornerNeighbours:
   - {fileID: 1580011824}
+  - {fileID: 337481965}
   - {fileID: 579817258}
+  - {fileID: 1679567198}
   - {fileID: 1167733729}
+  - {fileID: 1283661683}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -28496,6 +29267,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -28531,11 +29303,15 @@ MonoBehaviour:
   - {fileID: 2132768089}
   - {fileID: 30260115}
   cornerNeighbours:
+  - {fileID: 1891664267}
   - {fileID: 595050015}
+  - {fileID: 326953658}
   - {fileID: 1672131237}
   - {fileID: 307508376}
+  - {fileID: 1983686664}
   - {fileID: 2047022942}
   - {fileID: 92060625}
+  - {fileID: 929139163}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -28754,6 +29530,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -28787,9 +29564,13 @@ MonoBehaviour:
   - {fileID: 402107330}
   - {fileID: 2100520834}
   cornerNeighbours:
+  - {fileID: 1130691786}
   - {fileID: 628857881}
+  - {fileID: 1718363394}
   - {fileID: 595050015}
+  - {fileID: 607437661}
   - {fileID: 1662375773}
+  - {fileID: 2132768089}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -28980,6 +29761,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -29015,12 +29797,18 @@ MonoBehaviour:
   - {fileID: 1772130387}
   - {fileID: 1302226476}
   cornerNeighbours:
+  - {fileID: 337481965}
   - {fileID: 1301378611}
+  - {fileID: 1643974072}
   - {fileID: 2126398020}
   - {fileID: 664520541}
+  - {fileID: 1574066999}
+  - {fileID: 1283661683}
   - {fileID: 48313433}
   - {fileID: 228830593}
+  - {fileID: 1819482875}
   - {fileID: 1471220658}
+  - {fileID: 1502567370}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -29149,6 +29937,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -29183,8 +29972,11 @@ MonoBehaviour:
   - {fileID: 1130691786}
   cornerNeighbours:
   - {fileID: 1101591395}
+  - {fileID: 100683672}
   - {fileID: 226694312}
+  - {fileID: 24759785}
   - {fileID: 628857881}
+  - {fileID: 1732061763}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -29313,6 +30105,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -29348,12 +30141,18 @@ MonoBehaviour:
   - {fileID: 1891664267}
   - {fileID: 595050015}
   cornerNeighbours:
+  - {fileID: 226694312}
   - {fileID: 348833613}
+  - {fileID: 2064970810}
   - {fileID: 65163684}
   - {fileID: 71284072}
+  - {fileID: 1130691786}
+  - {fileID: 776334722}
   - {fileID: 1732061763}
   - {fileID: 326953658}
+  - {fileID: 1672131237}
   - {fileID: 402107330}
+  - {fileID: 607437661}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -29579,6 +30378,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -29614,12 +30414,18 @@ MonoBehaviour:
   - {fileID: 2117304900}
   - {fileID: 16027363}
   cornerNeighbours:
+  - {fileID: 60525596}
   - {fileID: 26061103}
+  - {fileID: 1204078940}
   - {fileID: 2016354351}
   - {fileID: 1999087181}
+  - {fileID: 649317626}
+  - {fileID: 1536284082}
   - {fileID: 1001675603}
   - {fileID: 532817466}
+  - {fileID: 1776628587}
   - {fileID: 1996431693}
+  - {fileID: 885874751}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -29845,6 +30651,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -29878,9 +30685,13 @@ MonoBehaviour:
   - {fileID: 1891664267}
   - {fileID: 1672131237}
   cornerNeighbours:
+  - {fileID: 1710252349}
   - {fileID: 65163684}
+  - {fileID: 24759785}
   - {fileID: 1718363394}
+  - {fileID: 595050015}
   - {fileID: 402107330}
+  - {fileID: 2100520834}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -30353,6 +31164,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -30388,12 +31200,18 @@ MonoBehaviour:
   - {fileID: 983245440}
   - {fileID: 1724422696}
   cornerNeighbours:
+  - {fileID: 910133713}
   - {fileID: 1117810770}
+  - {fileID: 1089364919}
   - {fileID: 301527954}
   - {fileID: 1204078940}
+  - {fileID: 1552429656}
+  - {fileID: 1999087181}
   - {fileID: 649317626}
   - {fileID: 1244353582}
+  - {fileID: 1001675603}
   - {fileID: 2117304900}
+  - {fileID: 16027363}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -30619,6 +31437,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -30654,12 +31473,18 @@ MonoBehaviour:
   - {fileID: 1819482875}
   - {fileID: 1471220658}
   cornerNeighbours:
+  - {fileID: 2126398020}
   - {fileID: 579817258}
+  - {fileID: 970189732}
   - {fileID: 1574066999}
   - {fileID: 1167733729}
+  - {fileID: 1325770185}
+  - {fileID: 228830593}
   - {fileID: 1145899758}
   - {fileID: 1502567370}
+  - {fileID: 1033797433}
   - {fileID: 385610587}
+  - {fileID: 1510632587}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -30788,6 +31613,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -30823,12 +31649,18 @@ MonoBehaviour:
   - {fileID: 354750573}
   - {fileID: 1951332756}
   cornerNeighbours:
+  - {fileID: 362869722}
   - {fileID: 1924836870}
+  - {fileID: 642948419}
   - {fileID: 1369941427}
   - {fileID: 981957513}
+  - {fileID: 1124842085}
+  - {fileID: 601977458}
   - {fileID: 568719645}
   - {fileID: 38793467}
+  - {fileID: 474950104}
   - {fileID: 250971665}
+  - {fileID: 234120285}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -30957,6 +31789,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -30992,12 +31825,18 @@ MonoBehaviour:
   - {fileID: 348833613}
   - {fileID: 2064970810}
   cornerNeighbours:
+  - {fileID: 649317626}
   - {fileID: 983245440}
+  - {fileID: 1724422696}
   - {fileID: 664480206}
   - {fileID: 16027363}
+  - {fileID: 100683672}
+  - {fileID: 885874751}
   - {fileID: 226694312}
   - {fileID: 1482046694}
+  - {fileID: 24759785}
   - {fileID: 1425328349}
+  - {fileID: 71284072}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -31126,6 +31965,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -31159,9 +31999,13 @@ MonoBehaviour:
   - {fileID: 1019391273}
   - {fileID: 973201951}
   cornerNeighbours:
+  - {fileID: 664520541}
   - {fileID: 1167733729}
+  - {fileID: 1302226476}
   - {fileID: 1502567370}
+  - {fileID: 2135418571}
   - {fileID: 1365533972}
+  - {fileID: 983808119}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -31529,6 +32373,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -31564,12 +32409,18 @@ MonoBehaviour:
   - {fileID: 1033797433}
   - {fileID: 385610587}
   cornerNeighbours:
+  - {fileID: 1574066999}
   - {fileID: 1958954996}
+  - {fileID: 1679567198}
   - {fileID: 1325770185}
   - {fileID: 1302226476}
+  - {fileID: 4283638}
+  - {fileID: 1502567370}
   - {fileID: 1901250378}
   - {fileID: 1510632587}
+  - {fileID: 1848099109}
   - {fileID: 1584270450}
+  - {fileID: 1500483515}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -31766,6 +32617,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -31801,12 +32653,18 @@ MonoBehaviour:
   - {fileID: 440504823}
   - {fileID: 308267996}
   cornerNeighbours:
+  - {fileID: 1939340133}
   - {fileID: 535906078}
+  - {fileID: 470462889}
   - {fileID: 281942685}
   - {fileID: 1369941427}
+  - {fileID: 307508376}
+  - {fileID: 1983669179}
   - {fileID: 1983686664}
   - {fileID: 568719645}
+  - {fileID: 796106565}
   - {fileID: 709140192}
+  - {fileID: 2122387167}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -31972,6 +32830,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32007,12 +32866,18 @@ MonoBehaviour:
   - {fileID: 629327867}
   - {fileID: 244372071}
   cornerNeighbours:
+  - {fileID: 4283638}
   - {fileID: 1145899758}
+  - {fileID: 1819482875}
   - {fileID: 411724947}
   - {fileID: 385610587}
+  - {fileID: 138399653}
+  - {fileID: 1500483515}
   - {fileID: 876184498}
   - {fileID: 398869958}
+  - {fileID: 535906078}
   - {fileID: 470462889}
+  - {fileID: 362869722}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -32141,6 +33006,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32176,12 +33042,18 @@ MonoBehaviour:
   - {fileID: 1999087181}
   - {fileID: 807232223}
   cornerNeighbours:
+  - {fileID: 345139184}
   - {fileID: 251533358}
+  - {fileID: 1035878400}
   - {fileID: 1089364919}
   - {fileID: 1038804093}
+  - {fileID: 26061103}
+  - {fileID: 2126398020}
   - {fileID: 367949446}
   - {fileID: 1574066999}
+  - {fileID: 1244353582}
   - {fileID: 1536284082}
+  - {fileID: 1325770185}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -32407,6 +33279,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32442,10 +33315,14 @@ MonoBehaviour:
   - {fileID: 2030876851}
   - {fileID: 1596508920}
   cornerNeighbours:
+  - {fileID: 2135418571}
   - {fileID: 1365533972}
+  - {fileID: 983808119}
   - {fileID: 218338344}
   - {fileID: 1154812396}
+  - {fileID: 2134719023}
   - {fileID: 642948419}
+  - {fileID: 981957513}
   - {fileID: 1440758663}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -32575,6 +33452,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32608,9 +33486,13 @@ MonoBehaviour:
   - {fileID: 967533950}
   - {fileID: 1889674508}
   cornerNeighbours:
+  - {fileID: 440504823}
   - {fileID: 308267996}
+  - {fileID: 568719645}
   - {fileID: 796106565}
   - {fileID: 474950104}
+  - {fileID: 1294520388}
+  - {fileID: 1883341455}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -32739,6 +33621,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32772,9 +33655,12 @@ MonoBehaviour:
   - {fileID: 1889674508}
   - {fileID: 1250442779}
   cornerNeighbours:
+  - {fileID: 568719645}
   - {fileID: 354750573}
+  - {fileID: 1951332756}
   - {fileID: 2122387167}
   - {fileID: 234120285}
+  - {fileID: 1883096161}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -32903,6 +33789,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -32936,9 +33823,13 @@ MonoBehaviour:
   - {fileID: 1883096161}
   - {fileID: 1883341455}
   cornerNeighbours:
+  - {fileID: 308267996}
   - {fileID: 568719645}
+  - {fileID: 354750573}
   - {fileID: 709140192}
   - {fileID: 250971665}
+  - {fileID: 967533950}
+  - {fileID: 1250442779}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -33067,6 +33958,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33102,11 +33994,15 @@ MonoBehaviour:
   - {fileID: 1672131237}
   - {fileID: 402107330}
   cornerNeighbours:
+  - {fileID: 65163684}
   - {fileID: 24759785}
+  - {fileID: 1425328349}
   - {fileID: 1130691786}
   - {fileID: 110548406}
+  - {fileID: 326953658}
   - {fileID: 607437661}
   - {fileID: 2100520834}
+  - {fileID: 1662375773}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -33235,6 +34131,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33270,12 +34167,18 @@ MonoBehaviour:
   - {fileID: 1108158590}
   - {fileID: 1848099109}
   cornerNeighbours:
+  - {fileID: 1536284082}
   - {fileID: 1325770185}
+  - {fileID: 48313433}
   - {fileID: 532817466}
   - {fileID: 1819482875}
+  - {fileID: 885874751}
+  - {fileID: 385610587}
   - {fileID: 138399653}
   - {fileID: 1584270450}
+  - {fileID: 876184498}
   - {fileID: 629327867}
+  - {fileID: 244372071}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -33403,6 +34306,26 @@ Prefab:
       propertyPath: generateInEditor
       value: 
       objectReference: {fileID: 892379729}
+    - target: {fileID: 114316359607351516, guid: 52d785a94dd87bf439f9ab7dd9f49913,
+        type: 2}
+      propertyPath: cellTypeTriggerOnWait.mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 50756c657c732ad4b80b30c0535f4062, type: 2}
+    - target: {fileID: 114316359607351516, guid: 52d785a94dd87bf439f9ab7dd9f49913,
+        type: 2}
+      propertyPath: cellTypeTriggerOnWait.name
+      value: OnWaitTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 114316359607351516, guid: 52d785a94dd87bf439f9ab7dd9f49913,
+        type: 2}
+      propertyPath: cellTypeTriggerOnWait.onWaitForCancer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114316359607351516, guid: 52d785a94dd87bf439f9ab7dd9f49913,
+        type: 2}
+      propertyPath: cellTypeTriggerOnWait.isTriggerDestruction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52d785a94dd87bf439f9ab7dd9f49913, type: 2}
   m_IsPrefabParent: 0
@@ -33451,6 +34374,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33486,12 +34410,18 @@ MonoBehaviour:
   - {fileID: 1314729020}
   - {fileID: 1538933559}
   cornerNeighbours:
+  - {fileID: 1584270450}
   - {fileID: 1500483515}
+  - {fileID: 218338344}
   - {fileID: 244372071}
   - {fileID: 1295139580}
+  - {fileID: 470462889}
+  - {fileID: 2030876851}
   - {fileID: 1369941427}
   - {fileID: 981957513}
+  - {fileID: 1983669179}
   - {fileID: 1773170063}
+  - {fileID: 1524644058}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -33620,6 +34550,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33655,12 +34586,18 @@ MonoBehaviour:
   - {fileID: 281942685}
   - {fileID: 1234368827}
   cornerNeighbours:
+  - {fileID: 1482046694}
   - {fileID: 138399653}
+  - {fileID: 1108158590}
   - {fileID: 71284072}
   - {fileID: 629327867}
+  - {fileID: 110548406}
+  - {fileID: 470462889}
   - {fileID: 326953658}
   - {fileID: 172344413}
+  - {fileID: 307508376}
   - {fileID: 1557042875}
+  - {fileID: 1834067945}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -33789,6 +34726,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33824,10 +34762,14 @@ MonoBehaviour:
   - {fileID: 250971665}
   - {fileID: 234120285}
   cornerNeighbours:
+  - {fileID: 1314729020}
   - {fileID: 1538933559}
+  - {fileID: 981957513}
   - {fileID: 1983669179}
   - {fileID: 601977458}
+  - {fileID: 568719645}
   - {fileID: 474950104}
+  - {fileID: 1883341455}
   - {fileID: 1250442779}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -33957,6 +34899,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -33992,12 +34935,18 @@ MonoBehaviour:
   - {fileID: 48313433}
   - {fileID: 1772130387}
   cornerNeighbours:
+  - {fileID: 1038804093}
   - {fileID: 337481965}
+  - {fileID: 1301378611}
   - {fileID: 1135321941}
   - {fileID: 970189732}
+  - {fileID: 807232223}
+  - {fileID: 1167733729}
   - {fileID: 1325770185}
   - {fileID: 1302226476}
+  - {fileID: 1145899758}
   - {fileID: 1819482875}
+  - {fileID: 1471220658}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -34223,6 +35172,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -34258,12 +35208,18 @@ MonoBehaviour:
   - {fileID: 568719645}
   - {fileID: 354750573}
   cornerNeighbours:
+  - {fileID: 470462889}
   - {fileID: 362869722}
+  - {fileID: 1924836870}
   - {fileID: 172344413}
   - {fileID: 1538933559}
+  - {fileID: 1834067945}
+  - {fileID: 1524644058}
   - {fileID: 308267996}
   - {fileID: 1951332756}
+  - {fileID: 2122387167}
   - {fileID: 474950104}
+  - {fileID: 250971665}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -34392,6 +35348,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -34427,12 +35384,18 @@ MonoBehaviour:
   - {fileID: 2047022942}
   - {fileID: 796106565}
   cornerNeighbours:
+  - {fileID: 326953658}
   - {fileID: 281942685}
+  - {fileID: 1234368827}
   - {fileID: 607437661}
   - {fileID: 1834067945}
+  - {fileID: 1662375773}
+  - {fileID: 308267996}
   - {fileID: 30260115}
   - {fileID: 709140192}
+  - {fileID: 929139163}
   - {fileID: 1294520388}
+  - {fileID: 967533950}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -34629,6 +35592,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -34664,12 +35628,18 @@ MonoBehaviour:
   - {fileID: 2064970810}
   - {fileID: 1482046694}
   cornerNeighbours:
+  - {fileID: 983245440}
   - {fileID: 1724422696}
+  - {fileID: 1244353582}
   - {fileID: 1001675603}
   - {fileID: 532817466}
+  - {fileID: 277346579}
+  - {fileID: 411724947}
   - {fileID: 348833613}
   - {fileID: 138399653}
+  - {fileID: 1425328349}
   - {fileID: 71284072}
+  - {fileID: 121994050}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -34798,6 +35768,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -34833,12 +35804,18 @@ MonoBehaviour:
   - {fileID: 1244353582}
   - {fileID: 1536284082}
   cornerNeighbours:
+  - {fileID: 1089364919}
   - {fileID: 1368799291}
+  - {fileID: 254162057}
   - {fileID: 26061103}
   - {fileID: 1135321941}
+  - {fileID: 1756732202}
+  - {fileID: 1574066999}
   - {fileID: 1724422696}
   - {fileID: 1325770185}
+  - {fileID: 16027363}
   - {fileID: 532817466}
+  - {fileID: 4283638}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -35191,6 +36168,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -35227,10 +36205,14 @@ MonoBehaviour:
   - {fileID: 983245440}
   cornerNeighbours:
   - {fileID: 910133713}
+  - {fileID: 1117810770}
   - {fileID: 26061103}
+  - {fileID: 367949446}
   - {fileID: 1156609015}
   - {fileID: 1724422696}
+  - {fileID: 664480206}
   - {fileID: 1001675603}
+  - {fileID: 2117304900}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -35359,6 +36341,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -35394,10 +36377,14 @@ MonoBehaviour:
   - {fileID: 981957513}
   - {fileID: 1440758663}
   cornerNeighbours:
+  - {fileID: 218338344}
   - {fileID: 1125950428}
+  - {fileID: 1378854678}
   - {fileID: 2134719023}
   - {fileID: 476447962}
+  - {fileID: 1924836870}
   - {fileID: 1538933559}
+  - {fileID: 1524644058}
   - {fileID: 601977458}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -35527,6 +36514,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -35562,9 +36550,13 @@ MonoBehaviour:
   - {fileID: 929139163}
   - {fileID: 1294520388}
   cornerNeighbours:
+  - {fileID: 607437661}
   - {fileID: 307508376}
+  - {fileID: 1557042875}
   - {fileID: 1662375773}
   - {fileID: 440504823}
+  - {fileID: 2132768089}
+  - {fileID: 709140192}
   - {fileID: 92060625}
   - {fileID: 967533950}
   currentAltitude: 0
@@ -35695,6 +36687,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -35730,12 +36723,18 @@ MonoBehaviour:
   - {fileID: 1425328349}
   - {fileID: 71284072}
   cornerNeighbours:
+  - {fileID: 1001675603}
   - {fileID: 2117304900}
+  - {fileID: 16027363}
   - {fileID: 277346579}
   - {fileID: 885874751}
+  - {fileID: 226694312}
+  - {fileID: 138399653}
   - {fileID: 24759785}
   - {fileID: 121994050}
+  - {fileID: 1718363394}
   - {fileID: 110548406}
+  - {fileID: 776334722}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -36155,6 +37154,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36188,9 +37188,13 @@ MonoBehaviour:
   - {fileID: 1662375773}
   - {fileID: 2132768089}
   cornerNeighbours:
+  - {fileID: 1732061763}
   - {fileID: 1891664267}
+  - {fileID: 595050015}
   - {fileID: 607437661}
+  - {fileID: 1436311770}
   - {fileID: 30260115}
+  - {fileID: 92060625}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -36416,6 +37420,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36451,12 +37456,18 @@ MonoBehaviour:
   - {fileID: 1776628587}
   - {fileID: 1996431693}
   cornerNeighbours:
+  - {fileID: 2016354351}
   - {fileID: 1756732202}
+  - {fileID: 367949446}
   - {fileID: 649317626}
   - {fileID: 1244353582}
+  - {fileID: 664480206}
+  - {fileID: 532817466}
   - {fileID: 277346579}
   - {fileID: 885874751}
+  - {fileID: 348833613}
   - {fileID: 2064970810}
+  - {fileID: 1482046694}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -36585,6 +37596,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36620,9 +37632,13 @@ MonoBehaviour:
   - {fileID: 1883096161}
   - {fileID: 1889674508}
   cornerNeighbours:
+  - {fileID: 1834067945}
   - {fileID: 1124842085}
+  - {fileID: 1983669179}
   - {fileID: 440504823}
   - {fileID: 354750573}
+  - {fileID: 796106565}
+  - {fileID: 250971665}
   - {fileID: 967533950}
   - {fileID: 1883341455}
   currentAltitude: 0
@@ -36753,6 +37769,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36788,12 +37805,18 @@ MonoBehaviour:
   - {fileID: 1574066999}
   - {fileID: 1958954996}
   cornerNeighbours:
+  - {fileID: 1035878400}
   - {fileID: 1611787287}
+  - {fileID: 1580011824}
   - {fileID: 254162057}
   - {fileID: 1301378611}
+  - {fileID: 1863423673}
+  - {fileID: 970189732}
   - {fileID: 807232223}
   - {fileID: 1679567198}
+  - {fileID: 1325770185}
   - {fileID: 48313433}
+  - {fileID: 1772130387}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -36922,6 +37945,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -36955,8 +37979,11 @@ MonoBehaviour:
   - {fileID: 30260115}
   - {fileID: 92060625}
   cornerNeighbours:
+  - {fileID: 1672131237}
   - {fileID: 402107330}
+  - {fileID: 607437661}
   - {fileID: 1436311770}
+  - {fileID: 2047022942}
   - {fileID: 929139163}
   currentAltitude: 0
   currentMat: {fileID: 0}
@@ -37156,6 +38183,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -37191,12 +38219,18 @@ MonoBehaviour:
   - {fileID: 1924836870}
   - {fileID: 642948419}
   cornerNeighbours:
+  - {fileID: 385610587}
   - {fileID: 1510632587}
+  - {fileID: 2135418571}
   - {fileID: 1584270450}
   - {fileID: 1125950428}
+  - {fileID: 244372071}
+  - {fileID: 1880153328}
   - {fileID: 362869722}
   - {fileID: 2030876851}
+  - {fileID: 1314729020}
   - {fileID: 1538933559}
+  - {fileID: 981957513}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []
@@ -37325,6 +38359,7 @@ MonoBehaviour:
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -37360,12 +38395,18 @@ MonoBehaviour:
   - {fileID: 218338344}
   - {fileID: 1125950428}
   cornerNeighbours:
+  - {fileID: 1302226476}
   - {fileID: 228830593}
+  - {fileID: 1781231464}
   - {fileID: 1471220658}
   - {fileID: 973201951}
+  - {fileID: 385610587}
+  - {fileID: 983808119}
   - {fileID: 1500483515}
   - {fileID: 1378854678}
+  - {fileID: 2134719023}
   - {fileID: 1295139580}
+  - {fileID: 1880153328}
   currentAltitude: 0
   currentMat: {fileID: 0}
   groupOfCancerImWith: []

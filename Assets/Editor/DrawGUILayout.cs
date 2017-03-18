@@ -278,6 +278,7 @@ public class DrawGUILayout : Editor {
                 CellTwo cellTwo = selection[i].GetComponent<CellTwo>();
                 Undo.RecordObject(cellTwo, "Update Cell");
 
+                cellTwo.cellType.isTriggerDestruction = generateInEditor.cellTypes[indexCellTypes].isTriggerDestruction;
                 cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
                 cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
                 //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;
@@ -308,6 +309,7 @@ public class DrawGUILayout : Editor {
                     CellTwo cellTwo = generateInEditor.worldGenerate.transform.GetChild(i).GetComponent<CellTwo>();
                     Undo.RecordObject(cellTwo, "Update Cell");
 
+                    cellTwo.cellType.isTriggerDestruction = generateInEditor.cellTypes[indexCellTypes].isTriggerDestruction;
                     cellTwo.cellType.name = generateInEditor.cellTypes[indexCellTypes].name;
                     cellTwo.cellType.isCancer = generateInEditor.cellTypes[indexCellTypes].isCancer;
                     //cellTwo.cellType.color = generateInEditor.cellTypes[indexCellTypes].color;

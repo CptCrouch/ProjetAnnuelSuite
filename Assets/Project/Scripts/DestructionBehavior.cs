@@ -54,6 +54,9 @@ public class DestructionBehavior : MonoBehaviour {
 
     [HideInInspector]
     public Transform cellParentUsed;
+    [HideInInspector]
+    public int cellTypeTriggerIndex;
+
 
 
 
@@ -75,8 +78,15 @@ public class DestructionBehavior : MonoBehaviour {
             cellParentUsed = generateInEditor.pavageParentToCustom;
         }
 
-       
-  
+        for (int i = 0; i < generateInEditor.cellTypes.Count; i++)
+        {
+            if (generateInEditor.cellTypes[i].isTriggerDestruction == true)
+            {
+                cellTypeTriggerIndex = i;
+                Debug.Log(cellTypeTriggerIndex);
+            }
+        }
+
         for (int i = 0; i < cellParentUsed.childCount; i++)
         {
             CellTwo cell = cellParentUsed.GetComponent<CellTwo>();
@@ -84,16 +94,10 @@ public class DestructionBehavior : MonoBehaviour {
             {
                 listOfCellOnStart.Add(cell);
             }
-            /*if (cancerInTheScene == true)
-            {
-                if (cell.cellType.isCancer == false)
-                    listOfCellOnStart.Add(cell);
-            }
-            else
-            {
-                listOfCellOnStart.Add(cell);
-            }*/
+            
         }
+        
+        
         
         
     }
@@ -265,7 +269,7 @@ public class DestructionBehavior : MonoBehaviour {
                     ChooseAndLaunchProperty(listCloseCell[0].currentAltitude, listCloseCell[0]);
                 else
                 {
-                    currentIndex = nombreChaineDestruction;
+                    //currentIndex = nombreChaineDestruction;
                 }
                 bool cleanCancer = false;
                 int altBeforeReset = listCloseCell[0].currentAltitude;
@@ -292,7 +296,7 @@ public class DestructionBehavior : MonoBehaviour {
         }
         else
         {
-            ChooseRandomClosestCell(GetClosestCells(center));
+            
             currentLvlOnChainSound = -1;
             if (cancerInTheScene == true)
             {

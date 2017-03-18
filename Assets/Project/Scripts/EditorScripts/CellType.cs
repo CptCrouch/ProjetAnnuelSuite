@@ -19,5 +19,7 @@ public class CellType {
 
     public bool isCancer = false;
     public bool onWaitForCancer = false;
+
+    public bool isTriggerDestruction = false;
 	
 }

@@ -29,7 +29,7 @@ public class CustomCellsEditor : Editor {
         GUILayout.Space(5);
         GUILayout.Label("[ Cell Types ]");
         GUILayout.Space(5);
-        GUILayout.Label("[ Order : Name / Base Material / StartAltitude / IsCancer / IsWithFeedBackEmission/ IsWithFeedBackMaterial / Mat Alt1 / Mat Alt2 / Mat Alt3 ]");
+        GUILayout.Label("[ Order : IsTriggerDestruction / Name / Base Material / StartAltitude / IsCancer / IsWithFeedBackEmission/ IsWithFeedBackMaterial / Mat Alt1 / Mat Alt2 / Mat Alt3 ]");
         
         GUILayout.Space(5);
 
@@ -96,8 +96,11 @@ public class CustomCellsEditor : Editor {
             
             // BeginChangeCheck et EndChangeCheck permet de voir si la variable a été modifié
             EditorGUI.BeginChangeCheck();
-            string newName = GUILayout.TextField(m_targetedScript.cellTypes[index].name, GUILayout.Width(120));
             Texture tex = null;
+            bool newIsTrigger = GUILayout.Toggle(m_targetedScript.cellTypes[index].isTriggerDestruction, tex, GUILayout.Width(20));
+
+            string newName = GUILayout.TextField(m_targetedScript.cellTypes[index].name, GUILayout.Width(120));
+            
             Material newMaterial = (Material)EditorGUILayout.ObjectField(m_targetedScript.cellTypes[index].mat, typeof(Material), true, GUILayout.Width(80));
 
             //float newSpeedUp = EditorGUILayout.FloatField("", m_targetedScript.cellTypes[index].speedUp, GUILayout.Width(40));
@@ -137,6 +140,7 @@ public class CustomCellsEditor : Editor {
             {
                 Undo.RecordObject(m_targetedScript, "Modified CellType");
 
+                m_targetedScript.cellTypes[index].isTriggerDestruction = newIsTrigger;
                 m_targetedScript.cellTypes[index].name = newName;
                 m_targetedScript.cellTypes[index].diffWithBasePosY = newStartY;
                 m_targetedScript.cellTypes[index].isCancer = newBoolIsCancer;
@@ -230,6 +234,7 @@ public class CustomCellsEditor : Editor {
                             CellType cellTypeTemp = m_targetedScript.cellTypes[j];
 
                             Undo.RecordObject(cellTwoTemp, "Update Cell");
+                            cellTwoTemp.cellType.isTriggerDestruction = cellTypeTemp.isTriggerDestruction;
                             //cellTwoTemp.cellType.color = cellTypeTemp.color;
                             cellTwoTemp.cellType.isCancer = cellTypeTemp.isCancer;
                             cellTwoTemp.cellType.speedUp = cellTypeTemp.speedUp;
