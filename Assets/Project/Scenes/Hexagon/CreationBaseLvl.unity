@@ -14717,7 +14717,8 @@ MonoBehaviour:
   timeToWaitForDominoEffect: 0.5
   timeToDestroyCellMin: 0.5
   timeToDestroyCellMax: 2
-  nombreChaineDestruction: 6
+  nombreChaineDestruction: 2147483647
+  multiChoiceActivated: 1
   alt1WithRepop: 0
   speedFeedbackDissolveAlt1: 1
   speedFeedbackDissolveAlt2: 1
@@ -15313,7 +15314,7 @@ MonoBehaviour:
     isCancer: 0
     onWaitForCancer: 0
     isTriggerDestruction: 0
-  - name: CouleursAutomne
+  - name: BaseCell
     color: {r: 0, g: 0, b: 0, a: 1}
     mat: {fileID: 2100000, guid: 259a469f200cc4e40a0f3e215da60814, type: 2}
     matAlt1: {fileID: 2100000, guid: 478af78b2083a2343a37ca96bfb2b3b3, type: 2}
@@ -18212,7 +18213,7 @@ GameObject:
   - component: {fileID: 1057189853}
   - component: {fileID: 1057189852}
   m_Layer: 8
-  m_Name: Trigger
+  m_Name: BaseCell
   m_TagString: Cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18230,20 +18231,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType:
-    name: Trigger
+    name: BaseCell
     color: {r: 0, g: 0, b: 0, a: 1}
     mat: {fileID: 0}
-    matAlt1: {fileID: 0}
-    matAlt2: {fileID: 0}
-    matAlt3: {fileID: 0}
+    matAlt1: {fileID: 2100000, guid: 478af78b2083a2343a37ca96bfb2b3b3, type: 2}
+    matAlt2: {fileID: 2100000, guid: aa19a84c9038b6644a55426a9b195869, type: 2}
+    matAlt3: {fileID: 2100000, guid: 5580e46f0a26efc4082a83aacdb5ecaa, type: 2}
     speedUp: 0
-    diffWithBasePosY: 1
+    diffWithBasePosY: 0
     imAppliedToCell: 1
     feedBackOnMaterial: 1
     feedBackOnEmission: 0
     isCancer: 0
     onWaitForCancer: 0
-    isTriggerDestruction: 1
+    isTriggerDestruction: 0
   variables:
     startCellColor: {r: 0, g: 0, b: 0, a: 0}
     feedBackCellColor: {r: 0, g: 0, b: 0, a: 0}
@@ -18326,7 +18327,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 24bd23e9e4202fd4f9c5054059099958, type: 2}
+  - {fileID: 2100000, guid: 259a469f200cc4e40a0f3e215da60814, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18358,7 +18359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057189851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.75, y: -36.1159, z: 0}
+  m_LocalPosition: {x: -8.75, y: -37.1159, z: 0}
   m_LocalScale: {x: 1.484636, y: 1.484636, z: 1.484636}
   m_Children: []
   m_Father: {fileID: 828229767}

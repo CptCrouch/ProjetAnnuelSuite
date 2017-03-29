@@ -26,6 +26,8 @@ public class CellTwo : MonoBehaviour
     public bool canLaunchVirus;
     [HideInInspector]
     public bool isGrow = false;
+    
+    private bool destructionOnly = false;
 
 
     [HideInInspector]
@@ -54,6 +56,8 @@ public class CellTwo : MonoBehaviour
 
     private float timer = 0;
     private Color color = Color.black;
+
+    
 
     
     [HideInInspector]
@@ -162,7 +166,8 @@ public class CellTwo : MonoBehaviour
 
     public void OnlyDestroyCell()
     {
-        StartCoroutine(ReturnToStartPos(destructionBehavior.speedFeedbackDissolveAlt1,destructionBehavior.prefabDissolve, false, 0, false, false));
+        destructionOnly = true;
+        StartCoroutine(ReturnToStartPos(destructionBehavior.speedFeedbackDissolveAlt1,destructionBehavior.prefabDissolve, 0, false));
         destructionBehavior.listOfCellOnStart.Add(this);
     }
 
@@ -221,26 +226,27 @@ public class CellTwo : MonoBehaviour
     }
 
 
-    public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve,bool launchPassive, int chainParameter,bool launchByVirus,bool cleanCancer)
+    public IEnumerator ReturnToStartPos(float speed,GameObject prefabDissolve, int chainParameter,bool cleanCancer)
     {
         Vector3 firstPos = transform.position;
         Quaternion firstRot = transform.rotation;
         Vector3 firstScale = transform.localScale;
         Color firstColor = GetComponent<Renderer>().material.color;
 
-        if(destructionBehavior.cancerInTheScene == true)
+        if(destructionBehavior.cancerInTheScene == true && destructionOnly == false)
         {
             destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this,currentAltitude);
         }
-
-        if (launchByVirus == false)
-        {
-            soundManager.EmittDestroySound(chainParameter, currentAltitude);
-        }
         else
         {
-            soundManager.EmittDestroySound(0, currentAltitude);
+            destructionOnly = false;
         }
+
+        
+        soundManager.EmittDestroySound(chainParameter, currentAltitude);
+
+        
+        
         
         currentAltitude = 0;
         if (cellType.feedBackOnMaterial == true)
@@ -272,11 +278,7 @@ public class CellTwo : MonoBehaviour
             yield return null;
         }
 
-        if (launchPassive == true && canLaunchVirus == true)
-        {
-            //destructionBehavior.DisableAllVirus();
-            //destructionBehavior.ChooseRandomClosestCell(destructionBehavior.GetClosestCells(this));
-        }
+        
         if (destructionBehavior.cancerInTheScene == true)
         {
             if (cleanCancer == true)
@@ -303,11 +305,26 @@ public class CellTwo : MonoBehaviour
         {
             destructionBehavior.cancerBehavior.DestroyAllCellCancerClose(this, currentAltitude);
         }
-
-        destructionBehavior.cancerBehavior.UpdateForcingMaterial(this, destructionBehavior.cancerBehavior.cellTypeTriggerOnWait);
-        destructionBehavior.ChooseAndLaunchProperty(1, this);
+        soundManager.EmittDestroySound(0, currentAltitude);
+        Debug.Log(currentAltitude);
+        //destructionBehavior.cancerBehavior.UpdateForcingMaterial(this, destructionBehavior.cancerBehavior.cellTypeTriggerOnWait);
+        destructionBehavior.ChooseAndLaunchProperty(currentAltitude, this);
         //soundManager.EmittDestroySound(0, currentAltitude);
 
+        currentAltitude = 0;
+        if (cellType.feedBackOnMaterial == true)
+        {
+            currentMat = startMat;
+            GetComponent<MeshRenderer>().material = currentMat;
+
+        }
+        state = DestroyState.Idle;
+        if (cellType.imAppliedToCell == false)
+            transform.position = new Vector3(transform.position.x, startPosYbyWorldGenerate, transform.position.z);
+        else
+            transform.position = new Vector3(transform.position.x, startPosYbyWorldGenerate + cellType.diffWithBasePosY, transform.position.z);
+
+        imAtStartPos = true;
 
 
         GameObject feedBackDissolve = CreateFeedBackExplosion(firstPos, firstRot, firstScale, prefabDissolve);
@@ -345,7 +362,7 @@ public class CellTwo : MonoBehaviour
 
         if (currentAltitude == 2)
         {
-            destructionBehavior.LaunchCellDestruction(this,false);
+            OnlyDestroyCell();
             //destructionBehavior.DisableAllVirus();
             //destructionBehavior.DisableAllCellDestruction();
             Debug.Log("pouet");

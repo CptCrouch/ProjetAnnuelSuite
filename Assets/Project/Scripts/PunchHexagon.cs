@@ -165,9 +165,10 @@ public class PunchHexagon : MonoBehaviour {
                     CellTwo cellHit = hit.collider.GetComponent<CellTwo>();
                     if(cellHit.imAtStartPos == false && cellHit._imMoving == false && cellHit.cellType.isCancer == false && cellHit.cellType.isTriggerDestruction == false)
                     {
-                        
-                        cellHit.OnlyDestroyCell();
-                        
+
+                        //cellHit.OnlyDestroyCell();
+                        StartCoroutine(cellHit.DestroyTrigger(destroyManager.speedFeedbackDissolveAlt1, destroyManager.prefabDissolve));
+
                     }
                     if(cellHit.cellType.isTriggerDestruction == true)
                         StartCoroutine(cellHit.DestroyTrigger(destroyManager.speedFeedbackDissolveAlt1, destroyManager.prefabDissolve));

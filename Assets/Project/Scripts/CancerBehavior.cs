@@ -48,7 +48,7 @@ public class CancerBehavior : MonoBehaviour {
                 Debug.Log("Cancer Found");
                 return;
             }
-            if(generateInEditor.cellTypes[i].name == "CouleursAutomne")
+            if(generateInEditor.cellTypes[i].name == "BaseCell")
             {
                 cleanCellType = generateInEditor.cellTypes[i];
                 Debug.Log("Clean Found");
@@ -156,7 +156,7 @@ public class CancerBehavior : MonoBehaviour {
                     ResetCellCancer(cell);
                 else
                 {
-                    UpdateForcingMaterial(cell, destructionBehav.generateInEditor.cellTypes[destructionBehav.cellTypeTriggerIndex]);
+                    //UpdateForcingMaterial(cell, destructionBehav.generateInEditor.cellTypes[destructionBehav.cellTypeTriggerIndex]);
                 }
             }
             

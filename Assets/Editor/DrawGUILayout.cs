@@ -253,10 +253,12 @@ public class DrawGUILayout : Editor {
         bool _isActive = index == SelectedType;
  
         GUIStyle toggleStyle = GUI.skin.button;
+        
+
 
         GUIStyle _text = EditorStyles.boldLabel;
         if(generateInEditor.cellTypes[index].mat != null)
-        _text.normal.textColor = generateInEditor.cellTypes[index].mat.color;
+        _text.normal.textColor = new Vector4 (generateInEditor.cellTypes[index].mat.color.r, generateInEditor.cellTypes[index].mat.color.g, generateInEditor.cellTypes[index].mat.color.b,1);
         GUI.Label(new Rect(12, index * 98 + 8, 100, 20), generateInEditor.cellTypes[index].name, _text);
 
         bool _isToggleDown = GUI.Toggle(new Rect(12, index * 98 + 25, 60, 60), _isActive, "",toggleStyle);

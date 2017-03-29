@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Project/Scenes/Hexagon/CreationBaseLvl.unity
+- path: Assets/Project/Scenes/Hexagon/yoyoyo.unity
   isLoaded: 1
   isActive: 1

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: C:\Users\macre\Documents\Cours3GD\ProjetAnnuelFourreTout\FMOD_Projet\soundProject\soundProject.fspro
-  SourceBankPath: C:\Users\macre\Documents\Cours3GD\ProjetAnnuelFourreTout\FMOD_Projet\soundProject\Build
+  SourceProjectPath: Assets\FMOD_Projet\soundProject\soundProject.fspro
+  SourceBankPath: Assets\FMOD_Projet\soundProject\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

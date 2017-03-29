@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{ca9fe85e-46b8-4a6a-bd40-e4b27c0f2528}">
+        <property name="assetPath">
+            <value>chainVoice.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>39.242312925170069</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{670bbd04-c13f-4b63-b2e9-80ed82d55ac1}</destination>
+        </relationship>
+    </object>
+</objects>

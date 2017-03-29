@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="Event" id="{2f6f5b39-dae1-4340-85ea-ae20820b01c3}"/>
+    <object class="MasterTrack" id="{256565e7-ba7e-4987-ad85-1f22ade318c7}"/>
+    <object class="MixerInput" id="{9f5d99fc-294a-4b71-9b8d-4277cffdb955}"/>
+    <object class="EventAutomatableProperties" id="{b9831b52-d4ff-4b0a-9045-084ae1e1427d}"/>
+    <object class="MarkerTrack" id="{6903b668-853b-4641-a841-969dc3027193}"/>
+    <object class="GroupTrack" id="{eda9f305-01b6-4a3a-a386-f5c3ca39801b}"/>
+    <object class="Timeline" id="{e7bd5952-e381-4214-a40f-22f3a50d6d02}">
+        <property name="cursorPosition">
+            <value>0</value>
+        </property>
+        <property name="uiLastRulerScaleRatio">
+            <value>0.015350389321468297</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{264ae208-9dce-4a2b-a28b-db1e00b8c1ef}">
+        <relationship name="input">
+            <destination>{42c8a470-8d3a-4862-bf88-4049915e730f}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{423f7d60-8c65-473e-b696-1dbc27384c14}"/>
+    <object class="MixerBusPanner" id="{2b461d27-5e2c-4b42-99ee-fe7a5a362ede}"/>
+    <object class="EventMixerGroup" id="{42c8a470-8d3a-4862-bf88-4049915e730f}"/>
+    <object class="LoopRegion" id="{d55b90da-e26b-4abe-9546-bd3d29aebdaa}"/>
+    <object class="MixerBusEffectChain" id="{11ab73d6-d82c-4038-9866-26e8dadfb1a1}"/>
+    <object class="MixerBusPanner" id="{de0d67d2-52e2-45f4-8a0b-3bbd564b67e1}"/>
+    <object class="MixerBusFader" id="{da224b29-0f5e-4783-90ba-990879e2213a}"/>
+    <object class="MixerBusEffectChain" id="{2dd243c5-4c5d-4af4-8c69-11c7ddcc1e0e}"/>
+    <object class="MixerBusPanner" id="{4236e6b9-c930-4cbf-936b-c53b34929af9}"/>
+    <object class="MixerBusFader" id="{6a97dd31-d734-425a-82f2-80bab0126f5f}"/>
+    <object class="MixerBusFader" id="{ac8435dc-71c4-4b10-a934-c5483606f1d2}"/>
+</objects>

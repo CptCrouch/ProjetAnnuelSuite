@@ -16,8 +16,12 @@ public class DestructionBehavior : MonoBehaviour {
     public float timeToDestroyCellMin =0.1f;
     public float timeToDestroyCellMax =2f;
 
+    [Space(10)]
+    [Header("[ VARIABLE IMPORTANTES CHAINE EXPLO ]")]
     public int nombreChaineDestruction = 6;
+    public bool multiChoiceActivated = false;
 
+    [Space(10)]
     public bool alt1WithRepop;
 
     [Space(10)]
@@ -39,6 +43,7 @@ public class DestructionBehavior : MonoBehaviour {
 
     private List<CellTwo> cellToDissolve = new List<CellTwo>();
 
+
     [HideInInspector]
     public List<CellTwo> listOfCellOnStart = new List<CellTwo>();
     [HideInInspector]
@@ -56,6 +61,8 @@ public class DestructionBehavior : MonoBehaviour {
     public Transform cellParentUsed;
     [HideInInspector]
     public int cellTypeTriggerIndex;
+
+    private bool DESTRUCTIONisON;
 
 
 
@@ -90,7 +97,11 @@ public class DestructionBehavior : MonoBehaviour {
         for (int i = 0; i < cellParentUsed.childCount; i++)
         {
             CellTwo cell = cellParentUsed.GetComponent<CellTwo>();
-            if(cell.cellType.isCancer == false)
+            if(cell == null)
+            {
+                Debug.Log(cell.gameObject.name);
+            }
+            if(cell.cellType.name == "BaseCell")
             {
                 listOfCellOnStart.Add(cell);
             }
@@ -160,33 +171,33 @@ public class DestructionBehavior : MonoBehaviour {
         {
             if (CheckIfThisWillLaunchChain(cell) == true)
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, false, currentLvlOnChainSound, launchByVirus, false));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve,  currentLvlOnChainSound,  false));
             }
             else
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, launchByVirus, true));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve,  currentLvlOnChainSound,  true));
             }
         }
         if (alt == 2)
         {
             if (CheckIfThisWillLaunchChain(cell) == true)
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolve, false, currentLvlOnChainSound, launchByVirus,false));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolve,  currentLvlOnChainSound, false));
             }
             else
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolve, true, currentLvlOnChainSound, launchByVirus,true));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt2, prefabDissolve, currentLvlOnChainSound, true));
             }
         }
         if (alt >= 3)
         {
             if (CheckIfThisWillLaunchChain(cell) == true)
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolve, false, currentLvlOnChainSound, launchByVirus,false));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolve,  currentLvlOnChainSound, false));
             }
             else
             {
-                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolve, true, currentLvlOnChainSound, launchByVirus,true));
+                StartCoroutine(cell.ReturnToStartPos(speedFeedbackDissolveAlt3, prefabDissolve,  currentLvlOnChainSound, true));
             }
         }
 
@@ -262,47 +273,77 @@ public class DestructionBehavior : MonoBehaviour {
                 }
             }
 
-
-           if(listCloseCell.Count == 1)
+            if (multiChoiceActivated == false)
             {
-                if ( listCloseCell[0].currentAltitude == 3)
-                    ChooseAndLaunchProperty(listCloseCell[0].currentAltitude, listCloseCell[0]);
+                if (listCloseCell.Count == 1)
+                {
+                    if (listCloseCell[0].currentAltitude == 3)
+                        ChooseAndLaunchProperty(listCloseCell[0].currentAltitude, listCloseCell[0]);
+                    else
+                    {
+                        //currentIndex = nombreChaineDestruction;
+                    }
+                    bool cleanCancer = false;
+                    int altBeforeReset = listCloseCell[0].currentAltitude;
+                    StartCoroutine(listCloseCell[0].ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, currentLvlOnChainSound, cleanCancer));
+
+
+                    listOfCellOnStart.Add(listCloseCell[0]);
+                    StartCoroutine(WaitForDominosEffect(listCloseCell[0], currentIndex - 1, altBeforeReset));
+                }
+
                 else
                 {
-                    //currentIndex = nombreChaineDestruction;
-                }
-                bool cleanCancer = false;
-                int altBeforeReset = listCloseCell[0].currentAltitude;
-                StartCoroutine(listCloseCell[0].ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, false, currentLvlOnChainSound, false, cleanCancer));
-                
 
-                listOfCellOnStart.Add(listCloseCell[0]);
-                StartCoroutine(WaitForDominosEffect(listCloseCell[0], currentIndex - 1,altBeforeReset));
+                    DESTRUCTIONisON = false;
+                    StartCoroutine(WaitForResetCancer());
+
+
+                }
             }
-            
-            else
+            else if(multiChoiceActivated == true)
             {
-                
-                currentLvlOnChainSound = -1;
-                if (cancerInTheScene == true)
+                if (listCloseCell.Count > 0)
                 {
-                    cancerBehavior.ResetAllCancer();
-                    Debug.Log("pouet");
+                    for (int i = 0; i < listCloseCell.Count; i++)
+                    {
+                        bool cleanCancer = false;
+                        int altBeforeReset = listCloseCell[i].currentAltitude;
+                        StartCoroutine(listCloseCell[i].ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, currentLvlOnChainSound, cleanCancer));
+
+
+                        listOfCellOnStart.Add(listCloseCell[i]);
+                        StartCoroutine(WaitForDominosEffect(listCloseCell[i], currentIndex - 1, altBeforeReset));
+                    }
+                    
                 }
+                else
+                {
+                    DESTRUCTIONisON = false;
+                    StartCoroutine(WaitForResetCancer());
 
-
+                }
             }
 
         }
         else
         {
-            
+            DESTRUCTIONisON = false;
+            StartCoroutine(WaitForResetCancer());
+
+        }
+
+    }
+    IEnumerator WaitForResetCancer()
+    {
+        yield return new WaitForSeconds(timeToWaitForDominoEffect + 0.1f);
+        if (DESTRUCTIONisON == false)
+        {
             currentLvlOnChainSound = -1;
             if (cancerInTheScene == true)
             {
                 cancerBehavior.ResetAllCancer();
             }
-
         }
 
     }
@@ -315,6 +356,7 @@ public class DestructionBehavior : MonoBehaviour {
     }
     IEnumerator WaitForDominosEffect( CellTwo center, int currentIndex, int startAltitude)
     {
+        DESTRUCTIONisON = true;
         yield return new WaitForSeconds(timeToWaitForDominoEffect);
         LaunchChainDestruction(center, currentIndex, startAltitude);
         Debug.Log(currentLvlOnChainSound);
@@ -341,14 +383,14 @@ public class DestructionBehavior : MonoBehaviour {
                 if (CheckIfThisWillLaunchChain(cellTwo) == true)
                 {
                     cleanCancer = false;
-                    StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, false, cleanCancer));
+                    StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve,  currentLvlOnChainSound,  cleanCancer));
                    
                 }
                 else
                 {
                     cleanCancer = true;
                     Debug.Log("NOP");
-                    StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve, true, currentLvlOnChainSound, false, cleanCancer));
+                    StartCoroutine(cellTwo.ReturnToStartPos(speedFeedbackDissolveAlt1, prefabDissolve,  currentLvlOnChainSound,  cleanCancer));
                     
                     //ChooseRandomClosestCell(GetClosestCells(center));
                 }

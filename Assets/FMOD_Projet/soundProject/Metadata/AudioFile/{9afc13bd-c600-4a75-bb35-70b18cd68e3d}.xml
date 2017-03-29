@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{9afc13bd-c600-4a75-bb35-70b18cd68e3d}">
+        <property name="assetPath">
+            <value>tileGlow2.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>4.5048072562358277</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{670bbd04-c13f-4b63-b2e9-80ed82d55ac1}</destination>
+        </relationship>
+    </object>
+</objects>

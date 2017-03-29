@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114776564746463478}
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   EditorEvents:
   - {fileID: 114860209393171722}
   - {fileID: 114077539880376658}
@@ -26,7 +26,7 @@ MonoBehaviour:
   - {fileID: 114749100741634962}
   - {fileID: 114020675162297950}
   - {fileID: 114286633369041818}
-  MasterBankRef: {fileID: 114561839720045252}
+  MasterBankRef: {fileID: 114629422604031918}
   StringsBankRef: {fileID: 114776564746463478}
   stringsBankWriteTime: 636204413873671391
   cacheVersion: 2
@@ -178,12 +178,12 @@ MonoBehaviour:
   Path: event:/SFX/destroyWave
   guid: ae49bcc2498226419912ef0589aee61e
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114371873812519846}
+  - {fileID: 114507058835162152}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114021513623488848
@@ -245,7 +245,7 @@ MonoBehaviour:
   Path: event:/SFX/tileGlow
   guid: 7e2d7cdd2a67f54b839050624ed734e0
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -355,7 +355,7 @@ MonoBehaviour:
   Path: event:/Menu/menuSelect
   guid: 5f156515937fdf48b107d95c09cf8420
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -897,7 +897,7 @@ MonoBehaviour:
   Path: event:/SFX/tileUp2
   guid: da6dd8183bee6047b16027b0aca9785a
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -948,6 +948,21 @@ MonoBehaviour:
   Name: Speed
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114304282897170644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: chainValue
+  Min: 0
+  Max: 30
   Default: 0
 --- !u!114 &114307651003315278
 MonoBehaviour:
@@ -1037,6 +1052,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114337539184877416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: tileHigh
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114346589618083184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1162,7 @@ MonoBehaviour:
   Path: event:/Menu/menuMouseOver
   guid: 5f3bf0b432e8ff4f8ac6feb2bb47bff4
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1236,6 +1266,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2687040
   Exists: 1
+--- !u!114 &114429316579685968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: waveLength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114429920074954960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,6 +1340,21 @@ MonoBehaviour:
   Name: ambiantModif
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114467389565167252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: chainValue
+  Min: 0
+  Max: 30
   Default: 0
 --- !u!114 &114467565212513154
 MonoBehaviour:
@@ -1446,6 +1506,21 @@ MonoBehaviour:
   Min: 1
   Max: 3
   Default: 1
+--- !u!114 &114500646486927060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: waveLength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114503267416046988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1543,21 @@ MonoBehaviour:
   - {fileID: 114499316781354398}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114507058835162152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: waveLength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114533738924731582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,6 +1686,21 @@ MonoBehaviour:
   Min: 1
   Max: 3
   Default: 1
+--- !u!114 &114591676797102462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: waveLength
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114596960031249530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,15 +1751,34 @@ MonoBehaviour:
   Path: event:/SFX/destroyChain
   guid: 7457f970eea0694082636f4ecc32efda
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114576625895813110}
-  - {fileID: 114783589439583766}
+  - {fileID: 114977651575993394}
+  - {fileID: 114304282897170644}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114629422604031918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\macre\Documents\Cours3GD\ProjetAnnuelSuite\Assets\FMOD_Projet\soundProject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636204413873646324
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4851744
+  Exists: 1
 --- !u!114 &114641624360310712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1780,6 +1904,21 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114690497129926570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: chainValue
+  Min: 0
+  Max: 30
+  Default: 0
 --- !u!114 &114694254878510096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,6 +2021,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114717738518516700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: tileHigh
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114724008678106140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1949,7 +2103,7 @@ MonoBehaviour:
   Path: event:/Menu/menuBack
   guid: 9f6d8125c31154428ce87bbe3e61dae1
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2057,7 +2211,7 @@ MonoBehaviour:
   Path: event:/SFX/tileUp1
   guid: 6812dfed4ae1e54d8c0a265957b5d2ad
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2075,8 +2229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: C:\Users\macre\Documents\Cours3GD\ProjetAnnuelFourreTout\FMOD_Projet\soundProject\Build\Desktop\Master
-    Bank.strings.bank
+  Path: Assets\FMOD_Projet\soundProject\Build\Desktop\Master Bank.strings.bank
   lastModified: 636204413873671391
   LoadResult: 0
   FileSizes:
@@ -2128,6 +2281,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114820114638129632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: tileHigh
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114821195941102748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2165,6 +2333,44 @@ MonoBehaviour:
   Min: 1
   Max: 3
   Default: 1
+--- !u!114 &114829069639632662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Documents\ICAN\Prog\ProjetAnnuel\ProjetAnnuel 4\Assets\FMOD_Projet\soundProject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636257889849201119
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4851744
+  Exists: 1
+--- !u!114 &114849230380542552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Documents\ICAN\Prog\ProjetAnnuel\ProjetAnnuel 4\Assets\FMOD_Projet\soundProject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636257889849201119
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4851744
+  Exists: 0
 --- !u!114 &114851050506917648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,7 +2385,7 @@ MonoBehaviour:
   Path: event:/Menu/Ambiant
   guid: 7ab26d200c5d4642b5509c17f0e343ff
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2245,7 +2451,7 @@ MonoBehaviour:
   Path: event:/SFX/destroySingle
   guid: 5b67567d24b5494eb3324f5ecdca69ed
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2273,6 +2479,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114863479152787176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: chainValue
+  Min: 0
+  Max: 30
+  Default: 0
 --- !u!114 &114868517396048764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,6 +2685,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114930026126532658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\macre\Documents\Cours3GD\ProjetAnnuelSuite\Assets\FMOD_Projet\soundProject\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636204413873646324
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4851744
+  Exists: 1
 --- !u!114 &114940615526170078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,7 +2883,7 @@ MonoBehaviour:
   Path: event:/SFX/tileUp3
   guid: 976f82860b149a4eb61d64a5c5f4aca6
   Banks:
-  - {fileID: 114561839720045252}
+  - {fileID: 114629422604031918}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2665,6 +2905,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114977651575993394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: tileHigh
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114981125505885542
 MonoBehaviour:
   m_ObjectHideFlags: 0
